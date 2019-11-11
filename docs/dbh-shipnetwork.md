@@ -21,21 +21,26 @@ Full blog post detailing this graph's creation [here](https://program-800.tumblr
 Hovering over a character's node gives you information on:
 - The percentage of fics with them in a ship(s) that are explicit
 - The top 5 most common characters they're shipped with
+
 #### Node size: 
 The bigger the character's node, the more characters that character has been shipped with.
+
 #### Node colour:
 - White: Most of the fics shipping the character are not explicit (~10% and below; 35th quantile and below)
 - Orange: A relatively moderate percentage of fics shipping the character are explicit (~10% to ~30%, 35th to 65th quantile)
 - Red: A relatively greater percentage of the fics shipping the character are explicit (~30% and above, 65th quantile and above)
+
 #### Info when hovering over a link between two characters:
 Hovering over a link between two characters gives you information on:
 - The percentage of fics shipping these 2 characters that are explicit.
+
 #### Link thickness:
 The thicker the link between two characters, the more times they've been shipped together across all the fics.
+
 #### Link colour:
 - White: None of the fics shipping the 2 characters are explicit (0%, ~40th quantile).
 - Orange: A relatively moderate percentage of the fics shipping the 2 characters are explicit (0 to ~38%, between ~40th to 70th quantile)
 - Red: A relatively greater percentage of the fics shipping the 2 characters are explicit (~38% and above, 70th quantile and above)
 
-#### Edit logs:
+### Edit logs:
 05/11/19: Fixed some dead links.
