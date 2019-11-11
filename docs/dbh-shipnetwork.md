@@ -13,7 +13,7 @@ This visualisation was created with the help of the awesome library pyvis.
 
 Full blog post detailing this graph's creation [here](https://program-800.tumblr.com/post/188743310956/exploring-dbh-fics-part-2)
 
-# ACCESS THE GRAPH: [click here for the interactive visualisation!](https://dru-r.github.io/ao3-dbh-analysis/ao3_dbhships.html)
+# ACCESS THE GRAPH: [click here for the interactive visualisation!](ao3_dbhships.html)
 ## Okay, how do I read this graph?
 ### Main points:
 #### Info when hovering over a character node:
