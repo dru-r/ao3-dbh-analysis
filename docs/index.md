@@ -1,4 +1,4 @@
-# An ongoing analysis of Detroit: Become Human fics on AO3
+# AO3 Detroit: Become Human fanfic analysis
 Main blog program-800 with all the details maintained [here](https://program-800.tumblr.com). Feel free to drop any feedback there!
 
 ## Available analyses:
