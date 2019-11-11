@@ -16,7 +16,7 @@ Full blog post detailing this graph's creation [here](https://program-800.tumblr
 # ACCESS THE GRAPH: [click here for the interactive visualisation!](ao3_dbhships.html)
 
 ## Okay, how do I read this graph?
-### Main points:
+
 #### Info when hovering over a character node:
 Hovering over a character's node gives you information on:
 - The percentage of fics with them in a ship(s) that are explicit
