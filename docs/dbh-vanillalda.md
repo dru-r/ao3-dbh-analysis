@@ -16,7 +16,7 @@ Some things to note, presented in a rather hand-wavey way:
 - <b>List of terms as you click through each topic</b>: useful words for trying to make sense on the topic.
 - <b>The blue bars next to each term</b>: overall frequency of the term in the corpus (e.g. 'humans' has a blue bar that almost hits 50k).
 - <b>The sliding bar on the top (relevance metric, with adjustable lambda λ)</b>: The [original research paper](https://www.aclweb.org/anthology/W14-3110.pdf) suggests setting it at 0.6 for optimal human interpretation. But in any case, you definitely can play around with it. Setting it at 1 gives you the default output from LDA, and setting it at 0 sets it to really topic-specific words (notice the change in proportion between the red:blue bars). 
-- <b>Hovering over a term</b>: To see in what other topics the term appears in (circle size proportional to term-specific frequencies in corpus). A term might appear in different topics because words typically have more than one meaning (e.g. duck - a bird, or to lower one's body).
+- <b>Hovering over a term</b>: To see in what other topics the term appears in (circle size proportional to term-specific frequencies in corpus). A term might appear in different topics because words may have more than one meaning (e.g. duck - a bird, or to lower one's body).
 
 
 ### Suggested topic labels
