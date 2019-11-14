@@ -5,7 +5,7 @@ What are some topics that appear in D:BH fics?<br>
 This was a little exercise I did to try preprocessing for topic modelling (specifically, Latent Dirichlet Allocation, or LDA) on a form of text (long-form fiction) that I typically don't work with in my research. The results aren't too exciting but they're largely interpretable (which is good), so I'm sharing them here. <b>Full blog post detailing preprocessing [here]</b>.
 
 ### Interactive visualisation is [here](https://nbviewer.jupyter.org/github/dru-r/ao3-dbh-analysis/blob/master/docs/vanilla%20lda_detroit%20ao3.ipynb)
-LDA doesn't generate topic labels for the user, so here are some topic labels I subjectively came up with based on the output [below](###suggested-topic-labels)
+LDA doesn't generate topic labels for the user, so here are some topic labels I subjectively came up with based on the output [below](#suggested-topic-labels)
 
 ## Details about the visualisation
 I built the LDA model with Gensim and the visualisation was created using pyLDAvis.<br>
