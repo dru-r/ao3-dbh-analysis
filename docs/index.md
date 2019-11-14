@@ -4,7 +4,7 @@ Main blog program-800 with all the details maintained [here](https://program-800
 ## Available analyses:
 1. [Publishing frequencies in the fandom by month](dbh-pubfreqs.md)<br>
 2. [Interactive visualisation of ships across all fics](dbh-shipnetwork.md)<br>
-3. [Topic modeling DBH fics](dbh-vanillalda.md)
+3. [Topic modeling DBH fics](dbh-vanillalda.md)<br>
 ### Stuff currently in the works:
 3. What distinguishes general/teen/mature fics? (we already know what goes down in explicit fics...)
 4. ??? (more to come!)
