@@ -7,5 +7,5 @@ Formal stuffy background: I come from a psychology background and my research is
 Methods-wise, I'm keen on text analysis, network representations/analysis and statistical analysis in general. And of course, useful interactive visualisations - something I'm frankly still bad at, but believe has a lot of value in aiding interpretation.
 <br>
 <br>
-There is definitely still a lot for me to learn and improve on! I am happy to take any feedback/thoughts/questions; you can contact me [here](https://program-800.tumblr.com/ask).
+There is definitely still a lot for me to learn and improve on! I am happy to take any feedback, thoughts and/or questions; you can contact me [here](https://program-800.tumblr.com/ask).
 <br><br>
