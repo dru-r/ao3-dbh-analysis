@@ -1,4 +1,4 @@
-## About 
+## about me
 This is a little side-project I'm maintaining while I complete my research masters and wait to start a full-time job. <br>
 <br>
 Formal stuffy background: I come from a psychology background and my research is in the field of computational social science. I'm interested in studying online communities; my formal work so far has dealt mainly with social media data. Fandom however has always been the closest to me, so here we are.
