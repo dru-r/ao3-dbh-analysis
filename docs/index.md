@@ -5,7 +5,7 @@ Main blog program-800 with all the details maintained [here](https://program-800
 1. [Publishing frequencies in the fandom by month](dbh-pubfreqs.md)<br>
 2. [Interactive visualisation of ships across all fics](dbh-shipnetwork.md)<br>
 3. [Topic modeling DBH fics](dbh-vanillalda.md)<br>
-4. [Average hits/kudos/comment counts/bookmarks received (split by publication month & rating)](https://nbviewer.jupyter.org/github/dru-r/ao3-dbh-analysis/blob/master/docs/dbh-avmetrics-month-v2.ipynb). Note that this looks only at one-shots.<br>
+4. [Average hits/kudos/comment counts/bookmarks received (split by publication month & rating)](https://nbviewer.jupyter.org/github/dru-r/ao3-dbh-analysis/blob/master/docs/dbh-avmetrics-month-v3.ipynb?flush_cache=True). Note that this looks only at one-shots.<br>
 ### Stuff currently in the works:
 5. More text analysis (long fiction text is tOuGh)
 6. ??? (more to come!)
