@@ -12,7 +12,7 @@ To recap AO3's rating system, taken from [here](https://archiveofourown.org/faq/
 - Teen And Up Audiences: The content may be inappropriate for audiences under 13. <br>
 - Mature: The content contains adult themes (sex, violence, etc) that aren't as graphic as explicit-rated content.<br>
 - Explicit: The content contains explicit adult themes, such as porn, graphic violence, etc.<br>
-
+<br>
 [Click here to skip to the results](#results).
 
 ## Analysis done
