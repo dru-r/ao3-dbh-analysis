@@ -6,9 +6,10 @@ Main blog program-800 with all the details maintained [here](https://program-800
 2. [Interactive visualisation of ships across all fics](dbh-shipnetwork.md)<br>
 3. [Topic modeling DBH fics](dbh-vanillalda.md)<br>
 4. [Average hits/kudos/comment counts/bookmarks received (split by publication month & rating)](https://nbviewer.jupyter.org/github/dru-r/ao3-dbh-analysis/blob/master/docs/dbh-avmetrics-month-v3.ipynb?flush_cache=True). Note that this looks only at one-shots.<br>
+5. [Differences in word use between fics of different ratings](dbh-ratingslanguse.md)<br>
 ### Stuff currently in the works:
-5. More text analysis (long fiction text is tOuGh)
-6. ??? (more to come!)
+6. More text analysis (long fiction text is tOuGh)
+7. ??? (more to come!)
 
 ## More details:
 #### What is this?
