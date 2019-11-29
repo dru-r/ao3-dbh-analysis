@@ -5,7 +5,7 @@ We can already guess how explicit fics may differ from the rest (sMuT) so my int
 1) What differentiates the general audience/teen/mature fics from each other, and <br>
 2) What differentiates mature/explicit fics (since mature-rated fics may also make references to sex/violence). <br>
 <br>
-<b>Note: I dropped Not Rated fics for this analysis, leaving 12647 fics for analysis. Full blog post on preprocessing and other details here. (link details later).</b> <br>
+<b>Note: I dropped Not Rated fics for this analysis, leaving 12647 fics for analysis. Full blog post on preprocessing and other details [here](https://program-800.tumblr.com/post/189370069921/exploring-dbh-fics-part-5).</b> <br>
 <br>
 To recap AO3's rating system, taken from [here](https://archiveofourown.org/faq/tutorial-posting-a-work-on-ao3?language_id=en#pwtrating):<br>
 - General Audiences: The content is unlikely to be disturbing to anyone, and is suitable for all ages. <br>
