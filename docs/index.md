@@ -7,9 +7,11 @@ Main blog program-800 with all the details maintained [here](https://program-800
 3. [Topic modeling DBH fics](dbh-vanillalda.md)<br>
 4. [Average hits/kudos/comment counts/bookmarks received (split by publication month & rating)](https://nbviewer.jupyter.org/github/dru-r/ao3-dbh-analysis/blob/master/docs/dbh-avmetrics-month-v3.ipynb?flush_cache=True). Note that this looks only at one-shots.<br>
 5. [Differences in word use between fics of different ratings](dbh-ratingslanguse.md)<br>
+6. [Finding similar words based on word usage patterns in AO3 D:BH fics (word2vec)](dbh-w2vtrial.md)<br>
 ### Stuff currently in the works:
-6. More text analysis (long fiction text is tOuGh)
-7. ??? (more to come!)
+7. Structural topic modeling
+8. Understanding how different characters are characterised by fic writers
+9. ??? (more to come!)
 
 ## More details:
 #### What is this?
