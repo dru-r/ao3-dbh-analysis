@@ -1,5 +1,5 @@
 # Finding similar words based on word usage patterns in AO3 D:BH fics (word2vec)
-An application of word2vec to my corpus of AO3 D:BH fics. <b>Full details of preprocessing and training covered [here](insert link later).</b><br>
+An application of word2vec to my corpus of AO3 D:BH fics. <b>Full details of preprocessing and training covered here(insert link later).</b><br>
 
 While there are pre-trained word vectors out there built off far more massive datasets (like Google's!), the datasets are typically rather different from fanfics (e.g. Google News). I think this site [provides a demo for Google's](https://bionlp-www.utu.fi/wv_demo) - you can use it to see how the similar words may differ between that model and this one.<br>
 
