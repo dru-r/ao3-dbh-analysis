@@ -7,13 +7,13 @@ Since the idea behind word2vec is that words which share similar contexts should
 
 Qualitatively, the model produces a visualisation and word similarities that do make sense; words that should be similar to each other have smaller distances to each other. Still, given that learned word2vec embeddings are only as useful as their performance in the eventual application you're training them for (generic e.g. is classifiying text; I have none thought of currently), I recommend that this visualisation be taken only for what it is - an exploratory tool for fun. 
 
-## Visualisation
+## Visualisation<br>
 <b>Click here for the [visualisation](https://dru-r.github.io/w2v-embedding-projector/) of 18,733 words. Note</b>:<br>
 1) Click on State 0 (under bookmarks) to load the saved 3D UMAP projection.<br>
 2) Works better in Chrome. I can't load the bookmark on Firefox for some reason.<br>
 3) Please search for 'toaster'.<br>
 
-### Visualisation details
+### Visualisation details<br>
 All credit to tensorflow, I just forked the [projector repo](https://github.com/tensorflow/embedding-projector-standalone) and added my data.<br>
 1) Search for a word using the Search bar on the top-right, or click on a word in the visualisation to check out its most similar words (calculated and ordered based on cosine similarity between the word embedding vectors).<br>
 2) In the display of most similar words, the number next to each word represents the cosine <i>distance</i> between the word you searched for/clicked on and that word. Cosine distance is just 1-cosine similarity, so smaller distance =  greater similarity.<br>
