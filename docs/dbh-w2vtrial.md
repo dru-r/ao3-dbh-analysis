@@ -1,7 +1,7 @@
 # Finding similar words based on word usage patterns in AO3 D:BH fics (word2vec)
 An application of word2vec to my corpus of AO3 D:BH fics. <b>Full details of preprocessing and training covered here(insert link later).</b><br>
 
-While there are pre-trained word vectors out there built off far more massive datasets (like Google's!), the datasets are typically rather different from fanfics (e.g. Google News). I think this site [provides a demo for Google's](https://bionlp-www.utu.fi/wv_demo) - you can use it to see how the similar words may differ between that model and this one.<br>
+While there are pre-trained word vectors out there built off far more massive datasets (like Google's!), the datasets are typically rather different from fanfics (e.g. Google News). I think this site [provides a demo for Google's](https://bionlp-www.utu.fi/wv_demo) - you can use it to see how the results may differ between that model and this one.<br>
 
 Since the idea behind word2vec is that words which share similar contexts should be similar in meaning*, I'd imagine using pre-trained embeddings may not fare quite as well for fics if we're interested in their nuances. While it'll probably work for the bulk of generic words (e.g. 'happy', 'joyful'), some subtleties arising from fandom might not be caught. For example, 'alpha'. Searching for it in the demo gives 'betas' and 'omega' in the top 10 words, but it's obviously not capturing the same idea as A/B/O! We see 'standard_deviation', 'gamma', 'ligand' - which obviously indicates that 'alpha' is captured in the mathematical sense. In this model trained on D:BH fics, we see 'mate' and 'werewolf' popping up within the top 10 words instead. <br>
 
