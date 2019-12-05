@@ -10,7 +10,7 @@ Qualitatively, the model produces a visualisation and word similarities that do 
 <sub>*note that this implies that similar words =/= necessarily synonyms; e.g. 'happy' and its antonym 'unhappy' would still be considered similar under this definition. As I used the skip-gram word2vec model, the model is actually learning how to predict the context words given an input word (e.g. 'revolution'). Intuitively, 'happy' and 'unhappy' would have similar surrounding context words despite their opposing meanings.</sub><br>
 
 ## Visualisation<br>
-<b>Click here for the [visualisation](https://dru-r.github.io/w2v-embedding-projector/) of 18,733 words. Note</b>:<br>
+<b>Click here for the [3D visualisation](https://dru-r.github.io/w2v-embedding-projector/) of the embeddings of 18,733 words. Works better in desktop (Chrome) browsers. Note</b>:<br>
 1) Click on State 0 (under bookmarks) to load the saved 3D UMAP projection.<br>
 2) Works better in Chrome. I can't load the bookmark on Firefox for some reason.<br>
 3) Please search for 'toaster'.<br>
