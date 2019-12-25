@@ -7,7 +7,7 @@ The TL;DR of that post:<br>
 <br>
 So - how else to understand what characterises/distinguishes the content of gen/teen/mature/explicit D:BH fics?<br>
 <br>
-Quite recently I was introduced to the [structural topic modeling algorithm (STM)](https://cran.r-project.org/web/packages/stm/vignettes/stmVignette.pdf). I talked about [applying vanilla latent dirichlet allocation (LDA) before](dbh-vanillalda.md). Vanilla LDA really just retrieves the topics in the corpus and the topic distribution of each document. <br>
+Quite recently I was introduced to the [structural topic modeling algorithm (STM)](https://cran.r-project.org/web/packages/stm/vignettes/stmVignette.pdf). I've talked about [applying vanilla latent dirichlet allocation (LDA) before](dbh-vanillalda.md). Vanilla LDA really just retrieves the topics in the corpus and the topic distribution of each document. <br>
 <br>
 STM goes a step further - it can incorporate metadata about each document in the modeling (e.g. what rating was the story assigned?)*. This metadata may affect topic prevalence (e.g. how often does a topic appear in gen fics vs mature fics?) and/or topic content (e.g. how does the vocabulary of a topic about school differ between gen fics vs teen fics?). With this knowledge of the metadata, you can do pretty cool stuff like compare how topics are used differently by different authors, for example, or track topic prevalence over time.<br>
 <sub>*note that STM is not just the vanilla LDA algorithm + metadata. STM falls under the family of topic models but is a separate algorithm. LDA can be used to initialise an STM model but the default is to use non-negative matrix factorisation.</sub><br>
