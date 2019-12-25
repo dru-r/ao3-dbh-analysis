@@ -31,7 +31,6 @@ Full blog post on preprocessing and training [here](insert link later). STM done
 <sub><b>Prob = words with highest probability for the topic</b></sub><br>
 <sub><b>FREX = words both frequently appearing and relatively exclusive to the topic</b></sub><br>
 <sub><b>Words stemmed by the Porter stemmer (truncate word to (pseudo) root form; e.g. cities/city to citi)</b></sub><br>
-<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -234,29 +233,29 @@ Full blog post on preprocessing and training [here](insert link later). STM done
 
 ### Prevalence of topics in corpus of fics <br>
 <sub><b>Topic label followed by top 5 FREX words</b></sub><br>
-![image](docs/visuals/07_stm/topic_props.jpg)
+![image](/visuals/07_stm/topic_props.jpg)
 
 ## Comparison of topic prevalence between different ratings
 ### Focusing on Gen <br>
 Some results unlike the previous unigram comparison! We see that versus the other ratings, D:BH gen is characterised by relatively greater use of the art, resting, feelings, setting, affection, food/eating, movement, and school topics. These are rather reminiscent of fluff fics (to me, you may disagree). Check out the plots below:<br>
 <br>
 <b>Gen vs Teen</b><br>
-![image](docs/visuals/07_stm/gen-teen.jpg)<br>
+![image](/visuals/07_stm/gen-teen.jpg)<br>
 <b>Gen vs Mature</b><br>
-![image](docs/visuals/07_stm/gen-mature.jpg)<br>
+![image](/visuals/07_stm/gen-mature.jpg)<br>
 <b>Gen vs Explicit</b><br>
-![image](docs/visuals/07_stm/gen-explicit.jpg)<br>
+![image](/visuals/07_stm/gen-explicit.jpg)<br>
 ### Focusing on Teen <br>
 D:BH Teen and D:BH Mature don't seem to diverge greatly beyond Mature incorporating more usage of touch and smut topics (physicality). In contrast, D:BH Teen has a greater usage of topics like deviancy, injury, guns, crime (the building interiors topic is probably related to crime scene setups), android stress, the revolution versus D:BH Explicit. This closely matches the results from the unigram comparison (sanity check ticked). Note too how Gen and Teen are similar in their (lesser) usage of the smut topic versus Explicit (another sanity check ticked). Check out the plots below:<br> 
 <br>
 <b>Teen vs Mature</b><br>
-![image](docs/visuals/07_stm/teen-mature.jpg)<br>
+![image](/visuals/07_stm/teen-mature.jpg)<br>
 <b>Teen vs Explicit</b><br>
-![image](docs/visuals/07_stm/teen-explicit.jpg)<br>
+![image](/visuals/07_stm/teen-explicit.jpg)<br>
 ### Focusing on Mature <br>
 <b>Mature vs Explicit</b><br>
 Like D:BH Teen, D:BH Mature has greater usage of topics like crime cases, android stress, negative emotion, injury, guns, revolution versus D:BH explicit. D:BH Explicit is largely distinguished by its Mature counterpart by the smut topic (and to a much lesser degree, the touch and affection topics). These closely follow the unigram comparison (sanity check ticked). Check out the plot for the topic usage comparison below:<br>
-![image](docs/visuals/07_stm/mature-explicit.jpg)<br>
+![image](/visuals/07_stm/mature-explicit.jpg)<br>
 Note how strongly the smut topic is characteristic of Explicit fics (moreso than violence/crime-related topics for Mature fics) - this also matches the H-statistic of the unigrams. If you return to the charts from that post ([unigrams characteristic of mature fics](/visuals/05_kw/mature_n1.html), [unigrams characteristic of explicit fics](/visuals/05_kw/explicit_n1.html)), you'll see that the H-statistic (and thus the corresponding effect size) of smut words for Explicit fics is way larger than the violence-related words for Mature fics. <br>
 
 ## Comparison of vocabulary of seemingly similar topics
@@ -264,13 +263,13 @@ This is tangential to characterising the different ratings. But when I was label
 <br>
 Note: Words further along the left/right axis are more closely related to the topic labelled on the left/right respectively. Words in the middle (around the dotted line) are central to <i>both</i> topics. Word size is relative to its frequency within the two topics (bigger = more frequent).<br>
 ### Aggression vs Injury <br>
-![image](docs/visuals/07_stm/aggvsinjury.jpg)<br>
+![image](/visuals/07_stm/aggvsinjury.jpg)<br>
 ### Injury vs Guns <br>
-![image](docs/visuals/07_stm/injuryvsguns.jpg)<br>
+![image](/visuals/07_stm/injuryvsguns.jpg)<br>
 ### Touch vs Smut <br>
-![image](docs/visuals/07_stm/touchvssmut.jpg)<br>
+![image](/visuals/07_stm/touchvssmut.jpg)<br>
 ### Touch vs Affection <br>
-![image](docs/visuals/07_stm/touchvsaffection.jpg)<br>
+![image](/visuals/07_stm/touchvsaffection.jpg)<br>
 
 ## Ending notes <br>
 1) Though I accounted for story publishing date in the modeling, I did not show the results here. Previously I've already tried a dynamic topic model on this corpus and I didn't see a lot of changes in topics over time. I think the Detroit fandom is still too new, but it would be exciting to apply this to Harry Potter's. <br>
