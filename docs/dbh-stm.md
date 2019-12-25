@@ -23,7 +23,7 @@ Note that there are already some sanity checks in place for this analysis: <br>
 2) [Comparison of topic prevalence between different ratings](#comparison-of-topic-prevalence-between-different-ratings)<br>
 3) [Comparison of vocabulary of seemingly similar topics](#comparison-of-vocabulary-of-seemingly-similar-topics)<br>
 <br>
-Full blog post on preprocessing and training [here](insert link later). STM done and images generated [using the R package](https://www.structuraltopicmodel.com). No fancy interactives because I'm dog vomit bad at R.
+Full blog post on preprocessing and training [here](https://program-800.tumblr.com/post/189862392256/exploring-dbh-fics-part-7). STM done and images generated [using the R package](https://www.structuraltopicmodel.com). No fancy interactives because I'm dog vomit bad at R.
 
 ## Topics retrieved by STM <br>
 ### Vocabulary of topics
