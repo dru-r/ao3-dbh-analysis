@@ -237,7 +237,7 @@ Full blog post on preprocessing and training [here](insert link later). STM done
 
 ## Comparison of topic prevalence between different ratings
 ### Focusing on Gen <br>
-Some results unlike the previous unigram comparison! We see that versus the other ratings, D:BH gen is characterised by relatively greater use of the art, resting, feelings, setting, affection, food/eating, movement, and school topics. These are rather reminiscent of fluff fics (to me, you may disagree). Check out the plots below:<br>
+Some results unlike the previous unigram comparison! We see that versus the other ratings, D:BH gen is characterised by relatively slightly greater use of the art, resting, feelings, setting, affection, food/eating, movement, and school topics. These are rather reminiscent of fluff fics (to me, you may disagree). Check out the plots below:<br>
 <br>
 <b>Gen vs Teen</b><br>
 ![image](/visuals/07_stm/gen-teen.jpg)<br>
