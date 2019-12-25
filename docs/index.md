@@ -8,7 +8,7 @@ Main blog program-800 with all the details maintained [here](https://program-800
 4. [Average hits/kudos/comment counts/bookmarks received (split by publication month & rating)](https://nbviewer.jupyter.org/github/dru-r/ao3-dbh-analysis/blob/master/docs/dbh-avmetrics-month-v3.ipynb?flush_cache=True). Note that this looks only at one-shots.<br>
 5. [Differences in word use between fics of different ratings](dbh-ratingslanguse.md)<br>
 6. [Finding similar words based on word usage patterns in AO3 D:BH fics (word2vec)](dbh-w2vtrial.md)<br>
-7. [Difference in topic usage between AO3 D:BH fics of different ratings (STM)](dbh-stm.md)<br>
+7. [Differences in topic usage between AO3 D:BH fics of different ratings (STM)](dbh-stm.md)<br>
 ### Stuff currently in the works:
 8. Understanding how different characters are characterised by fic writers
 9. ??? (more to come!)
