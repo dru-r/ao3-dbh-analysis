@@ -273,5 +273,7 @@ Note: Words further along the left/right axis are more closely related to the to
 
 ## Ending notes <br>
 1) Though I accounted for story publishing date in the modeling, I did not show the results here. Previously I've already tried a dynamic topic model on this corpus and I didn't see a lot of changes in topics over time. I think the Detroit fandom is still too new, but it would be exciting to apply this to Harry Potter's. <br>
+<br>
 2) I'm concerned by how small the confidence intervals are in the topic prevalence comparison charts; I'm not really sure if this is expected behaviour (KIV-ing this). <br>
+<br>
 3) Overall I'm still quite thrilled by what it's achieved in this very specific corpus of fiction. The STM would be very cool to apply on more social science-driven corpora (as suggested by its original authors). However, I'm not entirely clear about covariate selection for modeling and assessing the 'quality' of the covariates used/model fit. I hope to find more readings on this.
