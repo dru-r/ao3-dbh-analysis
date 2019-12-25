@@ -1,4 +1,4 @@
-# Difference in topic usage between AO3 D:BH fics of different ratings
+# Differences in topic usage between AO3 D:BH fics of different ratings
 This is a follow-up of sorts to my first investigation [(using unigrams)](dbh-ratingslanguse.md).<br>
 The TL;DR of that post:<br>
 1) Mature and teen fics (to a lesser degree) typically use words that relate more to aggression (e.g. blood) than explicit fics. <br>
