@@ -9,8 +9,8 @@ Main blog program-800 with all the details maintained [here](https://program-800
 5. [Differences in word use between fics of different ratings](dbh-ratingslanguse.md)<br>
 6. [Finding similar words based on word usage patterns in AO3 D:BH fics (word2vec)](dbh-w2vtrial.md)<br>
 7. [Differences in topic usage between AO3 D:BH fics of different ratings (STM)](dbh-stm.md)<br>
+8. [Understanding fanon representations of characters from story tags](dbh-charadescripts.md):<b> IN PROGRESS</b><br>
 ### Stuff currently in the works:
-8. Understanding how different characters are characterised by fic writers
 9. ??? (more to come!)
 
 ## More details:
