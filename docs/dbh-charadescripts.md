@@ -1,4 +1,4 @@
-# Understanding fanon representations from tags
+# Understanding fanon representations from story tags
 It's no secret that fanon and canon representations of characters can diverge quite a bit - if you've read any amount of fic, that much is clear. This divergence fascinates me <i>a ton</i> and was one of the driving factors for me to pick up programming and text analysis. Why is there this divergence? Why are certain qualities ascribed more to some characters than others? 
 <br><br>
 I find this especially interesting in the realm of slash. Even in the absence of explicit homosexual relationships in canon material to guide assignment, we can often find certain characters appearing more as bottoms (or tops) than others in fanon. Are there characteristics - personality-wise, appearance-wise - in the character's canon form that predisposes them to a particular role in fanon?
