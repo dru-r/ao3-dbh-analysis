@@ -14,7 +14,7 @@ In this analysis, I focus <b>only on author-provided tags</b>. Obviously, that m
 
 ## Connor in fanon
 ![image](/visuals/08_charatags/connor_wc.png)<br>
-<b>Top 3 words in the wordcloud are: <i>bottom, adorable, trans</i>.<b> <br>
+<b>Top 3 words in the wordcloud are: <i>bottom, adorable, trans</i>.</b> <br>
 This is interesting given that Connor in canon is the most advanced android model out on the field and is built specifically to hunt other (deviant) androids. In most of his routes, you will kill at least one person/android. This includes the 'good' Connor route, if you want to keep him alive.
 <br><br>
 For clarity I separated 'deviant', 'machine', and 'human' descriptions from the wordcloud. The breakdown is here: <br>
