@@ -13,7 +13,7 @@ In this analysis, I focus <b>only on author-provided tags</b>. Obviously, that m
 1) [Connor](#connor-in-fanon)<br>
 2) [RK900](#rk900-in-fanon)<br>
 <br>
-[Reflections](#reflections)<br>
+<b>Extra</b>: [Personal reflections as a fic writer](#reflections)<br>
 
 ## Connor in fanon
 ![image](/visuals/08_charatags/connor_wc.png)<br>
@@ -35,9 +35,9 @@ We see a clear preference for deviancy in RK900 too.
 
 ## Reflections
 <b> Or, personal expositions as a fic writer, that nobody asked for</b><br><br>
-<b>ON CONNOR</b>: To me, I think the wordcloud really shows the success of Connor's design. It's not explicitly discussed in the game (though Connor does explain to Hank that he was designed in this manner to be able to work well with humans), but I feel that Connor's soft/gentle design had a lot of impact overall on how everything played out. If Connor didn't look the way he does:<br>
-1) Humans would not let their guard down around him. Of course, that means less people being rude to him, but it also would make it harder for him to get around/snoop.<br>
-2) Connor may get less sympathy and/or be played as a killing machine more than a conflicted deviant. <br>
-3) Hank, Hank, Hank. His relationship with Hank. Even though Hank constantly says the opposite, many of his actions show that Connor's design does have an impact on him. There's treating Connor like a human, of course (and getting annoyed when Connor does something in-human that breaks the illusion), telling Connor to get behind him before they open a fugitive's apartment (logically, this makes little sense - Connor is technically replaceable, he should go in first), and his huge hang-up at the bridge about what/who Connor actually is. <br>
+<b>ON CONNOR</b>: To me, I think the wordcloud really shows the success of Connor's design. It's not explicitly discussed in the game (though Connor does explain to Hank that he was designed in this manner to be able to work well with humans), but I feel that Connor's soft/gentle design had a lot of impact overall on how everything played out. If Connor didn't look the way he does:<br><br>
+1) Humans would not let their guard down around him. Of course, that means less people being rude to him, but it also would make it harder for him to get around/snoop.<br><br>
+2) Connor may get less sympathy and/or be played as a killing machine more than a conflicted deviant. <br><br>
+3) Hank, Hank, Hank. His relationship with Hank. Even though Hank constantly says the opposite, many of his actions show that Connor's design does have an impact on him. There's treating Connor like a human, of course (and getting annoyed when Connor does something in-human that breaks the illusion), telling Connor to get behind him before they open a fugitive's apartment (logically, this makes little sense - Connor is technically replaceable, he should go in first), and his huge hang-up at the bridge about what/who Connor actually is. <br><br>
 Connor being aware of the implications of his design suggests to me that he isn't really that clueless or oblivious. Yes, he does say some offbeat things early in the game but he seems to learn pretty quickly. That lopsided grin of his? I think he learned it from Hank, in the scene after he breaks into Hank's house and sobers him up. <i>He mirrors the grin that Hank has on his face, back to Hank.</i> When asking Hank for extra time on the crime scene, he chooses to shoot Hank puppy eyes (and this leads to Hank obliging).<br><br>
 TL;DR yes, Connor's cute. He's best boi to me too. But my interpretation of him is that he's a lot smarter than he wants to let on; he probably knows to some degree that his design can be used for manipulation - so that's why I found the results of the worldcloud really interesting (though I could already infer the general fanon depiction of Connor from copious fic reading).
