@@ -11,6 +11,7 @@ In this analysis, I focus <b>only on author-provided tags</b>. Obviously, that m
 
 ## Characters
 1) [Connor](#connor-in-fanon)
+2) [RK900](#rk900-in-fanon)
 
 ## Connor in fanon
 ![image](/visuals/08_charatags/connor_wc.png)<br>
@@ -20,3 +21,11 @@ This is interesting given that Connor in canon is the most advanced android mode
 For clarity I separated 'deviant', 'machine', and 'human' descriptions from the wordcloud. The breakdown is here: <br>
 ![image](/visuals/08_charatags/connor_is.jpg) <br>
 We see a clear preference for deviant Connor.
+
+## RK900 in fanon
+![image](/visuals/08_charatags/nines_wc.png)<br>
+<b>Top 3 words in the wordcloud are: <i>top, protective, soft</i>.</b> <br>
+<br><br>
+For clarity I separated 'deviant', 'machine', and 'human' descriptions from the wordcloud. The breakdown is here: <br>
+![image](/visuals/08_charatags/nines_is.jpg) <br>
+Again, we see a clear preference for deviancy.
