@@ -13,7 +13,6 @@ In this analysis, I focus <b>only on author-provided tags</b>. Obviously, that m
 1) [Connor](#connor-in-fanon)<br>
 2) [RK900](#rk900-in-fanon)<br>
 <br>
-
 ## Connor in fanon
 ![image](/visuals/08_charatags/connor_wc.png)<br>
 <b>Top 3 words in the wordcloud are: <i>bottom, adorable, trans</i>.</b> <br>
