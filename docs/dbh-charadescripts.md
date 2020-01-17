@@ -10,9 +10,10 @@ In this analysis, I focus <b>only on author-provided tags</b>. Obviously, that m
 <b>This analysis is still in-progress. I will update with other characters as I complete them.</b> Wordclouds generated using the WordCloud library of Python. Character masks are screencaps I got off Google and edited myself.
 
 ## Characters
-![alt-text-1](/visuals/08_charatags/connor_.png "Connor") ![alt-text-2](/visuals/08_charatags/nines_.png "RK900")
- 
+| [![Connor](/visuals/08_charatags/connor_.png)](#connor-in-fanon)    | [![RK900](/visuals/08_charatags/nines_.png)](#rk900-in-fanon) |
+|:---:|:---:|
 <br>
+
 ## Connor in fanon
 ![image](/visuals/08_charatags/connor_wc.png)<br>
 <b>Top 3 words in the wordcloud are: <i>bottom, adorable, trans</i>.</b> <br>
