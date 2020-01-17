@@ -15,6 +15,8 @@ In this analysis, I focus <b>only on author-provided tags</b>. Obviously, that m
     <img src="https://raw.githubusercontent.com/dru-r/ao3-dbh-analysis/master/docs/visuals/08_charatags/connor_.png" width="200" title="Connor" alt="Connor"/></a>
   <a href="https://dru-r.github.io/ao3-dbh-analysis/dbh-charadescripts.html#rk900-in-fanon">
     <img src="https://raw.githubusercontent.com/dru-r/ao3-dbh-analysis/master/docs/visuals/08_charatags/nines_3.png" width="200" title="RK900" alt="RK900"/></a>
+  <a href="https://dru-r.github.io/ao3-dbh-analysis/dbh-charadescripts.html#hank-anderson-in-fanon">
+    <img src="https://raw.githubusercontent.com/dru-r/ao3-dbh-analysis/master/docs/visuals/08_charatags/hank_.png" width="200" title="Hank Anderson" alt="Hank Anderson"/></a>
 </p>
 
 ## Connor in fanon
@@ -34,3 +36,8 @@ RK900 is another interesting case. We don't actually have much of a "canon" RK90
 Again, for clarity I separated 'deviant', 'machine', and 'human' descriptions from the wordcloud. The breakdown is here: <br>
 ![image](/visuals/08_charatags/nines_is.jpg) <br>
 We see a clear preference for deviancy in RK900 too.
+
+## Hank Anderson in fanon
+![image](/visuals/08_charatags/hank_wc.png)<br>
+<b>Top 3 words in the wordcloud are: <i>good parent, parent, protective</i>.</b> <br>
+My fic reading personally revolves mainly around RK1700 so fanon Hank as parental never really stuck out to me as a huge trait - but this wordcloud suggests otherwise! Very understandable, given Hank's tragic backstory regarding his son and his in-game protectiveness of Connor/referring to Connor as 'son' (in some routes; the ones where he isn't openly antagonistic and wants to blow Connor's processors out). Hank's canonical general depressive and self-destructive tendencies are also reflected in the wordcloud. There's also a fair amount of exploration as Hank as the android instead.
