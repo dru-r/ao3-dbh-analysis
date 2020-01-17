@@ -14,7 +14,7 @@ In this analysis, I focus <b>only on author-provided tags</b>. Obviously, that m
   <a href="https://dru-r.github.io/ao3-dbh-analysis/dbh-charadescripts.html#connor-in-fanon">
     <img src="https://raw.githubusercontent.com/dru-r/ao3-dbh-analysis/master/docs/visuals/08_charatags/connor_.png" width="200" title="Connor" alt="Connor"/></a>
   <a href="https://dru-r.github.io/ao3-dbh-analysis/dbh-charadescripts.html#rk900-in-fanon">
-    <img src="https://raw.githubusercontent.com/dru-r/ao3-dbh-analysis/master/docs/visuals/08_charatags/nines_.png" width="200" title="RK900" alt="RK900"/></a>
+    <img src="https://raw.githubusercontent.com/dru-r/ao3-dbh-analysis/master/docs/visuals/08_charatags/nines_2.png" width="200" title="RK900" alt="RK900"/></a>
 </p>
 
 ## Connor in fanon
