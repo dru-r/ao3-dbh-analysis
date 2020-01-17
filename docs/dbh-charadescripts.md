@@ -11,8 +11,8 @@ In this analysis, I focus <b>only on author-provided tags</b>. Obviously, that m
 
 ## Characters
 <p float="left">
-  <img src="/visuals/08_charatags/connor_.png" width="100" />
-  <img src="/visuals/08_charatags/nines_.png" width="100" /> 
+  <img src="https://raw.githubusercontent.com/dru-r/ao3-dbh-analysis/master/docs/visuals/08_charatags/connor_.png" width="100" />
+  <img src="https://raw.githubusercontent.com/dru-r/ao3-dbh-analysis/master/docs/visuals/08_charatags/nines_.png" width="100" /> 
 </p>
 
 ## Connor in fanon
