@@ -11,7 +11,8 @@ Main blog program-800 with all the details maintained [here](https://program-800
 7. [Differences in topic usage between AO3 D:BH fics of different ratings (STM)](dbh-stm.md)<br>
 8. [Understanding fanon representations of characters from story tags](dbh-charadescripts.md):<b> IN PROGRESS</b><br>
 ### Stuff currently in the works:
-9. ??? (more to come!)
+9. Examining dialogue
+10. ??? (more to come!)
 
 ## More details:
 #### What is this?
