@@ -10,9 +10,10 @@ In this analysis, I focus <b>only on author-provided tags</b>. Obviously, that m
 <b>This analysis is still in-progress. I will update with other characters as I complete them.</b> Wordclouds generated using the WordCloud library of Python. Character masks are screencaps I got off Google and edited myself.
 
 ## Characters
-| [![Connor](/visuals/08_charatags/connor_.png)](#connor-in-fanon)    | [![RK900](/visuals/08_charatags/nines_.png)](#rk900-in-fanon) |
-|:---:|:---:|
-<br>
+<p float="left">
+  <img src="/visuals/08_charatags/connor_.png" width="100" />
+  <img src="/visuals/08_charatags/nines_.png" width="100" /> 
+</p>
 
 ## Connor in fanon
 ![image](/visuals/08_charatags/connor_wc.png)<br>
