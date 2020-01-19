@@ -1,5 +1,5 @@
 # AO3 Detroit: Become Human fanfic analysis
-Main blog program-800 with all the details maintained [here](https://program-800.tumblr.com). Feel free to drop any feedback there!
+Main blog program-800 with all the details maintained [here](https://program-800.tumblr.com). Feel free to drop any feedback there via the ask! If you don't have a Tumblr and would rather I reply you directly via email, please include a name and your email in your ask.
 
 ## Available analyses:
 1. [Publishing frequencies in the fandom by month](dbh-pubfreqs.md)<br>
@@ -9,7 +9,7 @@ Main blog program-800 with all the details maintained [here](https://program-800
 5. [Differences in word use between fics of different ratings](dbh-ratingslanguse.md)<br>
 6. [Finding similar words based on word usage patterns in AO3 D:BH fics (word2vec)](dbh-w2vtrial.md)<br>
 7. [Differences in topic usage between AO3 D:BH fics of different ratings (STM)](dbh-stm.md)<br>
-8. [Understanding fanon representations of characters from story tags](dbh-charadescripts.md):<b> IN PROGRESS</b><br>
+8. [Understanding fanon representations of characters from story tags](dbh-charadescripts.md)
 ### Stuff currently in the works:
 9. Examining dialogue
 10. ??? (more to come!)
