@@ -18,7 +18,7 @@ Wordclouds generated using the WordCloud library of Python. Character masks are 
   <a href="https://dru-r.github.io/ao3-dbh-analysis/dbh-charadescripts.html#hank-anderson-in-fanon">
     <img src="https://raw.githubusercontent.com/dru-r/ao3-dbh-analysis/master/docs/visuals/08_charatags/hank_.png" width="200" title="Hank Anderson" alt="Hank Anderson"/></a>
   <a href="https://dru-r.github.io/ao3-dbh-analysis/dbh-charadescripts.html#gavin-reed-in-fanon">
-    <img src="https://raw.githubusercontent.com/dru-r/ao3-dbh-analysis/master/docs/visuals/08_charatags/gavin_.png" width="200" title="Hank Anderson" alt="Gavin Reed"/></a>
+    <img src="https://raw.githubusercontent.com/dru-r/ao3-dbh-analysis/master/docs/visuals/08_charatags/gavin_.png" width="200" title="Gavin Reed" alt="Gavin Reed"/></a>
 </p>
 
 <b>Extra discussion: [Bottoms, submissives, alphas](#bottoms-submissives-alphas)</b><br>
