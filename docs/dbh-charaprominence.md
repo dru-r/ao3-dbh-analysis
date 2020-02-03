@@ -30,7 +30,7 @@ Very clean HTML files so I just wrote some code to pull out character names and 
 <br>
 Following this, I selected 40 named characters (i.e., no random policeman/passer-bys) for visualisation and comparison. These 40 characters together had 3745 transcribed lines.<br>
 ### Results<br>
-![image](/visuals/09_prominence/canon.png)<br>
+![image](/visuals/09_prominence/canon.PNG)<br>
 [Click here for the interactive version - with numbers, sample dialogue](/visuals/09_prominence/dbhgame_dialogpie.html)<br>
 <br>
 <b>Note the percentage is calculated from the lines of these 40 characters only</b> (i.e., does not cover dialogue counts of unnamed policemen, unnamed deviants, etc). Connor, Kara, and Markus are the three main playable characters, so it's no wonder they take up almost 50% of the chart. North has more lines than the rest of the Jericho members since there are scenarios where she takes Markus' place. Fan favourites like Gavin actually hold only a very little slice of this dialogue pie.<br>
@@ -47,14 +47,14 @@ Clearly this is not foolproof since everyone has different ideas of what constit
 4) Tags for ‘<i>Jericho’  </i>and<i> ‘Jericrew’, </i>etc - I added 0.25 to the counts of Jericho members (Markus, North, Simon, and Josh) each time such a tag appeared. Whether I did that or not probably wouldn’t have drastically changed the results though, since there were only 87 Jericho-related character tags.<br><br>
 I then pulled out the tags referring to the same 40 characters I had looked at for the game dialogue and made a pie chart. These 40 characters together received 53274 tags.<br>
 ### Results<br>
-![image](/visuals/09_prominence/fandom.png)<br>
+![image](/visuals/09_prominence/fandom.PNG)<br>
 [Click here for the interactive version - better view of numbers](/visuals/09_prominence/dbhfic_charatagprops.html)<br>
 <br>
 <b> Note the percentage is calculated from the total number of times these 40 characters were tagged</b> (e.g., does not include tag counts for own characters/OCs - which were tagged quite a bit as well). Connor holds on to his share in the AO3 fic fandom and there are huge jumps from Gavin and RK900. A number of DPD members (Tina, Fowler, Chris) also seem to have slightly bigger slices of the pie in fandom.<br><br>
 Trying to compare two pie-charts (especially those little slivers) is probably living hell though, so I put the information from both into a barchart.<br.
 
 ## Final results<br>
-![image](/visuals/09_prominence/canonvsfandom_static.png)<br>
+![image](/visuals/09_prominence/canonvsfandom_static.PNG)<br>
 [Click here for the interactive version - better view of numbers](/visuals/09_prominence//visuals/09_prominence/dbhgame_vs_fic.html)<br><br>
 I sorted the characters so the leftmost ones are the ones that lost the most prominence moving from canon to fandom and the rightmost ones are the ones that gained the most. The middle ones are well, just middling - not much change. Obviously the percentages are not one-on-one comparable since prominence had to be operationalised differently between the two sources, but I think it does capture a trend. Of the main playables, only Connor sees a slight gain (not sure how much more he can gain to be honest, such a dominant character in canon and fandom!) - Markus and Kara are much less emphasised than in canon. Perhaps because Connor is such a popular character, his DPD coworkers end up getting a boost too (since they may be more likely to appear when he does in fics?).<br>
 
@@ -66,7 +66,7 @@ This graph basically reflects how frequently characters have been tagged togethe
 <b>Node size and colour</b>: Nodes are sized by weighted degree. Brighter nodes are those with greater weighted degree.<br>
 Hover over nodes and links to get more information!<br><br>
 Note that all the information reflected in the graph (about tag count, top 5 characters that appear with said character, number of unique characters said character has appeared with in fics) were calculated from the initial graph of all characters. However, the displayed interactive graph is a condensed version. The initial unfiltered graph looked like this:<br><br>
-![image](/visuals/09_prominence/hairball.png)<br>
+![image](/visuals/09_prominence/hairball.PNG)<br>
 Big oof.<br><br>
 So I used [Serrano et al.'s (2009) disparity filter](https://www.pnas.org/content/106/16/6483.short) at α=.05 to filter the graph. Basically the disparity filter purports to preserve important connections in the network via testing for statistical significance in each link of the network (i.e., the link likely did not occur by random chance). As we can see from the final interactive graph, it cleans up a lot of the miscellaneous links and makes reading it much easier.<br><br>
 For more networks, I also have one for ships up [here](https://dru-r.github.io/ao3-dbh-analysis/dbh-shipnetwork.html).
