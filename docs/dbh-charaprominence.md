@@ -38,7 +38,7 @@ Following this, I selected 40 named characters (i.e., no random policeman/passer
 ## Share of character tags from fics
 Dataset is my usual pool of 13k+ fics (I need to update this sometime!).<br>
 ### Preprocessing and assumptions
-I collated all the tags that fell under the Character category (61333 tags). I had to do a fair bit of manual cleaning as usual due to misspellings/different ways to tag a character.<br><br>
+I collated all the tags that fell under the AO3 character class (61333 tags). I had to do a fair bit of manual cleaning as usual due to misspellings/different ways to tag a character.<br><br>
 <b>Assumption:</b> Picking out dialogue lines from fic and <b>attributing it correctly to characters</b> is an extremely difficult task. So, I chose tags - I assumed that characters that are important or at the very least more than a one-liner would receive a tag. At the same time, I assumed that characters that are really just one-liner appearances (like “<i>He saw Nines walk across the room.” </i>with zero mention of Nines in the rest of the fic) would <i>not</i> get tagged. <br><br>
 Clearly this is not foolproof since everyone has different ideas of what constitutes a character that should be tagged, but it’s what I worked with (otherwise I would have to read and check every fic - and even then the final decision of 'was this character important enough to warrant a tag' is pretty subjective). Note:<br><br>
 1) Ambiguous tags like “<i>everyone</i>” were not assigned to any character.<br>
@@ -56,8 +56,8 @@ Trying to compare two pie-charts (especially those little slivers) is probably l
 ## Final results<br>
 ![image](/visuals/09_prominence/canonvsfandom_static.PNG)<br>
 [Click here for the interactive version - better view of numbers](/visuals/09_prominence/dbhgame_vs_fic.html)<br><br>
-I sorted the characters so the leftmost ones are the ones that lost relatively more prominence moving from canon to fandom and the rightmost ones are the ones that gained the most. Obviously the exact percentage numbers are not one-on-one comparable since prominence had to be operationalised differently between the two sources, but I think it does capture a trend.<br><br>
-Of the main playables, only Connor sees a slight gain (not sure how much more he can gain to be honest, such a dominant character in canon and fandom!) - Markus and Kara are much less emphasised than in canon. Perhaps because Connor is such a popular character, his DPD coworkers end up getting a boost too (since they may be more likely to appear when he does in fics?).<br>
+I sorted the characters by prominence in fandom. Obviously the exact percentage numbers are not one-on-one comparable since prominence had to be operationalised differently between the two sources, but it does help us get a gauge of who's getting relatively more screen-time in fandom (and who's been whittled back on).<br><br>
+Of the main playables, only Connor sees a slight gain (not sure how much more he can gain to be honest, such a dominant character in canon and fandom!) - Markus and Kara appear relatively much less emphasised than in canon. Perhaps because Connor is such a popular character, his DPD coworkers end up getting a boost too (since they may be more likely to appear when he does in fics?).<br>
 
 ## A character cooccurence network built from fics
 I didn't touch on this in my Tumblr post (since I felt it didn't really add to the analysis), but since I had gone out of my way to clean 61333 tags, I decided to [make this little graph](/visuals/09_prominence/ao3_dbhchara_cooccur_filtered.html).<br>
