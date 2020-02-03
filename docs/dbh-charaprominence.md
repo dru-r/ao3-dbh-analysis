@@ -1,6 +1,6 @@
 # Comparison of character prominence between the actual game and fandom
 If you're here from my Tumblr post and looking for the interactive versions of the charts, here they are!<br>
-[Pie chart of game dialogue share](/visuals/09_prominence/dbhgame_dialogpie.html) || [Pie chart of fic tag share](/visuals/09_prominence/dbhfic_charatagprops.html) || [Bar chart comparing percentages from game/fic](/visuals/09_prominence/dbhgame_vs_fic.html)<br> 
+[Pie chart of game dialogue share](/visuals/09_prominence/dbhgame_dialogpie.html) | [Pie chart of fic tag share](/visuals/09_prominence/dbhfic_charatagprops.html) | [Bar chart comparing percentages from game/fic](/visuals/09_prominence/dbhgame_vs_fic.html)<br> 
 <br>
 <b>If you aren't from Tumblr, do read on first before viewing the charts</b>. Usually I like to dump all the methodology in a separate Tumblr post and drop a link here, but I think for this analysis it is best presented together with the methods since I made a fair bit of assumptions. Most of the writing here reprinted from my Tumblr post.<br><br>
 The question that sparked this little analysis was quite simple: which characters gained prominence moving from canon to fics, and which characters actually lost prominence? I won't pretend I had a compelling scientific reason for doing this (as with most of the other stuff I've done on here); I just wonder a lot about (what some might consider rather pointless) things in general.<br>
@@ -29,7 +29,7 @@ Very clean HTML files so I just wrote some code to pull out character names and 
 <b>Assumption 3</b>: The game has multiple scenarios based on your choices. I chose not to distinguish between them, taking the whole transcription as a long text document. I thought that if the writers decided a character was important enough to have/be in several variants of the scenario (e.g. Connor’s multiple endings versus the unnamed android Markus picked up paint from), I should not discount that.<br>
 <br>
 Following this, I selected 40 named characters (i.e., no random policeman/passer-bys) for visualisation and comparison. These 40 characters together had 3745 transcribed lines.<br>
-### Results
+### Results<br>
 ![image](/visuals/09_prominence/canon.png)<br>
 [Click here for the interactive version - with numbers, sample dialogue](/visuals/09_prominence/dbhgame_dialogpie.html)<br>
 <br>
@@ -46,14 +46,14 @@ Clearly this is not foolproof since everyone has different ideas of what constit
 3) Tags that were in the style of “<i>Connor (mentioned)</i>” were <b>still added to their respective characters</b>. Again, we all have varying ideas of what a “mention” actually means, so I decided to be less stringent and more inclusive here.<br>
 4) Tags for ‘<i>Jericho’  </i>and<i> ‘Jericrew’, </i>etc - I added 0.25 to the counts of Jericho members (Markus, North, Simon, and Josh) each time such a tag appeared. Whether I did that or not probably wouldn’t have drastically changed the results though, since there were only 87 Jericho-related character tags.<br><br>
 I then pulled out the tags referring to the same 40 characters I had looked at for the game dialogue and made a pie chart. These 40 characters together received 53274 tags.<br>
-### Results
+### Results<br>
 ![image](/visuals/09_prominence/fandom.png)<br>
 [Click here for the interactive version - better view of numbers](/visuals/09_prominence/dbhfic_charatagprops.html)<br>
 <br>
 <b> Note the percentage is calculated from the total number of times these 40 characters were tagged</b> (e.g., does not include tag counts for own characters/OCs - which were tagged quite a bit as well). Connor holds on to his share in the AO3 fic fandom and there are huge jumps from Gavin and RK900. A number of DPD members (Tina, Fowler, Chris) also seem to have slightly bigger slices of the pie in fandom.<br><br>
 Trying to compare two pie-charts (especially those little slivers) is probably living hell though, so I put the information from both into a barchart.<br.
 
-## Final results
+## Final results<br>
 ![image](/visuals/09_prominence/canonvsfandom_static.png)<br>
 [Click here for the interactive version - better view of numbers](/visuals/09_prominence//visuals/09_prominence/dbhgame_vs_fic.html)<br><br>
 I sorted the characters so the leftmost ones are the ones that lost the most prominence moving from canon to fandom and the rightmost ones are the ones that gained the most. The middle ones are well, just middling - not much change. Obviously the percentages are not one-on-one comparable since prominence had to be operationalised differently between the two sources, but I think it does capture a trend. Of the main playables, only Connor sees a slight gain (not sure how much more he can gain to be honest, such a dominant character in canon and fandom!) - Markus and Kara are much less emphasised than in canon. Perhaps because Connor is such a popular character, his DPD coworkers end up getting a boost too (since they may be more likely to appear when he does in fics?).<br>
