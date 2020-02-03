@@ -10,7 +10,7 @@ Main blog program-800 with all the details maintained [here](https://program-800
 6. [Finding similar words based on word usage patterns in AO3 D:BH fics (word2vec)](dbh-w2vtrial.md)<br>
 7. [Differences in topic usage between AO3 D:BH fics of different ratings (STM)](dbh-stm.md)<br>
 8. [Understanding fanon representations of characters from story tags](dbh-charadescripts.md)<br>
-9. [Comparison of character prominence between the actual game and fandom](dbh-charaprominence.md)
+9. [Character prominence in the actual game versus fandom](dbh-charaprominence.md)
 ### Stuff currently in the works:
 10. Examining dialogue
 11. ??? (more to come!)
