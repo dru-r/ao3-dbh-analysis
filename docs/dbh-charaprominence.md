@@ -51,7 +51,7 @@ I then pulled out the tags referring to the same 40 characters I had looked at f
 [Click here for the interactive version - better view of numbers](/visuals/09_prominence/dbhfic_charatagprops.html)<br>
 <br>
 <b> Note the percentage is calculated from the total number of times these 40 characters were tagged</b> (e.g., does not include tag counts for own characters/OCs - which were tagged quite a bit as well). Connor holds on to his share in the AO3 fic fandom and there are huge jumps from Gavin and RK900. A number of DPD members (Tina, Fowler, Chris) also seem to have slightly bigger slices of the pie in fandom.<br><br>
-Trying to compare two pie-charts (especially those little slivers) is probably living hell though, so I put the information from both into a barchart.<br.
+Trying to read two pie-charts (especially those little slivers) is probably living hell though, so I put the information from both into a barchart.<br.
 
 ## Final results<br>
 ![image](/visuals/09_prominence/canonvsfandom_static.PNG)<br>
