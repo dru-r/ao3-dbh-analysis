@@ -55,7 +55,7 @@ Trying to compare two pie-charts (especially those little slivers) is probably l
 
 ## Final results<br>
 ![image](/visuals/09_prominence/canonvsfandom_static.PNG)<br>
-[Click here for the interactive version - better view of numbers](/visuals/09_prominence//visuals/09_prominence/dbhgame_vs_fic.html)<br><br>
+[Click here for the interactive version - better view of numbers](/visuals/09_prominence/dbhgame_vs_fic.html)<br><br>
 I sorted the characters so the leftmost ones are the ones that lost the most prominence moving from canon to fandom and the rightmost ones are the ones that gained the most. The middle ones are well, just middling - not much change. Obviously the percentages are not one-on-one comparable since prominence had to be operationalised differently between the two sources, but I think it does capture a trend. Of the main playables, only Connor sees a slight gain (not sure how much more he can gain to be honest, such a dominant character in canon and fandom!) - Markus and Kara are much less emphasised than in canon. Perhaps because Connor is such a popular character, his DPD coworkers end up getting a boost too (since they may be more likely to appear when he does in fics?).<br>
 
 ## A character cooccurence network built from fics
