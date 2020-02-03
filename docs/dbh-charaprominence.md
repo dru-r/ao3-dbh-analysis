@@ -1,9 +1,9 @@
-# Comparison of character prominence between the actual game and fandom
+# Character prominence in the actual game versus fandom
 If you're here from my Tumblr post and looking for the interactive versions of the charts, here they are!<br>
 [Pie chart of game dialogue share](/visuals/09_prominence/dbhgame_dialogpie.html) | [Pie chart of fic tag share](/visuals/09_prominence/dbhfic_charatagprops.html) | [Bar chart comparing percentages from game/fic](/visuals/09_prominence/dbhgame_vs_fic.html)<br> 
 <br>
 <b>If you aren't from Tumblr, do read on first before viewing the charts</b>. Usually I like to dump all the methodology in a separate Tumblr post and drop a link here, but I think for this analysis it is best presented together with the methods since I made a fair bit of assumptions. Most of the writing here reprinted from my Tumblr post.<br><br>
-The question that sparked this little analysis was quite simple: which characters gained prominence moving from canon to fics, and which characters actually lost prominence? I won't pretend I had a compelling scientific reason for doing this (as with most of the other stuff I've done on here); I just wonder a lot about (what some might consider rather pointless) things in general.<br>
+The question that sparked this little analysis was quite simple: which characters are relatively more prominent in canon and are they the same ones prominent in the fandom? I won't pretend I had a compelling scientific reason for doing this (as with most of the other stuff I've done on here); I just wonder a lot about (what some might consider rather pointless) things in general.<br>
 ## Content
 1) [Considerations](#considerations) <br>
 2) [Dialogue share from the actual game](#dialogue-share-from-the-actual-game)<br>
@@ -57,7 +57,7 @@ Trying to read two pie-charts (especially those little slivers) is probably livi
 ![image](/visuals/09_prominence/canonvsfandom_static.PNG)<br>
 [Click here for the interactive version - better view of numbers](/visuals/09_prominence/dbhgame_vs_fic.html)<br><br>
 I sorted the characters by prominence in fandom. Obviously the exact percentage numbers are not one-on-one comparable since prominence had to be operationalised differently between the two sources, but it does help us get a gauge of who's getting relatively more screen-time in fandom (and who's been whittled back on).<br><br>
-Of the main playables, only Connor sees a slight gain (not sure how much more he can gain to be honest, such a dominant character in canon and fandom!) - Markus and Kara appear relatively much less emphasised than in canon. Perhaps because Connor is such a popular character, his DPD coworkers end up getting a boost too (since they may be more likely to appear when he does in fics?).<br>
+Of the main playables, Connor is rather stable (such a dominant character in canon and fandom!) - Markus and Kara appear relatively much less emphasised in fandom. Perhaps because Connor is such a popular character, his DPD coworkers end up getting a boost too (since they may be more likely to appear when he does in fics?).<br>
 
 ## A character cooccurence network built from fics
 I didn't touch on this in my Tumblr post (since I felt it didn't really add to the analysis), but since I had gone out of my way to clean 61333 tags, I decided to [make this little graph](/visuals/09_prominence/ao3_dbhchara_cooccur_filtered.html).<br>
