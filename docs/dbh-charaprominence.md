@@ -8,7 +8,7 @@ The question that sparked this little analysis was quite simple: which character
 1) [Considerations](#considerations) <br>
 2) [Dialogue share from the actual game](#dialogue-share-from-the-actual-game)<br>
 3) [Share of character tags from AO3 fics](#share-of-character-tags-from-fics)<br>
-4) [Final results](#final-results)
+4) [Final results](#final-results)<br>
 5) Extra: [A character cooccurence network built from AO3 fics](#a-character-cooccurence-network-built-from-fics)
 <br><br>
 ## Considerations
