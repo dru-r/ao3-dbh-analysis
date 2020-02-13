@@ -1,5 +1,8 @@
 # AO3 Detroit: Become Human fanfic analysis
-Main blog program-800 with all the details maintained [here](https://program-800.tumblr.com). Feel free to drop any feedback there via the ask! If you don't have a Tumblr and would rather I reply you directly via email, please include a name and your email in your ask.
+Main blog program-800 with all the details maintained [here](https://program-800.tumblr.com). Feel free to drop any feedback there [via the ask](https://program-800.tumblr.com/ask)! If you don't have a Tumblr and would rather I reply you directly via email, please include a name and your email in your ask.
+
+## Status of the project:
+There's quite a bit going on in my life right now so I'm not going to be updating as often, but the project is still alive.
 
 ## Available analyses:
 1. [Publishing frequencies in the fandom by month](dbh-pubfreqs.md)<br>
@@ -12,7 +15,7 @@ Main blog program-800 with all the details maintained [here](https://program-800
 8. [Understanding fanon representations of characters from story tags](dbh-charadescripts.md)<br>
 9. [Character prominence in the actual game versus fandom](dbh-charaprominence.md)
 ### Stuff currently in the works:
-10. Examining dialogue
+10. An updated scrape + a few preliminary ideas
 11. ??? (more to come!)
 
 ## More details:
