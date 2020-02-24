@@ -42,5 +42,5 @@ The thicker the link between two characters, the more times they've been shipped
 - Red: A relatively greater percentage of the fics shipping the 2 characters are explicit (~38% and above, 70th quantile and above)
 
 ### Edit logs:
-05/11/19: Fixed some dead links.
+05/11/19: Fixed some dead links.<br>
 24/02/20: Fixed an error in the code that counted multiple ships within the same fic (e.g. Fic ships: Connor/Hank, Connor/Hank/RK900 - Connor gets counted twice).
