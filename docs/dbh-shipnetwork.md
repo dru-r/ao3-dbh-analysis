@@ -26,8 +26,8 @@ The bigger the character's node, the more characters that character has been shi
 
 #### Node colour:
 - White: Most of the fics shipping the character are not explicit (~10% and below; 35th quantile and below)
-- Orange: A relatively moderate percentage of fics shipping the character are explicit (~10% to ~30%, 35th to 65th quantile)
-- Red: A relatively greater percentage of the fics shipping the character are explicit (~30% and above, 65th quantile and above)
+- Orange: A relatively moderate percentage of fics shipping the character are explicit (~10% to ~29%, 35th to 65th quantile)
+- Red: A relatively greater percentage of the fics shipping the character are explicit (~29% and above, 65th quantile and above)
 
 #### Info when hovering over a link between two characters:
 Hovering over a link between two characters gives you information on:
@@ -43,3 +43,4 @@ The thicker the link between two characters, the more times they've been shipped
 
 ### Edit logs:
 05/11/19: Fixed some dead links.
+24/02/20: Fixed an error in the code that counted multiple ships within the same fic (e.g. Fic ships: Connor/Hank, Connor/Hank/RK900 - Connor gets counted twice).
