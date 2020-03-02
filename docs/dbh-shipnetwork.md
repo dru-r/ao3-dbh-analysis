@@ -44,4 +44,4 @@ The thicker the link between two characters, the more times they've been shipped
 ### Edit logs:
 05/11/19: Fixed some dead links.<br>
 24/02/20: Fixed an error in the code that counted multiple ships within the same fic (e.g. Fic ships: Connor/Hank, Connor/Hank/RK900 - Connor gets counted twice).<br>
-03/02/20: Redid graph - standardised node labelling with upcoming character co-occurrence graph so that this graph will be more easily comparable.
+02/03/20: Redid graph - standardised node labelling with upcoming character co-occurrence graph so that this graph will be more easily comparable.
