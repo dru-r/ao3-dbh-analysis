@@ -11,7 +11,7 @@ I created this  network as a summary of the dataset for myself, but decided to r
 8) How often a pair of characters are shipped together whenever they appear<br>
 9) The most common rating of a pair of characters' shipfics<br>
 
-Full blog post detailing the network's creation here.<br>
+Full blog post detailing the network's creation [here](https://program-800.tumblr.com/post/612029495975821312/exploring-dbh-fics-part-10).<br>
 
 <b>[Access the network here!](/visuals/10_chara_cooccur/ao3_dbhchara_cooccur_v2_filter.html)</b> <br>
 
@@ -33,7 +33,7 @@ Colour reference: grey = Not Rated, green = Gen, blue = Teen, orange = Mature, r
 - How many unique characters the character has appeared with<br>
 - The top 5 characters that appear with the character<br>
 - How often the character is shipped whenever they appear<br>
-- The most common rating of the character’s shipfics <br><br>
+- The most common rating of the character’s shipfics (e.g. <i>28.97% of fics shipping Connor are Explicit</i>; the top rating for Connor shipfics is Explicit)<br><br>
 
 ### Link qualities
 Characters are linked if they have appeared in at least one fic together. <br><br>
@@ -44,4 +44,4 @@ Characters are linked if they have appeared in at least one fic together. <br><b
 - How many fics a pair of characters have appeared in together<br>
 - The most common rating a pair of characters typically appears in together<br>
 - How often a pair of characters are shipped together whenever they appear<br>
-- The most common rating of a pair of characters' shipfics<br>
+- The most common rating of a pair of characters' shipfics (e.g. <i>3.33% of fics that ship Kamski and ST200 are Explicit)</i>; the top rating for Kamski/ST200 shipfics is Explicit)<br>
