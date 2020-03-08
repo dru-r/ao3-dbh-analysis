@@ -44,4 +44,4 @@ Characters are linked if they have appeared in at least one fic together. <br><b
 - How many fics a pair of characters have appeared in together<br>
 - The most common rating a pair of characters typically appears in together<br>
 - How often a pair of characters are shipped together whenever they appear<br>
-- The most common rating of a pair of characters' shipfics (e.g. <i>3.33% of fics that ship Kamski and ST200 are Explicit)</i>; the top rating for Kamski/ST200 shipfics is Explicit)<br>
+- The most common rating of a pair of characters' shipfics (e.g. <i>83.33% of fics that ship Kamski and ST200 are Explicit)</i>; the top rating for Kamski/ST200 shipfics is Explicit)<br>
