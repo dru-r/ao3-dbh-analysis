@@ -13,10 +13,11 @@ There's quite a bit going on in my life right now so I'm not going to be updatin
 6. [Finding similar words based on word usage patterns in AO3 D:BH fics (word2vec)](dbh-w2vtrial.md)<br>
 7. [Differences in topic usage between AO3 D:BH fics of different ratings (STM)](dbh-stm.md)<br>
 8. [Understanding fanon representations of characters from story tags](dbh-charadescripts.md)<br>
-9. [Character prominence in the actual game versus fandom](dbh-charaprominence.md)
+9. [Character prominence in the actual game versus fandom](dbh-charaprominence.md)<br>
+10. [Interactive visualisation of character cooccurence across all fics](dbh-charanetwork.md)<br>
 ### Stuff currently in the works:
-10. An updated scrape + a few preliminary ideas
-11. ??? (more to come!)
+11. An updated scrape + a few preliminary ideas
+12. ??? (more to come!)
 
 ## More details:
 #### What is this?
