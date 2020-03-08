@@ -34,7 +34,7 @@ Colour reference: grey = Not Rated, green = Gen, blue = Teen, orange = Mature, r
 - The top 5 characters that appear with the character<br>
 - How often the character is shipped whenever they appear<br>
 - The most common rating of the character’s shipfics <br>
-<br>
+
 ### Link qualities
 Characters are linked if they have appeared in at least one fic together. <br><br>
 <b>Link thickness</b>: The thicker the link, the more often that pair of characters has appeared together.<br>
