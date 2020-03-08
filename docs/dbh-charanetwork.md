@@ -17,7 +17,7 @@ Full blog post detailing the network's creation here.<br>
 
 If you are interested in just ships specifically, [do visit my earlier work on it](dbh-shipnetwork.md).
 
-## How do I read this graph?
+## How do I read this graph? <br>
 ### Node qualities
 Nodes are characters. <br><br>
 <b>Node size</b>: The larger a character node, the more unique characters the character has appeared with.<br>
@@ -33,7 +33,7 @@ Colour reference: grey = Not Rated, green = Gen, blue = Teen, orange = Mature, r
 - How many unique characters the character has appeared with<br>
 - The top 5 characters that appear with the character<br>
 - How often the character is shipped whenever they appear<br>
-- The most common rating of the character’s shipfics <br>
+- The most common rating of the character’s shipfics <br><br>
 
 ### Link qualities
 Characters are linked if they have appeared in at least one fic together. <br><br>
