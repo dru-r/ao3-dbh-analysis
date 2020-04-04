@@ -15,9 +15,10 @@ There's quite a bit going on in my life right now so I'm not going to be updatin
 8. [Understanding fanon representations of characters from story tags](dbh-charadescripts.md)<br>
 9. [Character prominence in the actual game versus fandom](dbh-charaprominence.md)<br>
 10. [Interactive visualisation of character cooccurence across all fics](dbh-charanetwork.md)<br>
+11. [A partial attempt at automatically finding similar summaries (AO3 D:BH fics)](dbh-wmdtrial.md)<br>
 ### Stuff currently in the works:
-11. An updated scrape + a few preliminary ideas
-12. ??? (more to come!)
+12. An updated scrape + a few preliminary ideas
+13. ??? (more to come!)
 
 ## More details:
 #### What is this?
