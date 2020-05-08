@@ -9,7 +9,6 @@ The question that sparked this little analysis was quite simple: which character
 2) [Dialogue share from the actual game](#dialogue-share-from-the-actual-game)<br>
 3) [Share of character tags from AO3 fics](#share-of-character-tags-from-fics)<br>
 4) [Final results](#final-results)<br>
-5) Extra: [A character cooccurence network built from AO3 fics](#a-character-cooccurence-network-built-from-fics)
 <br><br>
 ## Considerations
 1) What is prominence? There are many ways to conceptualise the prominence of a character - how many times did they appear (and what counts as an appearance; just walking across the street, or actually being the focus of action)? How much screen-time did they get? How many lines did they say? How many times their name appeared or they were referred to? Maybe even how much influence they had over events? And how can we capture it as a measurable construct?<br>
@@ -51,23 +50,10 @@ I then pulled out the tags referring to the same 40 characters I had looked at f
 [Click here for the interactive version - better view of numbers](/visuals/09_prominence/dbhfic_charatagprops.html)<br>
 <br>
 <b> Note the percentage is calculated from the total number of times these 40 characters were tagged</b> (e.g., does not include tag counts for own characters/OCs - which were tagged quite a bit as well). Connor holds on to his share in the AO3 fic fandom and there are huge jumps from Gavin and RK900. A number of DPD members (Tina, Fowler, Chris) also seem to have slightly bigger slices of the pie in fandom.<br><br>
-Trying to read two pie-charts (especially those little slivers) is probably living hell though, so I put the information from both into a barchart.<br.
+Trying to read two pie-charts (especially those little slivers) is probably living hell though, so I put the information from both into a barchart.<br>
 
 ## Final results<br>
 ![image](/visuals/09_prominence/canonvsfandom_static.PNG)<br>
 [Click here for the interactive version - better view of numbers](/visuals/09_prominence/dbhgame_vs_fic.html)<br><br>
 I sorted the characters by prominence in fandom. Obviously the exact percentage numbers are not one-on-one comparable since prominence had to be operationalised differently between the two sources, but it does help us get a gauge of who's getting relatively more screen-time in fandom (and who's been whittled back on).<br><br>
 Of the main playables, Connor is rather stable (such a dominant character in canon and fandom!) - Markus and Kara appear relatively much less emphasised in fandom. Perhaps because Connor is such a popular character, his DPD coworkers end up getting a boost too (since they may be more likely to appear when he does in fics?).<br>
-
-## A character cooccurence network built from fics
-I didn't touch on this in my Tumblr post (since I felt it didn't really add to the analysis), but since I had gone out of my way to clean 61333 tags, I decided to [make this little graph](/visuals/09_prominence/ao3_dbhchara_cooccur_filtered.html).<br>
-### Reading the graph
-This graph basically reflects how frequently characters have been tagged together on the same fic - so, nodes are characters and they are linked if they have been tagged together on one fic. Links are weighted by the number of times a pair of characters have been tagged together on fics.<br><br>
-<b>Link thickness and colour</b>: Links are thicker and brighter if a pair of characters have been tagged together on fics more often.<br>
-<b>Node size and colour</b>: Nodes are sized by weighted degree. Brighter nodes are those with greater weighted degree.<br>
-Hover over nodes and links to get more information!<br><br>
-Note that all the information reflected in the graph (about tag count, top 5 characters that appear with said character, number of unique characters said character has appeared with in fics) were calculated from the initial graph of all characters. However, the displayed interactive graph is a condensed version. The initial unfiltered graph looked like this:<br><br>
-![image](/visuals/09_prominence/hairball.PNG)<br>
-Big oof.<br><br>
-So I used [Serrano et al.'s (2009) disparity filter](https://www.pnas.org/content/106/16/6483.short) at α=.05 to filter the graph. Basically the disparity filter purports to preserve important connections in the network via testing for statistical significance in each link of the network (i.e., the link likely did not occur by random chance). As we can see from the final interactive graph, it cleans up a lot of the miscellaneous links and makes reading it much easier.<br><br>
-For more networks, I also have one for ships up [here](https://dru-r.github.io/ao3-dbh-analysis/dbh-shipnetwork.html).
