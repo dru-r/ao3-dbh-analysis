@@ -18,6 +18,7 @@ There's quite a bit going on in my life right now so I'm not going to be updatin
 10. [Interactive visualisation of character cooccurence across all fics](dbh-charanetwork.md)<br>
 11. [A partial attempt at automatically finding similar summaries (AO3 D:BH fics)](dbh-wmdtrial.md)<br>
 <br>
+
 <b>Based on data from June 2020:</b><br> 
 12: [Publishing frequencies in the fandom by month (updated)](dbh-pubfreqs2.md)<br>
 
