@@ -20,7 +20,7 @@ There's quite a bit going on in my life right now so I'm not going to be updatin
 <br>
 
 <b>Based on data from June 2020:</b><br> 
-12: [Publishing frequencies in the fandom by month (updated)](dbh-pubfreqs2.md)<br>
+12. [Publishing frequencies in the fandom by month (updated)](dbh-pubfreqs2.md)<br>
 
 ### Stuff currently in the works:
 13. A comment scrape <br>
@@ -34,7 +34,7 @@ A small collection of images/visualisations of analyses I've done on the AO3 D:B
 <b>For analyses 1 to 11: </b><br>
 13,933 English language stories published from May 2018 to mid-October 2019 under the Detroit: Become Human fandom tag from AO3. No cross-over fics, fic word-count of at least 10 words.<br>
 <b>From analysis 12 onwards:</b><br>
-16,211 English language stories published from May 2018 to early-June 2020 under the Detroit: Become Human fandom tag from AO3. No cross-over fifcs, fic word-count of at least 10 words.<br>
+16,211 English language stories published from May 2018 to early-June 2020 under the Detroit: Become Human fandom tag from AO3. No cross-over fics, fic word-count of at least 10 words.<br>
 
 #### Why are you doing this?
 Spare time and a love for fandom.
