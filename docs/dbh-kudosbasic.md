@@ -9,14 +9,14 @@ In any case, I went ahead with the information I extracted.
 
 ## Breakdown of kudos-givers (user vs guest)
 ![image](/visuals/13_kudos_basics/users_vs_guest.PNG)<br>
-[Click here for the interactive version with numbers](/visuals/13_kudos_basics/user_vs_guest.html)<br>
+[Click here for the interactive version with numbers](/visuals/13a_kudos_basics/user_vs_guest.html)<br>
 
 ## Breakdown of kudos-givers (user vs guest), by rating
 ![image](/visuals/13_kudos_basics/users_vs_guest_byrating.PNG)<br>
-[Click here for the interactive version with numbers](/visuals/13_kudos_basics/user_vs_guest_byrating.html)<br>
+[Click here for the interactive version with numbers](/visuals/13a_kudos_basics/user_vs_guest_byrating.html)<br>
 
 ## Distribution of proportion of kudos-givers who are guests, by rating
 For each fic, I divided the number of guests kudos-givers against the total number of kudos it received. I was wondering, for example, if explicit fics might skew more to a higher guest kudos-giver proportion, etc? (spoiler: the answer is no!) <br>
 ![image](/visuals/13_kudos_basics/guestprop_byrating.PNG)<br>
-[Click here for the interactive version with numbers](/visuals/13_kudos_basics/guestprop_byrating.html)<br>
+[Click here for the interactive version with numbers](/visuals/13a_kudos_basics/guestprop_byrating.html)<br>
 
