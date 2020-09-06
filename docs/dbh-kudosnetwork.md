@@ -5,7 +5,7 @@ This is somewhat of a follow-up to my initial post on [kudo descriptives](dbh-ku
 (1) How many registered AO3 users have indicated interest in a particular D:BH ship, and <br>
 (2) How many interested users do two particular D:BH ships share? <br>
 <br>
-You can find the plot [here](/visuals/13b_kudos_network/ao3_dbh_kudos_filter.html).</b> The hover information (i.e., the raw counts shown on nodes/edges) have been separately compiled into two tables: [nodes](/visuals/13b_kudos_network/node_table.html) and [edges](/visuals/13b_kudos_network/edge_table.html). Preprocessing and creation of the plot [in this Tumblr post](insert link later). <br>
+You can find the plot [here](/visuals/13b_kudos_network/ao3_dbh_kudos_filter.html).</b> The hover information (i.e., the raw counts shown on nodes/edges) have been separately compiled into two tables: [nodes](/visuals/13b_kudos_network/node_table.html) and [edges](/visuals/13b_kudos_network/edge_table.html). Preprocessing and creation of the plot [in this Tumblr post](https://program-800.tumblr.com/post/628530161427595264/a-continued-look-at-kudos-on-ao3-dbh-fics). <br>
 <br>
 Main points to note are: <br>
 (1) User interest is defined as (a) being the author of a fic with the particular ship(s), and/or (b) leaving a kudos on a fic with the particular ship(s), <br>
