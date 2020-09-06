@@ -22,6 +22,7 @@ There's quite a bit going on in my life right now so I'm not going to be updatin
 <b>Based on data from June 2020:</b><br> 
 12. [Publishing frequencies in the fandom by month (updated)](dbh-pubfreqs2.md)<br>
 13. (A) [An initial look at kudos on AO3 D:BH fics](dbh-kudosbasic.md)<br>
+13. (B) [User interest in ships in the AO3 D:BH fandom](dbh-kudosnetwork.md)<br>
 
 ### Stuff currently in the works:
 14. ??? (more to come!)<br>
