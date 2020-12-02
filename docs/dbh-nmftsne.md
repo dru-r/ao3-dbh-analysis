@@ -175,8 +175,3 @@ Nevertheless I'm leaving this up first as a WIP. <b>Full blog post detailing pro
       <th>39</th>
       <td>sit, sleep, wake, eat, watch, lay, rest, stay, fall, remember, set, rub, lie, read, close</td>
     </tr>
-  </tbody>
-</table>
-
-
-
