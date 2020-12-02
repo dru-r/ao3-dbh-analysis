@@ -1,7 +1,7 @@
 # Visualising D:BH fics based on verb usage
 Can fics be clustered based on verb usage? For example, would I be able to see a cluster for character introspection fics, for date-y fics, for smut, etc? I had hoped the answer would be a nice yes, but as with all the new things I'm learning, it's a "no, until you figure out how to git gud".<br>
 <br>
-Nevertheless I'm leaving this up first as a WIP. <b>Full blog post detailing process is [here](holder)</b>.
+Nevertheless I'm leaving this up first as a WIP. <b>Full blog post detailing process is [here](https://program-800.tumblr.com/post/636401158429212672/an-attempt-at-visualising-ao3-dbh-fics-based-on)</b>.
 <br>
 ### Interactive visualisation is [here](/visuals/14_tsne-nmf/tsne-nmf.html).
 [Credits to palette found here](https://lospec.com/palette-list/dots). Each fic is represented by one dot in the scatterplot, and I've put the top 5 tf-idf weighted words for that fic in its hover data. More or less a gigantic hairball, but I'd like to point out the little group of smutty-seeming fics lurking at the bottom left (topics 2, 5, 18, and 32 selected).<br>
