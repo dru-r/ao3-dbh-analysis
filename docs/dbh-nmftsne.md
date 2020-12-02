@@ -3,9 +3,9 @@ Can fics be clustered based on verb usage? For example, would I be able to see a
 <br>
 Nevertheless I'm leaving this up first as a WIP. <b>Full blog post detailing process is [here](holder)</b>.
 <br>
-### Interactive visualisation is [here](holder).
+### Interactive visualisation is [here](/visuals/14_tsne-nmf/tsne-nmf.html).
 [Credits to palette found here](https://lospec.com/palette-list/dots). Each fic is represented by one dot in the scatterplot, and I've put the top 5 tf-idf weighted words for that fic in its hover data. More or less a gigantic hairball, but I'd like to point out the little group of smutty-seeming fics lurking at the bottom left (topics 2, 5, 18, and 32 selected).<br>
-![image](holder)
+![image](/visuals/14_tsne-nmf/tsne-nmf-exp.PNG)
 ### Top 15 keywords for each NMF topic
 <table border="1" class="dataframe">
   <thead>
