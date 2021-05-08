@@ -426,7 +426,7 @@ Asterisks* denote a network with 5 or less nodes.<br><br>
       <td>21*</td>
       <td>Harry Potter Epilogue Compliant, Infidelity</td>
       <td><a href="dru-r.github.io/ao3-dbh-analysis/ visuals/drarry/01_tagnetworks/mature/20_mature.html">Link</a></td>
-       <td>get married -> cheat</td>
+       <td>get married, cheat</td>
     </tr>
     <tr>
       <td>22*</td>
