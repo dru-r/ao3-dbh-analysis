@@ -49,8 +49,6 @@ Asterisks* denote a network with 5 or less nodes.<br><br>
       <th>Link to network</th>
      <th>Comments</th>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <th>1</th>
       <td>Post-Hogwarts, Auror Harry Potter, Clubbing, POV Draco Malfoy, Potions Master Draco Malfoy</td>
@@ -302,8 +300,6 @@ Asterisks* denote a network with 5 or less nodes.<br><br>
       <th>Link to network</th>
      <th>Comments</th>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <th>1</th>
       <td>Post-Hogwarts, Hogwarts Sixth Year, Harry Potter Epilogue What Epilogue | EWE, Draco Malfoy Redemption, Hogwarts Eighth Year</td>
@@ -512,8 +508,6 @@ Asterisks* denote a network with 5 or less nodes.<br><br>
       <th>Link to network</th>
      <th>Comments</th>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <th>1</th>
       <td>Hogwarts Eighth Year, Post-War, Mutual Pining, Boys In Love, Kissing</td>
@@ -764,8 +758,6 @@ Asterisks* denote a network with 5 or less nodes.<br><br>
       <th>Link to network</th>
      <th>Comments</th>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <th>1</th>
       <td>Harry Potter Epilogue What Epilogue | EWE, Established Relationship, Domestic Fluff, Post-Hogwarts, Light Angst</td>
