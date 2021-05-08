@@ -42,9 +42,8 @@ Asterisks* denote a network with 5 or less nodes.<br><br>
 <body>
 
 <div style="overflow-x:auto;">
-  <table>  
-    <tr style="text-align: left;">
-      <th></th>
+  <table>
+    <tr>
       <th>Example tags</th>
       <th>Link to network</th>
      <th>Comments</th>
@@ -275,6 +274,7 @@ Asterisks* denote a network with 5 or less nodes.<br><br>
     </tr>
   </table>
 </div>
+
 </body>
 </html>
 
@@ -294,8 +294,8 @@ Asterisks* denote a network with 5 or less nodes.<br><br>
 <body>
 
 <div style="overflow-x:auto;">
-  <table>  
-    <tr style="text-align: left;">
+  <table>
+    <tr>
       <th></th>
       <th>Example tags</th>
       <th>Link to network</th>
@@ -504,8 +504,8 @@ Asterisks* denote a network with 5 or less nodes.<br><br>
 <body>
 
 <div style="overflow-x:auto;">
-  <table>  
-    <tr style="text-align: left;">
+  <table>
+    <tr>
       <th></th>
       <th>Example tags</th>
       <th>Link to network</th>
@@ -756,8 +756,8 @@ Asterisks* denote a network with 5 or less nodes.<br><br>
 <body>
 
 <div style="overflow-x:auto;">
-  <table>  
-    <tr style="text-align: left;">
+  <table>
+    <tr>
       <th></th>
       <th>Example tags</th>
       <th>Link to network</th>
