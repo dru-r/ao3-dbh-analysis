@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#2b2542", "font": {"color": "white"}, "id": "Fanart", "label": "Fanart", "shape": "dot", "title": "Fanart\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Fanart:\u003cbr\u003eDrarry Discord Writers Corner Drawble Art Challenge\u003cbr\u003eH/D Erised 2020\u003cbr\u003eComic\u003cbr\u003eCommunity: hd_erised\u003cbr\u003eDigital Art", "value": 6}, {"color": "#2b2542", "font": {"color": "white"}, "id": "Digital Art", "label": "Digital Art", "shape": "dot", "title": "Digital Art\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Digital Art:\u003cbr\u003eComic\u003cbr\u003eFanart\u003cbr\u003eArt", "value": 3}, {"color": "#2b2542", "font": {"color": "white"}, "id": "Art", "label": "Art", "shape": "dot", "title": "Art\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Art:\u003cbr\u003eH/D Erised 2020\u003cbr\u003eCommunity: hd_erised\u003cbr\u003eComic\u003cbr\u003eFanart\u003cbr\u003eDigital Art", "value": 5}, {"color": "#2b2542", "font": {"color": "white"}, "id": "Community: hd_erised", "label": "Community: hd_erised", "shape": "dot", "title": "Community: hd_erised\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Community: hd_erised:\u003cbr\u003eArt\u003cbr\u003eFanart", "value": 2}, {"color": "#2b2542", "font": {"color": "white"}, "id": "Comic", "label": "Comic", "shape": "dot", "title": "Comic\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Comic:\u003cbr\u003eDigital Art\u003cbr\u003eArt\u003cbr\u003eFanart", "value": 3}, {"color": "#2b2542", "font": {"color": "white"}, "id": "Drarry Discord Writers Corner Drawble Art Challenge", "label": "Drarry Discord Writers Corner Drawble Art Challenge", "shape": "dot", "title": "Drarry Discord Writers Corner Drawble Art Challenge\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Drarry Discord Writers Corner Drawble Art Challenge:\u003cbr\u003eFanart", "value": 1}, {"color": "#2b2542", "font": {"color": "white"}, "id": "H/D Erised 2020", "label": "H/D Erised 2020", "shape": "dot", "title": "H/D Erised 2020\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with H/D Erised 2020:\u003cbr\u003eFanart\u003cbr\u003eArt", "value": 2}]);
+        edges = new vis.DataSet([{"from": "Fanart", "title": "Co-occurred in 56 fics", "to": "Digital Art", "value": 56.0}, {"from": "Fanart", "title": "Co-occurred in 88 fics", "to": "Art", "value": 88.0}, {"from": "Fanart", "title": "Co-occurred in 24 fics", "to": "Community: hd_erised", "value": 24.0}, {"from": "Fanart", "title": "Co-occurred in 21 fics", "to": "Comic", "value": 21.0}, {"from": "Fanart", "title": "Co-occurred in 14 fics", "to": "Drarry Discord Writers Corner Drawble Art Challenge", "value": 14.0}, {"from": "Fanart", "title": "Co-occurred in 15 fics", "to": "H/D Erised 2020", "value": 15.0}, {"from": "Digital Art", "title": "Co-occurred in 99 fics", "to": "Art", "value": 99.0}, {"from": "Digital Art", "title": "Co-occurred in 18 fics", "to": "Comic", "value": 18.0}, {"from": "Art", "title": "Co-occurred in 19 fics", "to": "Comic", "value": 19.0}, {"from": "Art", "title": "Co-occurred in 17 fics", "to": "Community: hd_erised", "value": 17.0}, {"from": "Art", "title": "Co-occurred in 16 fics", "to": "H/D Erised 2020", "value": 16.0}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"nodes": {"font": {"size": 20}, "scaling": {"min": 10, "max": 50}, "color": {"highlight": {"border": "rgba(217,0,18,1)", "background": "rgba(217,0,18,1)"}}, "shape": "circle"}, "edges": {"color": {"highlight": "rgba(237,5,24,1)", "inherit": false, "opacity": 0.2}, "smooth": false}, "physics": {"forceAtlas2Based": {"gravitationalConstant": -118, "springLength": 200, "springConstant": 0, "damping": 0.92, "avoidOverlap": 0.9}, "maxVelocity": 30, "minVelocity": 0.75, "solver": "forceAtlas2Based"}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

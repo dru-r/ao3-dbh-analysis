@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#ff0054", "font": {"color": "white"}, "id": "Drabble", "label": "Drabble", "shape": "dot", "title": "Drabble\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Drabble:\u003cbr\u003eHeadcanon\u003cbr\u003eTumblr Prompt\u003cbr\u003eCommunity: dracoharry100\u003cbr\u003eShort One Shot\u003cbr\u003eWordcount: 100", "value": 10}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Drarry", "label": "Drarry", "shape": "dot", "title": "Drarry\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Drarry:\u003cbr\u003eromione\u003cbr\u003eTumblr Prompt\u003cbr\u003eAlternate Universe - Harry Potter Setting\u003cbr\u003eNo Smut\u003cbr\u003eShort One Shot", "value": 11}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Short", "label": "Short", "shape": "dot", "title": "Short\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Short:\u003cbr\u003eDrarry\u003cbr\u003eShort One Shot\u003cbr\u003eDrabble", "value": 3}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Short \u0026 Sweet", "label": "Short \u0026 Sweet", "shape": "dot", "title": "Short \u0026 Sweet\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Short \u0026 Sweet:\u003cbr\u003eShort One Shot\u003cbr\u003eDrabble", "value": 2}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Don\u0027t copy to another site", "label": "Don\u0027t copy to another site", "shape": "dot", "title": "Don\u0027t copy to another site\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Don\u0027t copy to another site:\u003cbr\u003eDrarry\u003cbr\u003eDrabble", "value": 2}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Drarry Discord Writers Corner Drabble Challenge", "label": "Drarry Discord Writers Corner Drabble Challenge", "shape": "dot", "title": "Drarry Discord Writers Corner Drabble Challenge\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Drarry Discord Writers Corner Drabble Challenge:\u003cbr\u003eSnakes\u003cbr\u003eDrawble\u003cbr\u003eDon\u0027t copy to other sites\u003cbr\u003eDrarry\u003cbr\u003eDrabble", "value": 5}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Community: dracoharry100", "label": "Community: dracoharry100", "shape": "dot", "title": "Community: dracoharry100\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Community: dracoharry100:\u003cbr\u003eDrabble", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Short One Shot", "label": "Short One Shot", "shape": "dot", "title": "Short One Shot\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Short One Shot:\u003cbr\u003eDrarry\u003cbr\u003eDrabble\u003cbr\u003eShort\u003cbr\u003eShort \u0026 Sweet", "value": 4}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Wordcount: 100", "label": "Wordcount: 100", "shape": "dot", "title": "Wordcount: 100\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Wordcount: 100:\u003cbr\u003eDrabble", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Tumblr Prompt", "label": "Tumblr Prompt", "shape": "dot", "title": "Tumblr Prompt\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Tumblr Prompt:\u003cbr\u003eDrarry\u003cbr\u003eDrabble", "value": 2}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Headcanon", "label": "Headcanon", "shape": "dot", "title": "Headcanon\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Headcanon:\u003cbr\u003eDrabble", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Gay", "label": "Gay", "shape": "dot", "title": "Gay\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Gay:\u003cbr\u003eDrarry", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Draco Malfoy/Harry Potter Fluff", "label": "Draco Malfoy/Harry Potter Fluff", "shape": "dot", "title": "Draco Malfoy/Harry Potter Fluff\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Draco Malfoy/Harry Potter Fluff:\u003cbr\u003eDrarry", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "romione", "label": "romione", "shape": "dot", "title": "romione\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with romione:\u003cbr\u003eDrarry", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Alternate Universe - Harry Potter Setting", "label": "Alternate Universe - Harry Potter Setting", "shape": "dot", "title": "Alternate Universe - Harry Potter Setting\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Alternate Universe - Harry Potter Setting:\u003cbr\u003eDrarry", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "No Smut", "label": "No Smut", "shape": "dot", "title": "No Smut\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with No Smut:\u003cbr\u003eDrarry", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Don\u0027t copy to other sites", "label": "Don\u0027t copy to other sites", "shape": "dot", "title": "Don\u0027t copy to other sites\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Don\u0027t copy to other sites:\u003cbr\u003eDrarry Discord Writers Corner Drabble Challenge", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Drawble", "label": "Drawble", "shape": "dot", "title": "Drawble\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Drawble:\u003cbr\u003eDrarry Discord Writers Corner Drabble Challenge", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Snakes", "label": "Snakes", "shape": "dot", "title": "Snakes\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Snakes:\u003cbr\u003eDrarry Discord Writers Corner Drabble Challenge", "value": 1}]);
+        edges = new vis.DataSet([{"from": "Drabble", "title": "Co-occurred in 81 fics", "to": "Drarry", "value": 81.0}, {"from": "Drabble", "title": "Co-occurred in 30 fics", "to": "Short", "value": 30.0}, {"from": "Drabble", "title": "Co-occurred in 33 fics", "to": "Short \u0026 Sweet", "value": 33.0}, {"from": "Drabble", "title": "Co-occurred in 43 fics", "to": "Don\u0027t copy to another site", "value": 43.0}, {"from": "Drabble", "title": "Co-occurred in 50 fics", "to": "Drarry Discord Writers Corner Drabble Challenge", "value": 50.0}, {"from": "Drabble", "title": "Co-occurred in 18 fics", "to": "Community: dracoharry100", "value": 18.0}, {"from": "Drabble", "title": "Co-occurred in 18 fics", "to": "Short One Shot", "value": 18.0}, {"from": "Drabble", "title": "Co-occurred in 23 fics", "to": "Wordcount: 100", "value": 23.0}, {"from": "Drabble", "title": "Co-occurred in 17 fics", "to": "Tumblr Prompt", "value": 17.0}, {"from": "Drabble", "title": "Co-occurred in 12 fics", "to": "Headcanon", "value": 12.0}, {"from": "Drarry", "title": "Co-occurred in 36 fics", "to": "Don\u0027t copy to another site", "value": 36.0}, {"from": "Drarry", "title": "Co-occurred in 25 fics", "to": "Gay", "value": 25.0}, {"from": "Drarry", "title": "Co-occurred in 15 fics", "to": "Short One Shot", "value": 15.0}, {"from": "Drarry", "title": "Co-occurred in 16 fics", "to": "Short", "value": 16.0}, {"from": "Drarry", "title": "Co-occurred in 12 fics", "to": "Tumblr Prompt", "value": 12.0}, {"from": "Drarry", "title": "Co-occurred in 16 fics", "to": "Draco Malfoy/Harry Potter Fluff", "value": 16.0}, {"from": "Drarry", "title": "Co-occurred in 20 fics", "to": "Drarry Discord Writers Corner Drabble Challenge", "value": 20.0}, {"from": "Drarry", "title": "Co-occurred in 11 fics", "to": "romione", "value": 11.0}, {"from": "Drarry", "title": "Co-occurred in 12 fics", "to": "Alternate Universe - Harry Potter Setting", "value": 12.0}, {"from": "Drarry", "title": "Co-occurred in 12 fics", "to": "No Smut", "value": 12.0}, {"from": "Short", "title": "Co-occurred in 19 fics", "to": "Short One Shot", "value": 19.0}, {"from": "Short \u0026 Sweet", "title": "Co-occurred in 22 fics", "to": "Short One Shot", "value": 22.0}, {"from": "Drarry Discord Writers Corner Drabble Challenge", "title": "Co-occurred in 14 fics", "to": "Don\u0027t copy to other sites", "value": 14.0}, {"from": "Drarry Discord Writers Corner Drabble Challenge", "title": "Co-occurred in 12 fics", "to": "Drawble", "value": 12.0}, {"from": "Drarry Discord Writers Corner Drabble Challenge", "title": "Co-occurred in 10 fics", "to": "Snakes", "value": 10.0}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"nodes": {"font": {"size": 20}, "scaling": {"min": 10, "max": 50}, "color": {"highlight": {"border": "rgba(217,0,18,1)", "background": "rgba(217,0,18,1)"}}, "shape": "circle"}, "edges": {"color": {"highlight": "rgba(237,5,24,1)", "inherit": false, "opacity": 0.2}, "smooth": false}, "physics": {"forceAtlas2Based": {"gravitationalConstant": -118, "springLength": 200, "springConstant": 0, "damping": 0.92, "avoidOverlap": 0.9}, "maxVelocity": 30, "minVelocity": 0.75, "solver": "forceAtlas2Based"}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

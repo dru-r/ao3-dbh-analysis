@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#999999", "font": {"color": "white"}, "id": "Humor", "label": "Humor", "shape": "dot", "title": "Humor\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Humor:\u003cbr\u003eMythical Beings \u0026 Creatures\u003cbr\u003eAttempt at Humor\u003cbr\u003eSlash\u003cbr\u003eDrama\u003cbr\u003ePre-Slash", "value": 15}, {"color": "#999999", "font": {"color": "white"}, "id": "Slash", "label": "Slash", "shape": "dot", "title": "Slash\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Slash:\u003cbr\u003eHumor\u003cbr\u003eRomance", "value": 2}, {"color": "#999999", "font": {"color": "white"}, "id": "Romance", "label": "Romance", "shape": "dot", "title": "Romance\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Romance:\u003cbr\u003eHogwarts Era\u003cbr\u003eFirst Time\u003cbr\u003eSongfic\u003cbr\u003eSlash\u003cbr\u003ePre-Slash", "value": 12}, {"color": "#999999", "font": {"color": "white"}, "id": "Parody", "label": "Parody", "shape": "dot", "title": "Parody\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Parody:\u003cbr\u003eHumor", "value": 1}, {"color": "#999999", "font": {"color": "white"}, "id": "Alternate Universe", "label": "Alternate Universe", "shape": "dot", "title": "Alternate Universe\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Alternate Universe:\u003cbr\u003eMpreg\u003cbr\u003eDrama\u003cbr\u003eOut of Character\u003cbr\u003eHumor\u003cbr\u003eRomance", "value": 6}, {"color": "#999999", "font": {"color": "white"}, "id": "Mpreg", "label": "Mpreg", "shape": "dot", "title": "Mpreg\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Mpreg:\u003cbr\u003ePregnant Draco Malfoy\u003cbr\u003eAlternate Universe\u003cbr\u003eOne Shot\u003cbr\u003eHumor\u003cbr\u003eRomance", "value": 5}, {"color": "#999999", "font": {"color": "white"}, "id": "Challenge Response", "label": "Challenge Response", "shape": "dot", "title": "Challenge Response\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Challenge Response:\u003cbr\u003eRomance\u003cbr\u003eHumor\u003cbr\u003eOne Shot\u003cbr\u003eThe Hex Files Monthly General Drabble Challenge", "value": 4}, {"color": "#999999", "font": {"color": "white"}, "id": "One Shot", "label": "One Shot", "shape": "dot", "title": "One Shot\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with One Shot:\u003cbr\u003eMpreg\u003cbr\u003eSongfic\u003cbr\u003eThe Hex Files Monthly General Drabble Challenge\u003cbr\u003eOut of Character\u003cbr\u003eDrama", "value": 12}, {"color": "#999999", "font": {"color": "white"}, "id": "Out of Character", "label": "Out of Character", "shape": "dot", "title": "Out of Character\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Out of Character:\u003cbr\u003eRomance\u003cbr\u003eAlternate Universe\u003cbr\u003eOne Shot\u003cbr\u003eHumor", "value": 4}, {"color": "#999999", "font": {"color": "white"}, "id": "Fluff and Humor", "label": "Fluff and Humor", "shape": "dot", "title": "Fluff and Humor\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Fluff and Humor:\u003cbr\u003eHumor", "value": 1}, {"color": "#999999", "font": {"color": "white"}, "id": "The Hex Files Birthday Drabbles", "label": "The Hex Files Birthday Drabbles", "shape": "dot", "title": "The Hex Files Birthday Drabbles\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with The Hex Files Birthday Drabbles:\u003cbr\u003eHumor\u003cbr\u003eOne Shot", "value": 2}, {"color": "#999999", "font": {"color": "white"}, "id": "Explicit Language", "label": "Explicit Language", "shape": "dot", "title": "Explicit Language\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Explicit Language:\u003cbr\u003eHumor\u003cbr\u003eOne Shot", "value": 2}, {"color": "#999999", "font": {"color": "white"}, "id": "Pre-Slash", "label": "Pre-Slash", "shape": "dot", "title": "Pre-Slash\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Pre-Slash:\u003cbr\u003eRomance\u003cbr\u003eHumor\u003cbr\u003eOne Shot", "value": 3}, {"color": "#999999", "font": {"color": "white"}, "id": "Drama", "label": "Drama", "shape": "dot", "title": "Drama\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Drama:\u003cbr\u003eAlternate Universe\u003cbr\u003eHumor\u003cbr\u003eOne Shot\u003cbr\u003eRomance", "value": 4}, {"color": "#999999", "font": {"color": "white"}, "id": "Mythical Beings \u0026 Creatures", "label": "Mythical Beings \u0026 Creatures", "shape": "dot", "title": "Mythical Beings \u0026 Creatures\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Mythical Beings \u0026 Creatures:\u003cbr\u003eHumor", "value": 1}, {"color": "#999999", "font": {"color": "white"}, "id": "Attempt at Humor", "label": "Attempt at Humor", "shape": "dot", "title": "Attempt at Humor\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Attempt at Humor:\u003cbr\u003eHumor", "value": 1}, {"color": "#999999", "font": {"color": "white"}, "id": "The Hex Files Monthly General Drabble Challenge", "label": "The Hex Files Monthly General Drabble Challenge", "shape": "dot", "title": "The Hex Files Monthly General Drabble Challenge\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with The Hex Files Monthly General Drabble Challenge:\u003cbr\u003eOne Shot\u003cbr\u003eChallenge Response", "value": 2}, {"color": "#999999", "font": {"color": "white"}, "id": "First Time", "label": "First Time", "shape": "dot", "title": "First Time\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with First Time:\u003cbr\u003eRomance", "value": 1}, {"color": "#999999", "font": {"color": "white"}, "id": "Songfic", "label": "Songfic", "shape": "dot", "title": "Songfic\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Songfic:\u003cbr\u003eSong Lyrics\u003cbr\u003eRomance\u003cbr\u003eOne Shot", "value": 3}, {"color": "#999999", "font": {"color": "white"}, "id": "Hogwarts Era", "label": "Hogwarts Era", "shape": "dot", "title": "Hogwarts Era\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Hogwarts Era:\u003cbr\u003eRomance", "value": 1}, {"color": "#999999", "font": {"color": "white"}, "id": "Pregnant Draco Malfoy", "label": "Pregnant Draco Malfoy", "shape": "dot", "title": "Pregnant Draco Malfoy\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Pregnant Draco Malfoy:\u003cbr\u003eMpreg", "value": 1}, {"color": "#999999", "font": {"color": "white"}, "id": "Song Lyrics", "label": "Song Lyrics", "shape": "dot", "title": "Song Lyrics\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Song Lyrics:\u003cbr\u003eSongfic", "value": 1}]);
+        edges = new vis.DataSet([{"from": "Humor", "title": "Co-occurred in 15 fics", "to": "Slash", "value": 15.0}, {"from": "Humor", "title": "Co-occurred in 155 fics", "to": "Romance", "value": 155.0}, {"from": "Humor", "title": "Co-occurred in 36 fics", "to": "Parody", "value": 36.0}, {"from": "Humor", "title": "Co-occurred in 47 fics", "to": "Alternate Universe", "value": 47.0}, {"from": "Humor", "title": "Co-occurred in 31 fics", "to": "Mpreg", "value": 31.0}, {"from": "Humor", "title": "Co-occurred in 48 fics", "to": "Challenge Response", "value": 48.0}, {"from": "Humor", "title": "Co-occurred in 162 fics", "to": "One Shot", "value": 162.0}, {"from": "Humor", "title": "Co-occurred in 39 fics", "to": "Out of Character", "value": 39.0}, {"from": "Humor", "title": "Co-occurred in 34 fics", "to": "Fluff and Humor", "value": 34.0}, {"from": "Humor", "title": "Co-occurred in 32 fics", "to": "The Hex Files Birthday Drabbles", "value": 32.0}, {"from": "Humor", "title": "Co-occurred in 35 fics", "to": "Explicit Language", "value": 35.0}, {"from": "Humor", "title": "Co-occurred in 29 fics", "to": "Pre-Slash", "value": 29.0}, {"from": "Humor", "title": "Co-occurred in 27 fics", "to": "Drama", "value": 27.0}, {"from": "Humor", "title": "Co-occurred in 11 fics", "to": "Mythical Beings \u0026 Creatures", "value": 11.0}, {"from": "Humor", "title": "Co-occurred in 14 fics", "to": "Attempt at Humor", "value": 14.0}, {"from": "Challenge Response", "title": "Co-occurred in 66 fics", "to": "One Shot", "value": 66.0}, {"from": "Challenge Response", "title": "Co-occurred in 72 fics", "to": "The Hex Files Monthly General Drabble Challenge", "value": 72.0}, {"from": "Challenge Response", "title": "Co-occurred in 29 fics", "to": "Romance", "value": 29.0}, {"from": "Romance", "title": "Co-occurred in 23 fics", "to": "Slash", "value": 23.0}, {"from": "Romance", "title": "Co-occurred in 24 fics", "to": "Pre-Slash", "value": 24.0}, {"from": "Romance", "title": "Co-occurred in 17 fics", "to": "First Time", "value": 17.0}, {"from": "Romance", "title": "Co-occurred in 36 fics", "to": "Mpreg", "value": 36.0}, {"from": "Romance", "title": "Co-occurred in 22 fics", "to": "Songfic", "value": 22.0}, {"from": "Romance", "title": "Co-occurred in 58 fics", "to": "Alternate Universe", "value": 58.0}, {"from": "Romance", "title": "Co-occurred in 176 fics", "to": "One Shot", "value": 176.0}, {"from": "Romance", "title": "Co-occurred in 46 fics", "to": "Drama", "value": 46.0}, {"from": "Romance", "title": "Co-occurred in 25 fics", "to": "Out of Character", "value": 25.0}, {"from": "Romance", "title": "Co-occurred in 12 fics", "to": "Hogwarts Era", "value": 12.0}, {"from": "One Shot", "title": "Co-occurred in 47 fics", "to": "Pre-Slash", "value": 47.0}, {"from": "One Shot", "title": "Co-occurred in 22 fics", "to": "Mpreg", "value": 22.0}, {"from": "One Shot", "title": "Co-occurred in 24 fics", "to": "Songfic", "value": 24.0}, {"from": "One Shot", "title": "Co-occurred in 67 fics", "to": "Alternate Universe", "value": 67.0}, {"from": "One Shot", "title": "Co-occurred in 45 fics", "to": "Drama", "value": 45.0}, {"from": "One Shot", "title": "Co-occurred in 47 fics", "to": "Explicit Language", "value": 47.0}, {"from": "One Shot", "title": "Co-occurred in 45 fics", "to": "The Hex Files Birthday Drabbles", "value": 45.0}, {"from": "One Shot", "title": "Co-occurred in 37 fics", "to": "Out of Character", "value": 37.0}, {"from": "One Shot", "title": "Co-occurred in 35 fics", "to": "The Hex Files Monthly General Drabble Challenge", "value": 35.0}, {"from": "Alternate Universe", "title": "Co-occurred in 19 fics", "to": "Mpreg", "value": 19.0}, {"from": "Alternate Universe", "title": "Co-occurred in 26 fics", "to": "Drama", "value": 26.0}, {"from": "Alternate Universe", "title": "Co-occurred in 32 fics", "to": "Out of Character", "value": 32.0}, {"from": "Mpreg", "title": "Co-occurred in 18 fics", "to": "Pregnant Draco Malfoy", "value": 18.0}, {"from": "Songfic", "title": "Co-occurred in 9 fics", "to": "Song Lyrics", "value": 9.0}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"nodes": {"font": {"size": 20}, "scaling": {"min": 10, "max": 50}, "color": {"highlight": {"border": "rgba(217,0,18,1)", "background": "rgba(217,0,18,1)"}}, "shape": "circle"}, "edges": {"color": {"highlight": "rgba(237,5,24,1)", "inherit": false, "opacity": 0.2}, "smooth": false}, "physics": {"forceAtlas2Based": {"gravitationalConstant": -118, "springLength": 200, "springConstant": 0, "damping": 0.92, "avoidOverlap": 0.9}, "maxVelocity": 30, "minVelocity": 0.75, "solver": "forceAtlas2Based"}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

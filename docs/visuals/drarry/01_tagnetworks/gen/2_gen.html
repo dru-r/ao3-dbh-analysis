@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#666666", "font": {"color": "white"}, "id": "Hogwarts Eighth Year", "label": "Hogwarts Eighth Year", "shape": "dot", "title": "Hogwarts Eighth Year\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Hogwarts Eighth Year:\u003cbr\u003eOblivious Harry\u003cbr\u003eDrarropoly: A Drarry Game/Fest\u003cbr\u003eBanter\u003cbr\u003ePining Draco Malfoy\u003cbr\u003eDraco Malfoy Redemption", "value": 18}, {"color": "#666666", "font": {"color": "white"}, "id": "Potions", "label": "Potions", "shape": "dot", "title": "Potions\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Potions:\u003cbr\u003eHogwarts Eighth Year", "value": 1}, {"color": "#666666", "font": {"color": "white"}, "id": "First Kiss", "label": "First Kiss", "shape": "dot", "title": "First Kiss\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with First Kiss:\u003cbr\u003eFirst Dates\u003cbr\u003eKissing\u003cbr\u003eGetting Together\u003cbr\u003eHogwarts Eighth Year", "value": 4}, {"color": "#666666", "font": {"color": "white"}, "id": "Hogwarts", "label": "Hogwarts", "shape": "dot", "title": "Hogwarts\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Hogwarts:\u003cbr\u003eHogwarts Eighth Year", "value": 1}, {"color": "#666666", "font": {"color": "white"}, "id": "Kissing", "label": "Kissing", "shape": "dot", "title": "Kissing\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Kissing:\u003cbr\u003eFirst Kiss\u003cbr\u003eHogwarts Eighth Year", "value": 2}, {"color": "#666666", "font": {"color": "white"}, "id": "Getting Together", "label": "Getting Together", "shape": "dot", "title": "Getting Together\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Getting Together:\u003cbr\u003eFirst Kiss\u003cbr\u003eHogwarts Eighth Year", "value": 2}, {"color": "#666666", "font": {"color": "white"}, "id": "Quidditch", "label": "Quidditch", "shape": "dot", "title": "Quidditch\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Quidditch:\u003cbr\u003eHogwarts Eighth Year", "value": 1}, {"color": "#666666", "font": {"color": "white"}, "id": "Secret Relationship", "label": "Secret Relationship", "shape": "dot", "title": "Secret Relationship\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Secret Relationship:\u003cbr\u003eComing Out\u003cbr\u003eHogwarts Eighth Year", "value": 2}, {"color": "#666666", "font": {"color": "white"}, "id": "Truth or Dare", "label": "Truth or Dare", "shape": "dot", "title": "Truth or Dare\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Truth or Dare:\u003cbr\u003eHogwarts Eighth Year", "value": 1}, {"color": "#666666", "font": {"color": "white"}, "id": "Banter", "label": "Banter", "shape": "dot", "title": "Banter\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Banter:\u003cbr\u003eHogwarts Eighth Year", "value": 1}, {"color": "#666666", "font": {"color": "white"}, "id": "Draco Malfoy Redemption", "label": "Draco Malfoy Redemption", "shape": "dot", "title": "Draco Malfoy Redemption\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Draco Malfoy Redemption:\u003cbr\u003eHogwarts Eighth Year", "value": 1}, {"color": "#666666", "font": {"color": "white"}, "id": "Nightmares", "label": "Nightmares", "shape": "dot", "title": "Nightmares\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Nightmares:\u003cbr\u003eHogwarts Eighth Year", "value": 1}, {"color": "#666666", "font": {"color": "white"}, "id": "Post-Battle of Hogwarts", "label": "Post-Battle of Hogwarts", "shape": "dot", "title": "Post-Battle of Hogwarts\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Post-Battle of Hogwarts:\u003cbr\u003eHogwarts Eighth Year", "value": 1}, {"color": "#666666", "font": {"color": "white"}, "id": "Oblivious Draco Malfoy", "label": "Oblivious Draco Malfoy", "shape": "dot", "title": "Oblivious Draco Malfoy\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Oblivious Draco Malfoy:\u003cbr\u003eHogwarts Eighth Year", "value": 1}, {"color": "#666666", "font": {"color": "white"}, "id": "Pining Draco Malfoy", "label": "Pining Draco Malfoy", "shape": "dot", "title": "Pining Draco Malfoy\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Pining Draco Malfoy:\u003cbr\u003eOblivious Harry Potter\u003cbr\u003eHogwarts Eighth Year", "value": 2}, {"color": "#666666", "font": {"color": "white"}, "id": "Oblivious Harry", "label": "Oblivious Harry", "shape": "dot", "title": "Oblivious Harry\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Oblivious Harry:\u003cbr\u003eHogwarts Eighth Year", "value": 1}, {"color": "#666666", "font": {"color": "white"}, "id": "Drarropoly: A Drarry Game/Fest", "label": "Drarropoly: A Drarry Game/Fest", "shape": "dot", "title": "Drarropoly: A Drarry Game/Fest\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Drarropoly: A Drarry Game/Fest:\u003cbr\u003eHogwarts Eighth Year", "value": 1}, {"color": "#666666", "font": {"color": "white"}, "id": "Pre-Relationship", "label": "Pre-Relationship", "shape": "dot", "title": "Pre-Relationship\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Pre-Relationship:\u003cbr\u003eHogwarts Eighth Year", "value": 1}, {"color": "#666666", "font": {"color": "white"}, "id": "Roommates", "label": "Roommates", "shape": "dot", "title": "Roommates\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Roommates:\u003cbr\u003eHogwarts Eighth Year", "value": 1}, {"color": "#666666", "font": {"color": "white"}, "id": "First Dates", "label": "First Dates", "shape": "dot", "title": "First Dates\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with First Dates:\u003cbr\u003eFirst Kiss", "value": 1}, {"color": "#666666", "font": {"color": "white"}, "id": "Coming Out", "label": "Coming Out", "shape": "dot", "title": "Coming Out\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Coming Out:\u003cbr\u003eSecret Relationship", "value": 1}, {"color": "#666666", "font": {"color": "white"}, "id": "Oblivious Harry Potter", "label": "Oblivious Harry Potter", "shape": "dot", "title": "Oblivious Harry Potter\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Oblivious Harry Potter:\u003cbr\u003ePining Draco Malfoy", "value": 1}]);
+        edges = new vis.DataSet([{"from": "Hogwarts Eighth Year", "title": "Co-occurred in 16 fics", "to": "Potions", "value": 16.0}, {"from": "Hogwarts Eighth Year", "title": "Co-occurred in 40 fics", "to": "First Kiss", "value": 40.0}, {"from": "Hogwarts Eighth Year", "title": "Co-occurred in 36 fics", "to": "Hogwarts", "value": 36.0}, {"from": "Hogwarts Eighth Year", "title": "Co-occurred in 18 fics", "to": "Kissing", "value": 18.0}, {"from": "Hogwarts Eighth Year", "title": "Co-occurred in 35 fics", "to": "Getting Together", "value": 35.0}, {"from": "Hogwarts Eighth Year", "title": "Co-occurred in 20 fics", "to": "Quidditch", "value": 20.0}, {"from": "Hogwarts Eighth Year", "title": "Co-occurred in 25 fics", "to": "Secret Relationship", "value": 25.0}, {"from": "Hogwarts Eighth Year", "title": "Co-occurred in 17 fics", "to": "Truth or Dare", "value": 17.0}, {"from": "Hogwarts Eighth Year", "title": "Co-occurred in 14 fics", "to": "Banter", "value": 14.0}, {"from": "Hogwarts Eighth Year", "title": "Co-occurred in 15 fics", "to": "Draco Malfoy Redemption", "value": 15.0}, {"from": "Hogwarts Eighth Year", "title": "Co-occurred in 17 fics", "to": "Nightmares", "value": 17.0}, {"from": "Hogwarts Eighth Year", "title": "Co-occurred in 23 fics", "to": "Post-Battle of Hogwarts", "value": 23.0}, {"from": "Hogwarts Eighth Year", "title": "Co-occurred in 17 fics", "to": "Oblivious Draco Malfoy", "value": 17.0}, {"from": "Hogwarts Eighth Year", "title": "Co-occurred in 14 fics", "to": "Pining Draco Malfoy", "value": 14.0}, {"from": "Hogwarts Eighth Year", "title": "Co-occurred in 11 fics", "to": "Oblivious Harry", "value": 11.0}, {"from": "Hogwarts Eighth Year", "title": "Co-occurred in 12 fics", "to": "Drarropoly: A Drarry Game/Fest", "value": 12.0}, {"from": "Hogwarts Eighth Year", "title": "Co-occurred in 19 fics", "to": "Pre-Relationship", "value": 19.0}, {"from": "Hogwarts Eighth Year", "title": "Co-occurred in 16 fics", "to": "Roommates", "value": 16.0}, {"from": "Kissing", "title": "Co-occurred in 17 fics", "to": "First Kiss", "value": 17.0}, {"from": "First Dates", "title": "Co-occurred in 12 fics", "to": "First Kiss", "value": 12.0}, {"from": "First Kiss", "title": "Co-occurred in 30 fics", "to": "Getting Together", "value": 30.0}, {"from": "Coming Out", "title": "Co-occurred in 12 fics", "to": "Secret Relationship", "value": 12.0}, {"from": "Pining Draco Malfoy", "title": "Co-occurred in 11 fics", "to": "Oblivious Harry Potter", "value": 11.0}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"nodes": {"font": {"size": 20}, "scaling": {"min": 10, "max": 50}, "color": {"highlight": {"border": "rgba(217,0,18,1)", "background": "rgba(217,0,18,1)"}}, "shape": "circle"}, "edges": {"color": {"highlight": "rgba(237,5,24,1)", "inherit": false, "opacity": 0.2}, "smooth": false}, "physics": {"forceAtlas2Based": {"gravitationalConstant": -118, "springLength": 200, "springConstant": 0, "damping": 0.92, "avoidOverlap": 0.9}, "maxVelocity": 30, "minVelocity": 0.75, "solver": "forceAtlas2Based"}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
