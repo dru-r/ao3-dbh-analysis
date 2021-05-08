@@ -3,13 +3,15 @@ This is something that I’ve been dreaming of (sounds like a hyperbole, but it 
 After getting into a fandom for a while, we kind of intuitively know about the tropes that exist in it after consuming the works of others (and maybe even producing our own). Within Harry Potter, there are so many that have accumulated across the history of the fandom – creature inheritance, Hogwarts 8th year, Harry in Slytherin AUs, etc. And we know that when we see certain tags – e.g., creature inheritance – we can expect to see certain other tags (e.g. veela Draco Malfoy, magical bonds/soulmates). <b> Are we able to capture some of these tropes or ideas automatically given a huge dataset of tags?</b> I attempt that here, looking at each rating (Gen/Teen/Mature/Explicit) separately. <br><br>
 <b>As with my work on using tags to characterise characters in D:BH fandom, I want to reiterate that tags capture only a small part of the picture.</b> Many tropes aren’t explicitly laid out in their tags. Also, due to the way I’ve done preprocessing, only tags that meet a certain threshold for usage are kept – so I can’t really address much rarer tags. In short – this is really a rough overview. <br><br>
 Typically I lay out my preprocessing steps on [my Tumblr](https://program-800.tumblr.com) and just link the main images here, but I’ve decided to tie them both together here since the preprocessing is pretty integral in influencing what you see in the end. <br>
+
 ## Content
-1) [Preprocessing and network creation](#preprocessing) <br>
-2) [Explicit tag networks](#explicit-tag-networks)<br>
-3) [Mature tag networks](#mature-tag-networks)<br>
-4) [Teen tag networks](#teen-tag-networks)<br>
-5) [Gen tag networks](#gen-tag-networks)<br>
-6) [Conclusion](#conclusion)<br><br>
+1) [Preprocessing and network creation](#preprocessing-and-network-creation) <br>
+2) [Explicit tag network](#explicit-tag-network)<br>
+3) [Mature tag network](#mature-tag-network)<br>
+4) [Teen tag network](#teen-tag-network)<br>
+5) [Gen tag network](#gen-tag-network)<br>
+6) [Conclusion](#conclusion)<br>
+<br><br>
 ## Preprocessing and network creation
 ### Tag standardisation and fic selection
 The dataset from AO3 has a very nice mapping of tags to the ‘main’ tag. For example, tags Draco, Draco Malfoy, Dracy Malfoy – there is an indication that all these tags actually mean the same thing, and map back to the ‘main’ character tag Draco Malfoy. Thus, before I did anything else – for standardisation, I converted all the not-main tags to their respective ‘main’ tags (i.e., subbing ‘Dracy Malfoy’ to ‘Draco Malfoy’). <br><br>
@@ -26,10 +28,13 @@ There are two main sets of networks shown for each rating: <br>
 I’ve also added my comments on each group, but they’re just my opinion/own scribbles on what the group might be about. Again – modularity figures were low so it’s not like we got well-defined subclusters. These aren’t the gold standard of truth by any means, but I think they do at least reveal somewhat some tropes that we as readers/writers have come to be familiar with. <br>
 ## Explicit tag network
 <b>Modularity = .336</b><br>
+
 ### Full network
 [Link](/visuals/drarry/01_tagnetworks/explicit/full_explicit.html)<br>
+
 ### Networks by Louvain group
 Asterisks* denote a network with 5 or less nodes.<br><br>
+
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -275,10 +280,13 @@ Asterisks* denote a network with 5 or less nodes.<br><br>
 
 ## Mature tag network
 <b>Modularity = .521</b><br>
+
 ### Full network
 [Link](/visuals/drarry/01_tagnetworks/mature/full_mature.html)<br>
+
 ### Networks by Louvain group
 Asterisks* denote a network with 5 or less nodes.<br><br>
+
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -482,10 +490,13 @@ Asterisks* denote a network with 5 or less nodes.<br><br>
 
 ## Teen tag network
 <b>Modularity = .390</b><br>
+
 ### Full network
 [Link](/visuals/drarry/01_tagnetworks/teen/full_teen.html)<br>
+
 ### Networks by Louvain group
 Asterisks* denote a network with 5 or less nodes.<br><br>
+
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -731,10 +742,13 @@ Asterisks* denote a network with 5 or less nodes.<br><br>
 
 ## Gen tag network
 <b>Modularity = .390</b><br>
+
 ### Full network
 [Link](/visuals/drarry/01_tagnetworks/gen/full_gen.html)<br>
+
 ### Networks by Louvain group
 Asterisks* denote a network with 5 or less nodes.<br><br>
+
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
