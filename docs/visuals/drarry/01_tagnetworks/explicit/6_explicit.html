@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#b2509d", "font": {"color": "white"}, "id": "Oral Sex", "label": "Oral Sex", "shape": "dot", "title": "Oral Sex\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Oral Sex:\u003cbr\u003eLarge Cock\u003cbr\u003eFights\u003cbr\u003eOriginal Character(s)\u003cbr\u003eSexual Slavery\u003cbr\u003eConsent", "value": 24}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Magic", "label": "Magic", "shape": "dot", "title": "Magic\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Magic:\u003cbr\u003eOral Sex", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Sex", "label": "Sex", "shape": "dot", "title": "Sex\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Sex:\u003cbr\u003eAnal\u003cbr\u003eGay\u003cbr\u003eLove\u003cbr\u003eGay Sex\u003cbr\u003eOral Sex", "value": 5}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Consent", "label": "Consent", "shape": "dot", "title": "Consent\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Consent:\u003cbr\u003eEnthusiastic Consent\u003cbr\u003eOral Sex", "value": 2}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Enthusiastic Consent", "label": "Enthusiastic Consent", "shape": "dot", "title": "Enthusiastic Consent\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Enthusiastic Consent:\u003cbr\u003eConsent\u003cbr\u003eOral Sex", "value": 2}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Explicit Consent", "label": "Explicit Consent", "shape": "dot", "title": "Explicit Consent\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Explicit Consent:\u003cbr\u003eOral Sex", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Gay Sex", "label": "Gay Sex", "shape": "dot", "title": "Gay Sex\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Gay Sex:\u003cbr\u003eMale Homosexuality\u003cbr\u003eGay Male Character\u003cbr\u003eAnal\u003cbr\u003eMale Slash\u003cbr\u003eGay", "value": 7}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Love", "label": "Love", "shape": "dot", "title": "Love\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Love:\u003cbr\u003eOral Sex\u003cbr\u003eSex", "value": 2}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Gay Male Character", "label": "Gay Male Character", "shape": "dot", "title": "Gay Male Character\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Gay Male Character:\u003cbr\u003eOral Sex\u003cbr\u003eMale Slash\u003cbr\u003eGay Sex", "value": 3}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Male Slash", "label": "Male Slash", "shape": "dot", "title": "Male Slash\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Male Slash:\u003cbr\u003eMale Homosexuality\u003cbr\u003eGay Male Character\u003cbr\u003eGay Sex\u003cbr\u003eOral Sex", "value": 4}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Drunk Sex", "label": "Drunk Sex", "shape": "dot", "title": "Drunk Sex\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Drunk Sex:\u003cbr\u003eOral Sex", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "First Time Blow Jobs", "label": "First Time Blow Jobs", "shape": "dot", "title": "First Time Blow Jobs\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with First Time Blow Jobs:\u003cbr\u003eOral Sex", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Swearing", "label": "Swearing", "shape": "dot", "title": "Swearing\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Swearing:\u003cbr\u003eOral Sex", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Anal Play", "label": "Anal Play", "shape": "dot", "title": "Anal Play\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Anal Play:\u003cbr\u003eOral Sex", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Gay", "label": "Gay", "shape": "dot", "title": "Gay\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Gay:\u003cbr\u003eOral Sex\u003cbr\u003eSex\u003cbr\u003eGay Sex", "value": 3}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Underage Sex", "label": "Underage Sex", "shape": "dot", "title": "Underage Sex\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Underage Sex:\u003cbr\u003eOral Sex", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Anal", "label": "Anal", "shape": "dot", "title": "Anal\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Anal:\u003cbr\u003eSex\u003cbr\u003eGay Sex\u003cbr\u003eOral Sex", "value": 3}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Anal Plug", "label": "Anal Plug", "shape": "dot", "title": "Anal Plug\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Anal Plug:\u003cbr\u003eOral Sex", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Large Cock", "label": "Large Cock", "shape": "dot", "title": "Large Cock\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Large Cock:\u003cbr\u003eOral Sex", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Fights", "label": "Fights", "shape": "dot", "title": "Fights\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Fights:\u003cbr\u003eOral Sex", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Threesome - F/M/M", "label": "Threesome - F/M/M", "shape": "dot", "title": "Threesome - F/M/M\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Threesome - F/M/M:\u003cbr\u003eOral Sex", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Original Character(s)", "label": "Original Character(s)", "shape": "dot", "title": "Original Character(s)\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Original Character(s):\u003cbr\u003eOral Sex", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Blood", "label": "Blood", "shape": "dot", "title": "Blood\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Blood:\u003cbr\u003ePain\u003cbr\u003eOral Sex", "value": 2}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Sexual Slavery", "label": "Sexual Slavery", "shape": "dot", "title": "Sexual Slavery\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Sexual Slavery:\u003cbr\u003eOral Sex", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Anal Fisting", "label": "Anal Fisting", "shape": "dot", "title": "Anal Fisting\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Anal Fisting:\u003cbr\u003eOral Sex", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Male Homosexuality", "label": "Male Homosexuality", "shape": "dot", "title": "Male Homosexuality\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Male Homosexuality:\u003cbr\u003eGay Sex\u003cbr\u003eMale Slash", "value": 2}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Pain", "label": "Pain", "shape": "dot", "title": "Pain\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Pain:\u003cbr\u003eBlood", "value": 1}]);
+        edges = new vis.DataSet([{"from": "Oral Sex", "title": "Co-occurred in 19 fics", "to": "Magic", "value": 19.0}, {"from": "Oral Sex", "title": "Co-occurred in 53 fics", "to": "Sex", "value": 53.0}, {"from": "Oral Sex", "title": "Co-occurred in 14 fics", "to": "Consent", "value": 14.0}, {"from": "Oral Sex", "title": "Co-occurred in 14 fics", "to": "Enthusiastic Consent", "value": 14.0}, {"from": "Oral Sex", "title": "Co-occurred in 19 fics", "to": "Explicit Consent", "value": 19.0}, {"from": "Oral Sex", "title": "Co-occurred in 74 fics", "to": "Gay Sex", "value": 74.0}, {"from": "Oral Sex", "title": "Co-occurred in 22 fics", "to": "Love", "value": 22.0}, {"from": "Oral Sex", "title": "Co-occurred in 14 fics", "to": "Gay Male Character", "value": 14.0}, {"from": "Oral Sex", "title": "Co-occurred in 28 fics", "to": "Male Slash", "value": 28.0}, {"from": "Oral Sex", "title": "Co-occurred in 15 fics", "to": "Drunk Sex", "value": 15.0}, {"from": "Oral Sex", "title": "Co-occurred in 19 fics", "to": "First Time Blow Jobs", "value": 19.0}, {"from": "Oral Sex", "title": "Co-occurred in 14 fics", "to": "Swearing", "value": 14.0}, {"from": "Oral Sex", "title": "Co-occurred in 16 fics", "to": "Anal Play", "value": 16.0}, {"from": "Oral Sex", "title": "Co-occurred in 17 fics", "to": "Gay", "value": 17.0}, {"from": "Oral Sex", "title": "Co-occurred in 20 fics", "to": "Underage Sex", "value": 20.0}, {"from": "Oral Sex", "title": "Co-occurred in 30 fics", "to": "Anal", "value": 30.0}, {"from": "Oral Sex", "title": "Co-occurred in 15 fics", "to": "Anal Plug", "value": 15.0}, {"from": "Oral Sex", "title": "Co-occurred in 12 fics", "to": "Large Cock", "value": 12.0}, {"from": "Oral Sex", "title": "Co-occurred in 12 fics", "to": "Fights", "value": 12.0}, {"from": "Oral Sex", "title": "Co-occurred in 15 fics", "to": "Threesome - F/M/M", "value": 15.0}, {"from": "Oral Sex", "title": "Co-occurred in 12 fics", "to": "Original Character(s)", "value": 12.0}, {"from": "Oral Sex", "title": "Co-occurred in 21 fics", "to": "Blood", "value": 21.0}, {"from": "Oral Sex", "title": "Co-occurred in 12 fics", "to": "Sexual Slavery", "value": 12.0}, {"from": "Oral Sex", "title": "Co-occurred in 14 fics", "to": "Anal Fisting", "value": 14.0}, {"from": "Gay Sex", "title": "Co-occurred in 37 fics", "to": "Sex", "value": 37.0}, {"from": "Gay Sex", "title": "Co-occurred in 16 fics", "to": "Gay Male Character", "value": 16.0}, {"from": "Gay Sex", "title": "Co-occurred in 29 fics", "to": "Gay", "value": 29.0}, {"from": "Gay Sex", "title": "Co-occurred in 26 fics", "to": "Male Slash", "value": 26.0}, {"from": "Gay Sex", "title": "Co-occurred in 10 fics", "to": "Male Homosexuality", "value": 10.0}, {"from": "Gay Sex", "title": "Co-occurred in 16 fics", "to": "Anal", "value": 16.0}, {"from": "Love", "title": "Co-occurred in 22 fics", "to": "Sex", "value": 22.0}, {"from": "Sex", "title": "Co-occurred in 18 fics", "to": "Gay", "value": 18.0}, {"from": "Sex", "title": "Co-occurred in 14 fics", "to": "Anal", "value": 14.0}, {"from": "Consent", "title": "Co-occurred in 13 fics", "to": "Enthusiastic Consent", "value": 13.0}, {"from": "Gay Male Character", "title": "Co-occurred in 14 fics", "to": "Male Slash", "value": 14.0}, {"from": "Male Slash", "title": "Co-occurred in 10 fics", "to": "Male Homosexuality", "value": 10.0}, {"from": "Pain", "title": "Co-occurred in 10 fics", "to": "Blood", "value": 10.0}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"nodes": {"font": {"size": 20}, "scaling": {"min": 10, "max": 50}, "color": {"highlight": {"border": "rgba(217,0,18,1)", "background": "rgba(217,0,18,1)"}}, "shape": "circle"}, "edges": {"color": {"highlight": "rgba(237,5,24,1)", "inherit": false, "opacity": 0.2}, "smooth": false}, "physics": {"forceAtlas2Based": {"gravitationalConstant": -118, "springLength": 200, "springConstant": 0, "damping": 0.92, "avoidOverlap": 0.9}, "maxVelocity": 30, "minVelocity": 0.75, "solver": "forceAtlas2Based"}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
