@@ -277,6 +277,7 @@ Asterisks* denote a network with 5 or less nodes.<br><br>
 </body>
 </html>
 
+<br>
 ## Mature tag network
 <b>Modularity = .521</b><br>
 
@@ -486,6 +487,7 @@ Asterisks* denote a network with 5 or less nodes.<br><br>
 </body>
 </html>
 
+<br>
 ## Teen tag network
 <b>Modularity = .390</b><br>
 
@@ -737,6 +739,7 @@ Asterisks* denote a network with 5 or less nodes.<br><br>
 </body>
 </html>
 
+<br>
 ## Gen tag network
 <b>Modularity = .390</b><br>
 
@@ -958,6 +961,7 @@ Asterisks* denote a network with 5 or less nodes.<br><br>
 </body>
 </html>
 
+<br>
 ## Conclusion
 The results in the end were rather coarse. But across the ratings, we do see the common themes which pop up in many Drarry fics clustering somewhat together. To name a couple: immediate post-war redemptions/getting together, post-Hogwarts fumbling to find their way together, canon-divergence/EWE AUs, muggle AUs, mpreg, the ‘good’ side actually being manipulative, creature inheritance, season/holiday fics, dark Harry, mental health/abuse, soulmate AUs, professors Harry/Draco, genderbending. <br><br>
 For each of the ratings, we also see some slightly more specific to them: <br>
