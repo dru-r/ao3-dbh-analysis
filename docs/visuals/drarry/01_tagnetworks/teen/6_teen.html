@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#b2509d", "font": {"color": "white"}, "id": "Drarry", "label": "Drarry", "shape": "dot", "title": "Drarry\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Drarry:\u003cbr\u003edraco - Freeform\u003cbr\u003eGryffindor\u003cbr\u003eI Don\u0027t Even Know\u003cbr\u003eFluff and Smut\u003cbr\u003eEveryone Is Gay", "value": 19}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Draco Malfoy/Harry Potter Fluff", "label": "Draco Malfoy/Harry Potter Fluff", "shape": "dot", "title": "Draco Malfoy/Harry Potter Fluff\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Draco Malfoy/Harry Potter Fluff:\u003cbr\u003eDrarry", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Love", "label": "Love", "shape": "dot", "title": "Love\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Love:\u003cbr\u003eHogwarts\u003cbr\u003eDrarry", "value": 2}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Hogwarts", "label": "Hogwarts", "shape": "dot", "title": "Hogwarts\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Hogwarts:\u003cbr\u003eHufflepuff\u003cbr\u003eMagic\u003cbr\u003eHogsmeade\u003cbr\u003eCute\u003cbr\u003eAlternate Universe - Hogwarts", "value": 10}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Gay", "label": "Gay", "shape": "dot", "title": "Gay\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Gay:\u003cbr\u003eEveryone Is Gay\u003cbr\u003eHogwarts\u003cbr\u003eDrarry", "value": 3}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Everyone Is Gay", "label": "Everyone Is Gay", "shape": "dot", "title": "Everyone Is Gay\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Everyone Is Gay:\u003cbr\u003eGay\u003cbr\u003eDrarry", "value": 2}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Gryffindor", "label": "Gryffindor", "shape": "dot", "title": "Gryffindor\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Gryffindor:\u003cbr\u003eHufflepuff\u003cbr\u003eDrarry\u003cbr\u003eHogwarts\u003cbr\u003eSlytherin", "value": 4}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Slytherin", "label": "Slytherin", "shape": "dot", "title": "Slytherin\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Slytherin:\u003cbr\u003eRavenclaw\u003cbr\u003eHufflepuff\u003cbr\u003eDrarry\u003cbr\u003eHogwarts\u003cbr\u003eGryffindor", "value": 5}, {"color": "#b2509d", "font": {"color": "white"}, "id": "How Do I Tag", "label": "How Do I Tag", "shape": "dot", "title": "How Do I Tag\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with How Do I Tag:\u003cbr\u003eI Don\u0027t Even Know\u003cbr\u003eDrarry", "value": 2}, {"color": "#b2509d", "font": {"color": "white"}, "id": "I Don\u0027t Even Know", "label": "I Don\u0027t Even Know", "shape": "dot", "title": "I Don\u0027t Even Know\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with I Don\u0027t Even Know:\u003cbr\u003eHow Do I Tag\u003cbr\u003eI Wrote This Instead of Sleeping\u003cbr\u003eDrarry", "value": 3}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Smut", "label": "Smut", "shape": "dot", "title": "Smut\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Smut:\u003cbr\u003eFluff and Smut\u003cbr\u003eDrarry", "value": 2}, {"color": "#b2509d", "font": {"color": "white"}, "id": "No Smut", "label": "No Smut", "shape": "dot", "title": "No Smut\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with No Smut:\u003cbr\u003eDrarry", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "draco - Freeform", "label": "draco - Freeform", "shape": "dot", "title": "draco - Freeform\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with draco - Freeform:\u003cbr\u003eDrarry", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "I\u0027m Bad At Tagging", "label": "I\u0027m Bad At Tagging", "shape": "dot", "title": "I\u0027m Bad At Tagging\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with I\u0027m Bad At Tagging:\u003cbr\u003eDrarry", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Cute", "label": "Cute", "shape": "dot", "title": "Cute\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Cute:\u003cbr\u003eHogwarts\u003cbr\u003eDrarry", "value": 2}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Fluff and Smut", "label": "Fluff and Smut", "shape": "dot", "title": "Fluff and Smut\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Fluff and Smut:\u003cbr\u003eDrarry\u003cbr\u003eSmut", "value": 2}, {"color": "#b2509d", "font": {"color": "white"}, "id": "romione", "label": "romione", "shape": "dot", "title": "romione\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with romione:\u003cbr\u003eDrarry", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "wolfstar", "label": "wolfstar", "shape": "dot", "title": "wolfstar\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with wolfstar:\u003cbr\u003eDrarry", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Sad", "label": "Sad", "shape": "dot", "title": "Sad\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Sad:\u003cbr\u003eDrarry", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "linny - Freeform", "label": "linny - Freeform", "shape": "dot", "title": "linny - Freeform\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with linny - Freeform:\u003cbr\u003eDrarry", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Magic", "label": "Magic", "shape": "dot", "title": "Magic\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Magic:\u003cbr\u003eHogwarts", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Hogsmeade", "label": "Hogsmeade", "shape": "dot", "title": "Hogsmeade\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Hogsmeade:\u003cbr\u003eHogwarts", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Alternate Universe - Hogwarts", "label": "Alternate Universe - Hogwarts", "shape": "dot", "title": "Alternate Universe - Hogwarts\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Alternate Universe - Hogwarts:\u003cbr\u003eHogwarts", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Hufflepuff", "label": "Hufflepuff", "shape": "dot", "title": "Hufflepuff\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Hufflepuff:\u003cbr\u003eHogwarts\u003cbr\u003eGryffindor\u003cbr\u003eSlytherin", "value": 3}, {"color": "#b2509d", "font": {"color": "white"}, "id": "Ravenclaw", "label": "Ravenclaw", "shape": "dot", "title": "Ravenclaw\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Ravenclaw:\u003cbr\u003eSlytherin", "value": 1}, {"color": "#b2509d", "font": {"color": "white"}, "id": "I Wrote This Instead of Sleeping", "label": "I Wrote This Instead of Sleeping", "shape": "dot", "title": "I Wrote This Instead of Sleeping\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with I Wrote This Instead of Sleeping:\u003cbr\u003eI Don\u0027t Even Know", "value": 1}]);
+        edges = new vis.DataSet([{"from": "Drarry", "title": "Co-occurred in 15 fics", "to": "Draco Malfoy/Harry Potter Fluff", "value": 15.0}, {"from": "Drarry", "title": "Co-occurred in 33 fics", "to": "Love", "value": 33.0}, {"from": "Drarry", "title": "Co-occurred in 58 fics", "to": "Hogwarts", "value": 58.0}, {"from": "Drarry", "title": "Co-occurred in 56 fics", "to": "Gay", "value": 56.0}, {"from": "Drarry", "title": "Co-occurred in 13 fics", "to": "Everyone Is Gay", "value": 13.0}, {"from": "Drarry", "title": "Co-occurred in 12 fics", "to": "Gryffindor", "value": 12.0}, {"from": "Drarry", "title": "Co-occurred in 15 fics", "to": "Slytherin", "value": 15.0}, {"from": "Drarry", "title": "Co-occurred in 18 fics", "to": "How Do I Tag", "value": 18.0}, {"from": "Drarry", "title": "Co-occurred in 12 fics", "to": "I Don\u0027t Even Know", "value": 12.0}, {"from": "Drarry", "title": "Co-occurred in 18 fics", "to": "Smut", "value": 18.0}, {"from": "Drarry", "title": "Co-occurred in 14 fics", "to": "No Smut", "value": 14.0}, {"from": "Drarry", "title": "Co-occurred in 11 fics", "to": "draco - Freeform", "value": 11.0}, {"from": "Drarry", "title": "Co-occurred in 15 fics", "to": "I\u0027m Bad At Tagging", "value": 15.0}, {"from": "Drarry", "title": "Co-occurred in 19 fics", "to": "Cute", "value": 19.0}, {"from": "Drarry", "title": "Co-occurred in 12 fics", "to": "Fluff and Smut", "value": 12.0}, {"from": "Drarry", "title": "Co-occurred in 16 fics", "to": "romione", "value": 16.0}, {"from": "Drarry", "title": "Co-occurred in 26 fics", "to": "wolfstar", "value": 26.0}, {"from": "Drarry", "title": "Co-occurred in 17 fics", "to": "Sad", "value": 17.0}, {"from": "Drarry", "title": "Co-occurred in 13 fics", "to": "linny - Freeform", "value": 13.0}, {"from": "Hogwarts", "title": "Co-occurred in 23 fics", "to": "Gryffindor", "value": 23.0}, {"from": "Hogwarts", "title": "Co-occurred in 31 fics", "to": "Slytherin", "value": 31.0}, {"from": "Hogwarts", "title": "Co-occurred in 28 fics", "to": "Gay", "value": 28.0}, {"from": "Hogwarts", "title": "Co-occurred in 20 fics", "to": "Love", "value": 20.0}, {"from": "Hogwarts", "title": "Co-occurred in 12 fics", "to": "Magic", "value": 12.0}, {"from": "Hogwarts", "title": "Co-occurred in 12 fics", "to": "Hogsmeade", "value": 12.0}, {"from": "Hogwarts", "title": "Co-occurred in 19 fics", "to": "Alternate Universe - Hogwarts", "value": 19.0}, {"from": "Hogwarts", "title": "Co-occurred in 16 fics", "to": "Cute", "value": 16.0}, {"from": "Hogwarts", "title": "Co-occurred in 10 fics", "to": "Hufflepuff", "value": 10.0}, {"from": "Gay", "title": "Co-occurred in 12 fics", "to": "Everyone Is Gay", "value": 12.0}, {"from": "Gryffindor", "title": "Co-occurred in 32 fics", "to": "Slytherin", "value": 32.0}, {"from": "Gryffindor", "title": "Co-occurred in 10 fics", "to": "Hufflepuff", "value": 10.0}, {"from": "Slytherin", "title": "Co-occurred in 11 fics", "to": "Hufflepuff", "value": 11.0}, {"from": "Slytherin", "title": "Co-occurred in 9 fics", "to": "Ravenclaw", "value": 9.0}, {"from": "How Do I Tag", "title": "Co-occurred in 11 fics", "to": "I Don\u0027t Even Know", "value": 11.0}, {"from": "I Don\u0027t Even Know", "title": "Co-occurred in 11 fics", "to": "I Wrote This Instead of Sleeping", "value": 11.0}, {"from": "Smut", "title": "Co-occurred in 16 fics", "to": "Fluff and Smut", "value": 16.0}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"nodes": {"font": {"size": 20}, "scaling": {"min": 10, "max": 50}, "color": {"highlight": {"border": "rgba(217,0,18,1)", "background": "rgba(217,0,18,1)"}}, "shape": "circle"}, "edges": {"color": {"highlight": "rgba(237,5,24,1)", "inherit": false, "opacity": 0.2}, "smooth": false}, "physics": {"forceAtlas2Based": {"gravitationalConstant": -118, "springLength": 200, "springConstant": 0, "damping": 0.92, "avoidOverlap": 0.9}, "maxVelocity": 30, "minVelocity": 0.75, "solver": "forceAtlas2Based"}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

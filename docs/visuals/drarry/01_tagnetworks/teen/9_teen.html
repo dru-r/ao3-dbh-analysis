@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#48619e", "font": {"color": "white"}, "id": "Ginny Weasley Bashing", "label": "Ginny Weasley Bashing", "shape": "dot", "title": "Ginny Weasley Bashing\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Ginny Weasley Bashing:\u003cbr\u003eManipulative Albus Dumbledore\u003cbr\u003eHermione Granger Bashing\u003cbr\u003eMolly Weasley Bashing\u003cbr\u003eAlbus Dumbledore Bashing\u003cbr\u003eRon Weasley Bashing", "value": 5}, {"color": "#48619e", "font": {"color": "white"}, "id": "Albus Dumbledore Bashing", "label": "Albus Dumbledore Bashing", "shape": "dot", "title": "Albus Dumbledore Bashing\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Albus Dumbledore Bashing:\u003cbr\u003eGood Severus Snape\u003cbr\u003eSeveritus | Severus Snape is Harry Potter\u0027s Parent\u003cbr\u003eEvil Albus Dumbledore\u003cbr\u003eGood Malfoy Family (Harry Potter)\u003cbr\u003eWeasley Family Bashing (Harry Potter)", "value": 10}, {"color": "#48619e", "font": {"color": "white"}, "id": "Manipulative Albus Dumbledore", "label": "Manipulative Albus Dumbledore", "shape": "dot", "title": "Manipulative Albus Dumbledore\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Manipulative Albus Dumbledore:\u003cbr\u003eGinny Weasley Bashing\u003cbr\u003eEvil Albus Dumbledore\u003cbr\u003eRon Weasley Bashing\u003cbr\u003eAlbus Dumbledore Bashing", "value": 4}, {"color": "#48619e", "font": {"color": "white"}, "id": "Molly Weasley Bashing", "label": "Molly Weasley Bashing", "shape": "dot", "title": "Molly Weasley Bashing\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Molly Weasley Bashing:\u003cbr\u003eGinny Weasley Bashing\u003cbr\u003eAlbus Dumbledore Bashing\u003cbr\u003eRon Weasley Bashing", "value": 3}, {"color": "#48619e", "font": {"color": "white"}, "id": "Ron Weasley Bashing", "label": "Ron Weasley Bashing", "shape": "dot", "title": "Ron Weasley Bashing\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Ron Weasley Bashing:\u003cbr\u003eGood Severus Snape\u003cbr\u003eGood Malfoy Family (Harry Potter)\u003cbr\u003eManipulative Albus Dumbledore\u003cbr\u003eHermione Granger Bashing\u003cbr\u003eMolly Weasley Bashing", "value": 7}, {"color": "#48619e", "font": {"color": "white"}, "id": "Hermione Granger Bashing", "label": "Hermione Granger Bashing", "shape": "dot", "title": "Hermione Granger Bashing\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Hermione Granger Bashing:\u003cbr\u003eGinny Weasley Bashing\u003cbr\u003eAlbus Dumbledore Bashing\u003cbr\u003eRon Weasley Bashing", "value": 3}, {"color": "#48619e", "font": {"color": "white"}, "id": "Severitus | Severus Snape is Harry Potter\u0027s Parent", "label": "Severitus | Severus Snape is Harry Potter\u0027s Parent", "shape": "dot", "title": "Severitus | Severus Snape is Harry Potter\u0027s Parent\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Severitus | Severus Snape is Harry Potter\u0027s Parent:\u003cbr\u003eAlbus Dumbledore Bashing", "value": 1}, {"color": "#48619e", "font": {"color": "white"}, "id": "Evil Albus Dumbledore", "label": "Evil Albus Dumbledore", "shape": "dot", "title": "Evil Albus Dumbledore\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Evil Albus Dumbledore:\u003cbr\u003eAlbus Dumbledore Bashing\u003cbr\u003eManipulative Albus Dumbledore", "value": 2}, {"color": "#48619e", "font": {"color": "white"}, "id": "Good Severus Snape", "label": "Good Severus Snape", "shape": "dot", "title": "Good Severus Snape\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Good Severus Snape:\u003cbr\u003eAlbus Dumbledore Bashing\u003cbr\u003eRon Weasley Bashing", "value": 2}, {"color": "#48619e", "font": {"color": "white"}, "id": "Weasley Family Bashing (Harry Potter)", "label": "Weasley Family Bashing (Harry Potter)", "shape": "dot", "title": "Weasley Family Bashing (Harry Potter)\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Weasley Family Bashing (Harry Potter):\u003cbr\u003eAlbus Dumbledore Bashing", "value": 1}, {"color": "#48619e", "font": {"color": "white"}, "id": "Good Malfoy Family (Harry Potter)", "label": "Good Malfoy Family (Harry Potter)", "shape": "dot", "title": "Good Malfoy Family (Harry Potter)\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Good Malfoy Family (Harry Potter):\u003cbr\u003eRon Weasley Bashing\u003cbr\u003eAlbus Dumbledore Bashing", "value": 2}]);
+        edges = new vis.DataSet([{"from": "Ginny Weasley Bashing", "title": "Co-occurred in 24 fics", "to": "Albus Dumbledore Bashing", "value": 24.0}, {"from": "Ginny Weasley Bashing", "title": "Co-occurred in 15 fics", "to": "Manipulative Albus Dumbledore", "value": 15.0}, {"from": "Ginny Weasley Bashing", "title": "Co-occurred in 22 fics", "to": "Molly Weasley Bashing", "value": 22.0}, {"from": "Ginny Weasley Bashing", "title": "Co-occurred in 30 fics", "to": "Ron Weasley Bashing", "value": 30.0}, {"from": "Ginny Weasley Bashing", "title": "Co-occurred in 15 fics", "to": "Hermione Granger Bashing", "value": 15.0}, {"from": "Albus Dumbledore Bashing", "title": "Co-occurred in 26 fics", "to": "Hermione Granger Bashing", "value": 26.0}, {"from": "Albus Dumbledore Bashing", "title": "Co-occurred in 44 fics", "to": "Ron Weasley Bashing", "value": 44.0}, {"from": "Albus Dumbledore Bashing", "title": "Co-occurred in 38 fics", "to": "Manipulative Albus Dumbledore", "value": 38.0}, {"from": "Albus Dumbledore Bashing", "title": "Co-occurred in 24 fics", "to": "Molly Weasley Bashing", "value": 24.0}, {"from": "Albus Dumbledore Bashing", "title": "Co-occurred in 14 fics", "to": "Severitus | Severus Snape is Harry Potter\u0027s Parent", "value": 14.0}, {"from": "Albus Dumbledore Bashing", "title": "Co-occurred in 16 fics", "to": "Evil Albus Dumbledore", "value": 16.0}, {"from": "Albus Dumbledore Bashing", "title": "Co-occurred in 13 fics", "to": "Good Severus Snape", "value": 13.0}, {"from": "Albus Dumbledore Bashing", "title": "Co-occurred in 17 fics", "to": "Weasley Family Bashing (Harry Potter)", "value": 17.0}, {"from": "Albus Dumbledore Bashing", "title": "Co-occurred in 16 fics", "to": "Good Malfoy Family (Harry Potter)", "value": 16.0}, {"from": "Manipulative Albus Dumbledore", "title": "Co-occurred in 21 fics", "to": "Ron Weasley Bashing", "value": 21.0}, {"from": "Manipulative Albus Dumbledore", "title": "Co-occurred in 20 fics", "to": "Evil Albus Dumbledore", "value": 20.0}, {"from": "Molly Weasley Bashing", "title": "Co-occurred in 27 fics", "to": "Ron Weasley Bashing", "value": 27.0}, {"from": "Ron Weasley Bashing", "title": "Co-occurred in 26 fics", "to": "Hermione Granger Bashing", "value": 26.0}, {"from": "Ron Weasley Bashing", "title": "Co-occurred in 13 fics", "to": "Good Severus Snape", "value": 13.0}, {"from": "Ron Weasley Bashing", "title": "Co-occurred in 15 fics", "to": "Good Malfoy Family (Harry Potter)", "value": 15.0}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"nodes": {"font": {"size": 20}, "scaling": {"min": 10, "max": 50}, "color": {"highlight": {"border": "rgba(217,0,18,1)", "background": "rgba(217,0,18,1)"}}, "shape": "circle"}, "edges": {"color": {"highlight": "rgba(237,5,24,1)", "inherit": false, "opacity": 0.2}, "smooth": false}, "physics": {"forceAtlas2Based": {"gravitationalConstant": -118, "springLength": 200, "springConstant": 0, "damping": 0.92, "avoidOverlap": 0.9}, "maxVelocity": 30, "minVelocity": 0.75, "solver": "forceAtlas2Based"}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

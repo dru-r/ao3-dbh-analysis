@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#3fffff", "font": {"color": "white"}, "id": "Gay Draco Malfoy", "label": "Gay Draco Malfoy", "shape": "dot", "title": "Gay Draco Malfoy\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Gay Draco Malfoy:\u003cbr\u003eLesbian Pansy Parkinson\u003cbr\u003eBisexual Harry\u003cbr\u003eComing Out\u003cbr\u003eGay Harry Potter\u003cbr\u003eBisexual Harry Potter", "value": 5}, {"color": "#3fffff", "font": {"color": "white"}, "id": "Bisexual Harry Potter", "label": "Bisexual Harry Potter", "shape": "dot", "title": "Bisexual Harry Potter\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Bisexual Harry Potter:\u003cbr\u003ePerson of Color Harry Potter\u003cbr\u003eComing Out\u003cbr\u003eGay Draco Malfoy", "value": 3}, {"color": "#3fffff", "font": {"color": "white"}, "id": "Coming Out", "label": "Coming Out", "shape": "dot", "title": "Coming Out\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Coming Out:\u003cbr\u003eBisexual Harry Potter\u003cbr\u003eGay Draco Malfoy", "value": 2}, {"color": "#3fffff", "font": {"color": "white"}, "id": "Gay Harry Potter", "label": "Gay Harry Potter", "shape": "dot", "title": "Gay Harry Potter\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Gay Harry Potter:\u003cbr\u003eGay Draco Malfoy", "value": 1}, {"color": "#3fffff", "font": {"color": "white"}, "id": "Bisexual Harry", "label": "Bisexual Harry", "shape": "dot", "title": "Bisexual Harry\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Bisexual Harry:\u003cbr\u003eGay Draco Malfoy", "value": 1}, {"color": "#3fffff", "font": {"color": "white"}, "id": "Lesbian Pansy Parkinson", "label": "Lesbian Pansy Parkinson", "shape": "dot", "title": "Lesbian Pansy Parkinson\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Lesbian Pansy Parkinson:\u003cbr\u003eGay Draco Malfoy", "value": 1}, {"color": "#3fffff", "font": {"color": "white"}, "id": "Person of Color Harry Potter", "label": "Person of Color Harry Potter", "shape": "dot", "title": "Person of Color Harry Potter\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Person of Color Harry Potter:\u003cbr\u003eBisexual Harry Potter", "value": 1}]);
+        edges = new vis.DataSet([{"from": "Gay Draco Malfoy", "title": "Co-occurred in 102 fics", "to": "Bisexual Harry Potter", "value": 102.0}, {"from": "Gay Draco Malfoy", "title": "Co-occurred in 23 fics", "to": "Coming Out", "value": 23.0}, {"from": "Gay Draco Malfoy", "title": "Co-occurred in 24 fics", "to": "Gay Harry Potter", "value": 24.0}, {"from": "Gay Draco Malfoy", "title": "Co-occurred in 13 fics", "to": "Bisexual Harry", "value": 13.0}, {"from": "Gay Draco Malfoy", "title": "Co-occurred in 11 fics", "to": "Lesbian Pansy Parkinson", "value": 11.0}, {"from": "Bisexual Harry Potter", "title": "Co-occurred in 18 fics", "to": "Coming Out", "value": 18.0}, {"from": "Bisexual Harry Potter", "title": "Co-occurred in 11 fics", "to": "Person of Color Harry Potter", "value": 11.0}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"nodes": {"font": {"size": 20}, "scaling": {"min": 10, "max": 50}, "color": {"highlight": {"border": "rgba(217,0,18,1)", "background": "rgba(217,0,18,1)"}}, "shape": "circle"}, "edges": {"color": {"highlight": "rgba(237,5,24,1)", "inherit": false, "opacity": 0.2}, "smooth": false}, "physics": {"forceAtlas2Based": {"gravitationalConstant": -118, "springLength": 200, "springConstant": 0, "damping": 0.92, "avoidOverlap": 0.9}, "maxVelocity": 30, "minVelocity": 0.75, "solver": "forceAtlas2Based"}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

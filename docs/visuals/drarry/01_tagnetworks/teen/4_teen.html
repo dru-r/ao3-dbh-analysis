@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#ff0054", "font": {"color": "white"}, "id": "Drabble", "label": "Drabble", "shape": "dot", "title": "Drabble\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Drabble:\u003cbr\u003eHeadcanon\u003cbr\u003eAmbiguous/Open Ending\u003cbr\u003eMild Language\u003cbr\u003eRating: PG13\u003cbr\u003eSecret Relationship", "value": 10}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Established Relationship", "label": "Established Relationship", "shape": "dot", "title": "Established Relationship\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Established Relationship:\u003cbr\u003eMarriage\u003cbr\u003eSlice of Life\u003cbr\u003eTeasing\u003cbr\u003eComfort\u003cbr\u003eMarried Couple", "value": 18}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Drabble Collection", "label": "Drabble Collection", "shape": "dot", "title": "Drabble Collection\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Drabble Collection:\u003cbr\u003eDrabble", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Implied Sexual Content", "label": "Implied Sexual Content", "shape": "dot", "title": "Implied Sexual Content\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Implied Sexual Content:\u003cbr\u003eRating: PG13\u003cbr\u003eEstablished Relationship\u003cbr\u003eDrabble", "value": 3}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Don\u0027t copy to another site", "label": "Don\u0027t copy to another site", "shape": "dot", "title": "Don\u0027t copy to another site\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Don\u0027t copy to another site:\u003cbr\u003eDrabble\u003cbr\u003eEstablished Relationship", "value": 2}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Drarry Discord Writers Corner Drabble Challenge", "label": "Drarry Discord Writers Corner Drabble Challenge", "shape": "dot", "title": "Drarry Discord Writers Corner Drabble Challenge\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Drarry Discord Writers Corner Drabble Challenge:\u003cbr\u003eAmbiguous/Open Ending\u003cbr\u003eDrabble\u003cbr\u003eEstablished Relationship", "value": 3}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Secret Relationship", "label": "Secret Relationship", "shape": "dot", "title": "Secret Relationship\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Secret Relationship:\u003cbr\u003eDrabble\u003cbr\u003eEstablished Relationship", "value": 2}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Ambiguous/Open Ending", "label": "Ambiguous/Open Ending", "shape": "dot", "title": "Ambiguous/Open Ending\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Ambiguous/Open Ending:\u003cbr\u003eDrabble\u003cbr\u003eDrarry Discord Writers Corner Drabble Challenge", "value": 2}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Mild Language", "label": "Mild Language", "shape": "dot", "title": "Mild Language\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Mild Language:\u003cbr\u003eDrabble\u003cbr\u003eRating: PG13", "value": 2}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Rating: PG13", "label": "Rating: PG13", "shape": "dot", "title": "Rating: PG13\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Rating: PG13:\u003cbr\u003eFanfiction\u003cbr\u003eMild Language\u003cbr\u003eDrabble\u003cbr\u003eImplied Sexual Content", "value": 4}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Headcanon", "label": "Headcanon", "shape": "dot", "title": "Headcanon\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Headcanon:\u003cbr\u003eDrabble", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Domestic", "label": "Domestic", "shape": "dot", "title": "Domestic\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Domestic:\u003cbr\u003eDomestic Fluff\u003cbr\u003eEstablished Relationship", "value": 2}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Teasing", "label": "Teasing", "shape": "dot", "title": "Teasing\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Teasing:\u003cbr\u003eEstablished Relationship", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Domestic Fluff", "label": "Domestic Fluff", "shape": "dot", "title": "Domestic Fluff\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Domestic Fluff:\u003cbr\u003eMarried Life\u003cbr\u003eFamily Fluff\u003cbr\u003eDomestic\u003cbr\u003eTooth-Rotting Fluff\u003cbr\u003eEstablished Relationship", "value": 5}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Arguing", "label": "Arguing", "shape": "dot", "title": "Arguing\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Arguing:\u003cbr\u003eEstablished Relationship", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Established Draco Malfoy/Harry Potter", "label": "Established Draco Malfoy/Harry Potter", "shape": "dot", "title": "Established Draco Malfoy/Harry Potter\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Established Draco Malfoy/Harry Potter:\u003cbr\u003eEstablished Relationship", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Tooth-Rotting Fluff", "label": "Tooth-Rotting Fluff", "shape": "dot", "title": "Tooth-Rotting Fluff\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Tooth-Rotting Fluff:\u003cbr\u003eEstablished Relationship\u003cbr\u003eDomestic Fluff", "value": 2}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Marriage", "label": "Marriage", "shape": "dot", "title": "Marriage\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Marriage:\u003cbr\u003eEstablished Relationship", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Short \u0026 Sweet", "label": "Short \u0026 Sweet", "shape": "dot", "title": "Short \u0026 Sweet\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Short \u0026 Sweet:\u003cbr\u003eEstablished Relationship", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Comfort", "label": "Comfort", "shape": "dot", "title": "Comfort\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Comfort:\u003cbr\u003eEstablished Relationship", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Cuddling \u0026 Snuggling", "label": "Cuddling \u0026 Snuggling", "shape": "dot", "title": "Cuddling \u0026 Snuggling\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Cuddling \u0026 Snuggling:\u003cbr\u003eEstablished Relationship", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Slice of Life", "label": "Slice of Life", "shape": "dot", "title": "Slice of Life\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Slice of Life:\u003cbr\u003eEstablished Relationship", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Marriage Proposal", "label": "Marriage Proposal", "shape": "dot", "title": "Marriage Proposal\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Marriage Proposal:\u003cbr\u003eEstablished Relationship", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Married Couple", "label": "Married Couple", "shape": "dot", "title": "Married Couple\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Married Couple:\u003cbr\u003eEstablished Relationship", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Married Life", "label": "Married Life", "shape": "dot", "title": "Married Life\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Married Life:\u003cbr\u003eDomestic Fluff", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Family Fluff", "label": "Family Fluff", "shape": "dot", "title": "Family Fluff\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Family Fluff:\u003cbr\u003eFamily Feels\u003cbr\u003eDomestic Fluff", "value": 2}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Fanfiction", "label": "Fanfiction", "shape": "dot", "title": "Fanfiction\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Fanfiction:\u003cbr\u003eRating: PG13", "value": 1}, {"color": "#ff0054", "font": {"color": "white"}, "id": "Family Feels", "label": "Family Feels", "shape": "dot", "title": "Family Feels\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Family Feels:\u003cbr\u003eFamily Fluff", "value": 1}]);
+        edges = new vis.DataSet([{"from": "Drabble", "title": "Co-occurred in 59 fics", "to": "Established Relationship", "value": 59.0}, {"from": "Drabble", "title": "Co-occurred in 24 fics", "to": "Drabble Collection", "value": 24.0}, {"from": "Drabble", "title": "Co-occurred in 22 fics", "to": "Implied Sexual Content", "value": 22.0}, {"from": "Drabble", "title": "Co-occurred in 34 fics", "to": "Don\u0027t copy to another site", "value": 34.0}, {"from": "Drabble", "title": "Co-occurred in 35 fics", "to": "Drarry Discord Writers Corner Drabble Challenge", "value": 35.0}, {"from": "Drabble", "title": "Co-occurred in 20 fics", "to": "Secret Relationship", "value": 20.0}, {"from": "Drabble", "title": "Co-occurred in 12 fics", "to": "Ambiguous/Open Ending", "value": 12.0}, {"from": "Drabble", "title": "Co-occurred in 12 fics", "to": "Mild Language", "value": 12.0}, {"from": "Drabble", "title": "Co-occurred in 16 fics", "to": "Rating: PG13", "value": 16.0}, {"from": "Drabble", "title": "Co-occurred in 11 fics", "to": "Headcanon", "value": 11.0}, {"from": "Established Relationship", "title": "Co-occurred in 17 fics", "to": "Domestic", "value": 17.0}, {"from": "Established Relationship", "title": "Co-occurred in 12 fics", "to": "Teasing", "value": 12.0}, {"from": "Established Relationship", "title": "Co-occurred in 30 fics", "to": "Secret Relationship", "value": 30.0}, {"from": "Established Relationship", "title": "Co-occurred in 46 fics", "to": "Don\u0027t copy to another site", "value": 46.0}, {"from": "Established Relationship", "title": "Co-occurred in 81 fics", "to": "Domestic Fluff", "value": 81.0}, {"from": "Established Relationship", "title": "Co-occurred in 42 fics", "to": "Drarry Discord Writers Corner Drabble Challenge", "value": 42.0}, {"from": "Established Relationship", "title": "Co-occurred in 13 fics", "to": "Arguing", "value": 13.0}, {"from": "Established Relationship", "title": "Co-occurred in 14 fics", "to": "Established Draco Malfoy/Harry Potter", "value": 14.0}, {"from": "Established Relationship", "title": "Co-occurred in 19 fics", "to": "Tooth-Rotting Fluff", "value": 19.0}, {"from": "Established Relationship", "title": "Co-occurred in 11 fics", "to": "Marriage", "value": 11.0}, {"from": "Established Relationship", "title": "Co-occurred in 14 fics", "to": "Short \u0026 Sweet", "value": 14.0}, {"from": "Established Relationship", "title": "Co-occurred in 12 fics", "to": "Comfort", "value": 12.0}, {"from": "Established Relationship", "title": "Co-occurred in 19 fics", "to": "Cuddling \u0026 Snuggling", "value": 19.0}, {"from": "Established Relationship", "title": "Co-occurred in 21 fics", "to": "Implied Sexual Content", "value": 21.0}, {"from": "Established Relationship", "title": "Co-occurred in 11 fics", "to": "Slice of Life", "value": 11.0}, {"from": "Established Relationship", "title": "Co-occurred in 19 fics", "to": "Marriage Proposal", "value": 19.0}, {"from": "Established Relationship", "title": "Co-occurred in 12 fics", "to": "Married Couple", "value": 12.0}, {"from": "Implied Sexual Content", "title": "Co-occurred in 18 fics", "to": "Rating: PG13", "value": 18.0}, {"from": "Drarry Discord Writers Corner Drabble Challenge", "title": "Co-occurred in 19 fics", "to": "Ambiguous/Open Ending", "value": 19.0}, {"from": "Domestic", "title": "Co-occurred in 16 fics", "to": "Domestic Fluff", "value": 16.0}, {"from": "Domestic Fluff", "title": "Co-occurred in 27 fics", "to": "Tooth-Rotting Fluff", "value": 27.0}, {"from": "Domestic Fluff", "title": "Co-occurred in 12 fics", "to": "Married Life", "value": 12.0}, {"from": "Domestic Fluff", "title": "Co-occurred in 15 fics", "to": "Family Fluff", "value": 15.0}, {"from": "Fanfiction", "title": "Co-occurred in 10 fics", "to": "Rating: PG13", "value": 10.0}, {"from": "Rating: PG13", "title": "Co-occurred in 13 fics", "to": "Mild Language", "value": 13.0}, {"from": "Family Feels", "title": "Co-occurred in 10 fics", "to": "Family Fluff", "value": 10.0}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"nodes": {"font": {"size": 20}, "scaling": {"min": 10, "max": 50}, "color": {"highlight": {"border": "rgba(217,0,18,1)", "background": "rgba(217,0,18,1)"}}, "shape": "circle"}, "edges": {"color": {"highlight": "rgba(237,5,24,1)", "inherit": false, "opacity": 0.2}, "smooth": false}, "physics": {"forceAtlas2Based": {"gravitationalConstant": -118, "springLength": 200, "springConstant": 0, "damping": 0.92, "avoidOverlap": 0.9}, "maxVelocity": 30, "minVelocity": 0.75, "solver": "forceAtlas2Based"}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#2b2542", "font": {"color": "white"}, "id": "Auror Harry Potter", "label": "Auror Harry Potter", "shape": "dot", "title": "Auror Harry Potter\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Auror Harry Potter:\u003cbr\u003eAuror Training\u003cbr\u003eUnspeakable Hermione Granger\u003cbr\u003eCurses\u003cbr\u003ePotioneer Draco Malfoy\u003cbr\u003eMinistry of Magic Employee Draco Malfoy", "value": 15}, {"color": "#2b2542", "font": {"color": "white"}, "id": "Ministry of Magic (Harry Potter)", "label": "Ministry of Magic (Harry Potter)", "shape": "dot", "title": "Ministry of Magic (Harry Potter)\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Ministry of Magic (Harry Potter):\u003cbr\u003eAuror Harry Potter", "value": 1}, {"color": "#2b2542", "font": {"color": "white"}, "id": "Auror Ron Weasley", "label": "Auror Ron Weasley", "shape": "dot", "title": "Auror Ron Weasley\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Auror Ron Weasley:\u003cbr\u003eAuror Draco Malfoy\u003cbr\u003eAuror Harry Potter", "value": 2}, {"color": "#2b2542", "font": {"color": "white"}, "id": "Auror Draco Malfoy", "label": "Auror Draco Malfoy", "shape": "dot", "title": "Auror Draco Malfoy\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Auror Draco Malfoy:\u003cbr\u003eAuror Ron Weasley\u003cbr\u003eAurors\u003cbr\u003eAuror Partners\u003cbr\u003eAuror Harry Potter", "value": 4}, {"color": "#2b2542", "font": {"color": "white"}, "id": "Healer Draco Malfoy", "label": "Healer Draco Malfoy", "shape": "dot", "title": "Healer Draco Malfoy\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Healer Draco Malfoy:\u003cbr\u003eSt Mungo\u0027s Hospital\u003cbr\u003eAuror Harry Potter", "value": 2}, {"color": "#2b2542", "font": {"color": "white"}, "id": "Auror Partners", "label": "Auror Partners", "shape": "dot", "title": "Auror Partners\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Auror Partners:\u003cbr\u003eAurors\u003cbr\u003eAuror Draco Malfoy\u003cbr\u003eAuror Harry Potter", "value": 3}, {"color": "#2b2542", "font": {"color": "white"}, "id": "Auror Training", "label": "Auror Training", "shape": "dot", "title": "Auror Training\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Auror Training:\u003cbr\u003eAuror Harry Potter", "value": 1}, {"color": "#2b2542", "font": {"color": "white"}, "id": "Aurors", "label": "Aurors", "shape": "dot", "title": "Aurors\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Aurors:\u003cbr\u003eAuror Draco Malfoy\u003cbr\u003eAuror Partners\u003cbr\u003eAuror Harry Potter", "value": 3}, {"color": "#2b2542", "font": {"color": "white"}, "id": "Banter", "label": "Banter", "shape": "dot", "title": "Banter\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Banter:\u003cbr\u003eAuror Harry Potter", "value": 1}, {"color": "#2b2542", "font": {"color": "white"}, "id": "Potions Master Draco Malfoy", "label": "Potions Master Draco Malfoy", "shape": "dot", "title": "Potions Master Draco Malfoy\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Potions Master Draco Malfoy:\u003cbr\u003eAuror Harry Potter", "value": 1}, {"color": "#2b2542", "font": {"color": "white"}, "id": "Ministry of Magic Employee Draco Malfoy", "label": "Ministry of Magic Employee Draco Malfoy", "shape": "dot", "title": "Ministry of Magic Employee Draco Malfoy\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Ministry of Magic Employee Draco Malfoy:\u003cbr\u003eAuror Harry Potter", "value": 1}, {"color": "#2b2542", "font": {"color": "white"}, "id": "Curses", "label": "Curses", "shape": "dot", "title": "Curses\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Curses:\u003cbr\u003eAuror Harry Potter", "value": 1}, {"color": "#2b2542", "font": {"color": "white"}, "id": "Potioneer Draco Malfoy", "label": "Potioneer Draco Malfoy", "shape": "dot", "title": "Potioneer Draco Malfoy\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Potioneer Draco Malfoy:\u003cbr\u003eAuror Harry Potter", "value": 1}, {"color": "#2b2542", "font": {"color": "white"}, "id": "St Mungo\u0027s Hospital", "label": "St Mungo\u0027s Hospital", "shape": "dot", "title": "St Mungo\u0027s Hospital\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with St Mungo\u0027s Hospital:\u003cbr\u003eHealer Draco Malfoy\u003cbr\u003eAuror Harry Potter", "value": 2}, {"color": "#2b2542", "font": {"color": "white"}, "id": "Unspeakable Hermione Granger", "label": "Unspeakable Hermione Granger", "shape": "dot", "title": "Unspeakable Hermione Granger\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Unspeakable Hermione Granger:\u003cbr\u003eAuror Harry Potter", "value": 1}, {"color": "#2b2542", "font": {"color": "white"}, "id": "Unspeakable Draco Malfoy", "label": "Unspeakable Draco Malfoy", "shape": "dot", "title": "Unspeakable Draco Malfoy\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Unspeakable Draco Malfoy:\u003cbr\u003eAuror Harry Potter", "value": 1}]);
+        edges = new vis.DataSet([{"from": "Auror Harry Potter", "title": "Co-occurred in 18 fics", "to": "Ministry of Magic (Harry Potter)", "value": 18.0}, {"from": "Auror Harry Potter", "title": "Co-occurred in 38 fics", "to": "Auror Ron Weasley", "value": 38.0}, {"from": "Auror Harry Potter", "title": "Co-occurred in 123 fics", "to": "Auror Draco Malfoy", "value": 123.0}, {"from": "Auror Harry Potter", "title": "Co-occurred in 53 fics", "to": "Healer Draco Malfoy", "value": 53.0}, {"from": "Auror Harry Potter", "title": "Co-occurred in 73 fics", "to": "Auror Partners", "value": 73.0}, {"from": "Auror Harry Potter", "title": "Co-occurred in 10 fics", "to": "Auror Training", "value": 10.0}, {"from": "Auror Harry Potter", "title": "Co-occurred in 23 fics", "to": "Aurors", "value": 23.0}, {"from": "Auror Harry Potter", "title": "Co-occurred in 19 fics", "to": "Banter", "value": 19.0}, {"from": "Auror Harry Potter", "title": "Co-occurred in 23 fics", "to": "Potions Master Draco Malfoy", "value": 23.0}, {"from": "Auror Harry Potter", "title": "Co-occurred in 15 fics", "to": "Ministry of Magic Employee Draco Malfoy", "value": 15.0}, {"from": "Auror Harry Potter", "title": "Co-occurred in 12 fics", "to": "Curses", "value": 12.0}, {"from": "Auror Harry Potter", "title": "Co-occurred in 12 fics", "to": "Potioneer Draco Malfoy", "value": 12.0}, {"from": "Auror Harry Potter", "title": "Co-occurred in 19 fics", "to": "St Mungo\u0027s Hospital", "value": 19.0}, {"from": "Auror Harry Potter", "title": "Co-occurred in 10 fics", "to": "Unspeakable Hermione Granger", "value": 10.0}, {"from": "Auror Harry Potter", "title": "Co-occurred in 21 fics", "to": "Unspeakable Draco Malfoy", "value": 21.0}, {"from": "Auror Ron Weasley", "title": "Co-occurred in 14 fics", "to": "Auror Draco Malfoy", "value": 14.0}, {"from": "Auror Draco Malfoy", "title": "Co-occurred in 17 fics", "to": "Aurors", "value": 17.0}, {"from": "Auror Draco Malfoy", "title": "Co-occurred in 71 fics", "to": "Auror Partners", "value": 71.0}, {"from": "Healer Draco Malfoy", "title": "Co-occurred in 11 fics", "to": "St Mungo\u0027s Hospital", "value": 11.0}, {"from": "Auror Partners", "title": "Co-occurred in 20 fics", "to": "Aurors", "value": 20.0}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"nodes": {"font": {"size": 20}, "scaling": {"min": 10, "max": 50}, "color": {"highlight": {"border": "rgba(217,0,18,1)", "background": "rgba(217,0,18,1)"}}, "shape": "circle"}, "edges": {"color": {"highlight": "rgba(237,5,24,1)", "inherit": false, "opacity": 0.2}, "smooth": false}, "physics": {"forceAtlas2Based": {"gravitationalConstant": -118, "springLength": 200, "springConstant": 0, "damping": 0.92, "avoidOverlap": 0.9}, "maxVelocity": 30, "minVelocity": 0.75, "solver": "forceAtlas2Based"}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

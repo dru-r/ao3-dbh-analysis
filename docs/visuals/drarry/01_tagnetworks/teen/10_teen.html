@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#474b9b", "font": {"color": "white"}, "id": "Christmas", "label": "Christmas", "shape": "dot", "title": "Christmas\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Christmas:\u003cbr\u003eChristmas Eve\u003cbr\u003e25 Days of Harry and Draco\u003cbr\u003eChristmas Presents\u003cbr\u003eEarly Bird 25 Days of Harry and Draco 2020\u003cbr\u003eChristmas Party", "value": 8}, {"color": "#474b9b", "font": {"color": "white"}, "id": "Holidays", "label": "Holidays", "shape": "dot", "title": "Holidays\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Holidays:\u003cbr\u003eChristmas Fluff\u003cbr\u003eChristmas", "value": 2}, {"color": "#474b9b", "font": {"color": "white"}, "id": "Mistletoe", "label": "Mistletoe", "shape": "dot", "title": "Mistletoe\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Mistletoe:\u003cbr\u003eChristmas Fluff\u003cbr\u003eChristmas", "value": 2}, {"color": "#474b9b", "font": {"color": "white"}, "id": "Christmas Fluff", "label": "Christmas Fluff", "shape": "dot", "title": "Christmas Fluff\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Christmas Fluff:\u003cbr\u003eChristmas Eve\u003cbr\u003eHolidays\u003cbr\u003eWinter\u003cbr\u003eMistletoe\u003cbr\u003eChristmas Party", "value": 6}, {"color": "#474b9b", "font": {"color": "white"}, "id": "25 Days of Harry and Draco", "label": "25 Days of Harry and Draco", "shape": "dot", "title": "25 Days of Harry and Draco\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with 25 Days of Harry and Draco:\u003cbr\u003eChristmas", "value": 1}, {"color": "#474b9b", "font": {"color": "white"}, "id": "Christmas Presents", "label": "Christmas Presents", "shape": "dot", "title": "Christmas Presents\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Christmas Presents:\u003cbr\u003eChristmas", "value": 1}, {"color": "#474b9b", "font": {"color": "white"}, "id": "Christmas Party", "label": "Christmas Party", "shape": "dot", "title": "Christmas Party\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Christmas Party:\u003cbr\u003eChristmas\u003cbr\u003eChristmas Fluff", "value": 2}, {"color": "#474b9b", "font": {"color": "white"}, "id": "Christmas Eve", "label": "Christmas Eve", "shape": "dot", "title": "Christmas Eve\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Christmas Eve:\u003cbr\u003eChristmas\u003cbr\u003eChristmas Fluff", "value": 2}, {"color": "#474b9b", "font": {"color": "white"}, "id": "Early Bird 25 Days of Harry and Draco 2020", "label": "Early Bird 25 Days of Harry and Draco 2020", "shape": "dot", "title": "Early Bird 25 Days of Harry and Draco 2020\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Early Bird 25 Days of Harry and Draco 2020:\u003cbr\u003eChristmas", "value": 1}, {"color": "#474b9b", "font": {"color": "white"}, "id": "Winter", "label": "Winter", "shape": "dot", "title": "Winter\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Winter:\u003cbr\u003eChristmas Fluff", "value": 1}]);
+        edges = new vis.DataSet([{"from": "Christmas", "title": "Co-occurred in 21 fics", "to": "Holidays", "value": 21.0}, {"from": "Christmas", "title": "Co-occurred in 30 fics", "to": "Mistletoe", "value": 30.0}, {"from": "Christmas", "title": "Co-occurred in 62 fics", "to": "Christmas Fluff", "value": 62.0}, {"from": "Christmas", "title": "Co-occurred in 11 fics", "to": "25 Days of Harry and Draco", "value": 11.0}, {"from": "Christmas", "title": "Co-occurred in 11 fics", "to": "Christmas Presents", "value": 11.0}, {"from": "Christmas", "title": "Co-occurred in 15 fics", "to": "Christmas Party", "value": 15.0}, {"from": "Christmas", "title": "Co-occurred in 10 fics", "to": "Christmas Eve", "value": 10.0}, {"from": "Christmas", "title": "Co-occurred in 11 fics", "to": "Early Bird 25 Days of Harry and Draco 2020", "value": 11.0}, {"from": "Holidays", "title": "Co-occurred in 12 fics", "to": "Christmas Fluff", "value": 12.0}, {"from": "Mistletoe", "title": "Co-occurred in 15 fics", "to": "Christmas Fluff", "value": 15.0}, {"from": "Christmas Fluff", "title": "Co-occurred in 15 fics", "to": "Christmas Party", "value": 15.0}, {"from": "Christmas Fluff", "title": "Co-occurred in 10 fics", "to": "Christmas Eve", "value": 10.0}, {"from": "Christmas Fluff", "title": "Co-occurred in 12 fics", "to": "Winter", "value": 12.0}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"nodes": {"font": {"size": 20}, "scaling": {"min": 10, "max": 50}, "color": {"highlight": {"border": "rgba(217,0,18,1)", "background": "rgba(217,0,18,1)"}}, "shape": "circle"}, "edges": {"color": {"highlight": "rgba(237,5,24,1)", "inherit": false, "opacity": 0.2}, "smooth": false}, "physics": {"forceAtlas2Based": {"gravitationalConstant": -118, "springLength": 200, "springConstant": 0, "damping": 0.92, "avoidOverlap": 0.9}, "maxVelocity": 30, "minVelocity": 0.75, "solver": "forceAtlas2Based"}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

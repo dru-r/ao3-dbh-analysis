@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#123689", "font": {"color": "white"}, "id": "Good Draco Malfoy", "label": "Good Draco Malfoy", "shape": "dot", "title": "Good Draco Malfoy\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Good Draco Malfoy:\u003cbr\u003eGood Narcissa Black Malfoy\u003cbr\u003eEnemies to Friends to Lovers\u003cbr\u003eSlow Burn\u003cbr\u003eDraco Malfoy Redemption", "value": 4}, {"color": "#123689", "font": {"color": "white"}, "id": "Draco Malfoy Redemption", "label": "Draco Malfoy Redemption", "shape": "dot", "title": "Draco Malfoy Redemption\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Draco Malfoy Redemption:\u003cbr\u003eEnemies to Friends to Lovers\u003cbr\u003eGood Draco Malfoy\u003cbr\u003eSlow Burn", "value": 3}, {"color": "#123689", "font": {"color": "white"}, "id": "Enemies to Friends to Lovers", "label": "Enemies to Friends to Lovers", "shape": "dot", "title": "Enemies to Friends to Lovers\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Enemies to Friends to Lovers:\u003cbr\u003eRedemption\u003cbr\u003eHogwarts Sixth Year\u003cbr\u003eGood Draco Malfoy\u003cbr\u003eSlow Build\u003cbr\u003eDraco Malfoy Redemption", "value": 9}, {"color": "#123689", "font": {"color": "white"}, "id": "Slow Burn", "label": "Slow Burn", "shape": "dot", "title": "Slow Burn\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Slow Burn:\u003cbr\u003eSlow To Update\u003cbr\u003eWork In Progress\u003cbr\u003eRedemption\u003cbr\u003eBad Parent Lucius Malfoy\u003cbr\u003eEventual Romance", "value": 15}, {"color": "#123689", "font": {"color": "white"}, "id": "Good Narcissa Black Malfoy", "label": "Good Narcissa Black Malfoy", "shape": "dot", "title": "Good Narcissa Black Malfoy\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Good Narcissa Black Malfoy:\u003cbr\u003eGood Draco Malfoy", "value": 1}, {"color": "#123689", "font": {"color": "white"}, "id": "Slow Build", "label": "Slow Build", "shape": "dot", "title": "Slow Build\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Slow Build:\u003cbr\u003eEnemies to Friends to Lovers\u003cbr\u003eSlow Burn", "value": 2}, {"color": "#123689", "font": {"color": "white"}, "id": "Enemies to Lovers", "label": "Enemies to Lovers", "shape": "dot", "title": "Enemies to Lovers\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Enemies to Lovers:\u003cbr\u003ePost-Battle of Hogwarts\u003cbr\u003eEnemies to Friends\u003cbr\u003eSlow Burn\u003cbr\u003eEnemies to Friends to Lovers", "value": 4}, {"color": "#123689", "font": {"color": "white"}, "id": "Post-Battle of Hogwarts", "label": "Post-Battle of Hogwarts", "shape": "dot", "title": "Post-Battle of Hogwarts\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Post-Battle of Hogwarts:\u003cbr\u003eEnemies to Lovers\u003cbr\u003eSlow Burn\u003cbr\u003eEnemies to Friends to Lovers", "value": 3}, {"color": "#123689", "font": {"color": "white"}, "id": "Enemies to Friends", "label": "Enemies to Friends", "shape": "dot", "title": "Enemies to Friends\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Enemies to Friends:\u003cbr\u003eSlow Burn\u003cbr\u003eEnemies to Lovers\u003cbr\u003eEnemies to Friends to Lovers", "value": 3}, {"color": "#123689", "font": {"color": "white"}, "id": "Redemption", "label": "Redemption", "shape": "dot", "title": "Redemption\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Redemption:\u003cbr\u003eEnemies to Friends to Lovers\u003cbr\u003eSlow Burn", "value": 2}, {"color": "#123689", "font": {"color": "white"}, "id": "Hogwarts Sixth Year", "label": "Hogwarts Sixth Year", "shape": "dot", "title": "Hogwarts Sixth Year\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Hogwarts Sixth Year:\u003cbr\u003eEnemies to Friends to Lovers\u003cbr\u003eSlow Burn", "value": 2}, {"color": "#123689", "font": {"color": "white"}, "id": "Work In Progress", "label": "Work In Progress", "shape": "dot", "title": "Work In Progress\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Work In Progress:\u003cbr\u003eSlow Burn", "value": 1}, {"color": "#123689", "font": {"color": "white"}, "id": "Draco Malfoy \u0026 Harry Potter Friendship", "label": "Draco Malfoy \u0026 Harry Potter Friendship", "shape": "dot", "title": "Draco Malfoy \u0026 Harry Potter Friendship\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Draco Malfoy \u0026 Harry Potter Friendship:\u003cbr\u003eSlow Burn", "value": 1}, {"color": "#123689", "font": {"color": "white"}, "id": "Original Character(s)", "label": "Original Character(s)", "shape": "dot", "title": "Original Character(s)\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Original Character(s):\u003cbr\u003eSlow Burn", "value": 1}, {"color": "#123689", "font": {"color": "white"}, "id": "Slow To Update", "label": "Slow To Update", "shape": "dot", "title": "Slow To Update\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Slow To Update:\u003cbr\u003eSlow Burn", "value": 1}, {"color": "#123689", "font": {"color": "white"}, "id": "Bad Parent Lucius Malfoy", "label": "Bad Parent Lucius Malfoy", "shape": "dot", "title": "Bad Parent Lucius Malfoy\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Bad Parent Lucius Malfoy:\u003cbr\u003eSlow Burn", "value": 1}, {"color": "#123689", "font": {"color": "white"}, "id": "Eventual Romance", "label": "Eventual Romance", "shape": "dot", "title": "Eventual Romance\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Eventual Romance:\u003cbr\u003eSlow Burn", "value": 1}]);
+        edges = new vis.DataSet([{"from": "Good Draco Malfoy", "title": "Co-occurred in 25 fics", "to": "Draco Malfoy Redemption", "value": 25.0}, {"from": "Good Draco Malfoy", "title": "Co-occurred in 19 fics", "to": "Enemies to Friends to Lovers", "value": 19.0}, {"from": "Good Draco Malfoy", "title": "Co-occurred in 22 fics", "to": "Slow Burn", "value": 22.0}, {"from": "Good Draco Malfoy", "title": "Co-occurred in 15 fics", "to": "Good Narcissa Black Malfoy", "value": 15.0}, {"from": "Enemies to Friends to Lovers", "title": "Co-occurred in 20 fics", "to": "Slow Build", "value": 20.0}, {"from": "Enemies to Friends to Lovers", "title": "Co-occurred in 106 fics", "to": "Slow Burn", "value": 106.0}, {"from": "Enemies to Friends to Lovers", "title": "Co-occurred in 23 fics", "to": "Draco Malfoy Redemption", "value": 23.0}, {"from": "Enemies to Friends to Lovers", "title": "Co-occurred in 46 fics", "to": "Enemies to Lovers", "value": 46.0}, {"from": "Enemies to Friends to Lovers", "title": "Co-occurred in 26 fics", "to": "Post-Battle of Hogwarts", "value": 26.0}, {"from": "Enemies to Friends to Lovers", "title": "Co-occurred in 31 fics", "to": "Enemies to Friends", "value": 31.0}, {"from": "Enemies to Friends to Lovers", "title": "Co-occurred in 11 fics", "to": "Redemption", "value": 11.0}, {"from": "Enemies to Friends to Lovers", "title": "Co-occurred in 15 fics", "to": "Hogwarts Sixth Year", "value": 15.0}, {"from": "Slow Burn", "title": "Co-occurred in 11 fics", "to": "Work In Progress", "value": 11.0}, {"from": "Slow Burn", "title": "Co-occurred in 31 fics", "to": "Slow Build", "value": 31.0}, {"from": "Slow Burn", "title": "Co-occurred in 15 fics", "to": "Draco Malfoy \u0026 Harry Potter Friendship", "value": 15.0}, {"from": "Slow Burn", "title": "Co-occurred in 18 fics", "to": "Original Character(s)", "value": 18.0}, {"from": "Slow Burn", "title": "Co-occurred in 30 fics", "to": "Enemies to Lovers", "value": 30.0}, {"from": "Slow Burn", "title": "Co-occurred in 25 fics", "to": "Draco Malfoy Redemption", "value": 25.0}, {"from": "Slow Burn", "title": "Co-occurred in 10 fics", "to": "Slow To Update", "value": 10.0}, {"from": "Slow Burn", "title": "Co-occurred in 12 fics", "to": "Bad Parent Lucius Malfoy", "value": 12.0}, {"from": "Slow Burn", "title": "Co-occurred in 25 fics", "to": "Post-Battle of Hogwarts", "value": 25.0}, {"from": "Slow Burn", "title": "Co-occurred in 11 fics", "to": "Redemption", "value": 11.0}, {"from": "Slow Burn", "title": "Co-occurred in 15 fics", "to": "Hogwarts Sixth Year", "value": 15.0}, {"from": "Slow Burn", "title": "Co-occurred in 13 fics", "to": "Eventual Romance", "value": 13.0}, {"from": "Slow Burn", "title": "Co-occurred in 16 fics", "to": "Enemies to Friends", "value": 16.0}, {"from": "Enemies to Lovers", "title": "Co-occurred in 19 fics", "to": "Post-Battle of Hogwarts", "value": 19.0}, {"from": "Enemies to Lovers", "title": "Co-occurred in 19 fics", "to": "Enemies to Friends", "value": 19.0}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"nodes": {"font": {"size": 20}, "scaling": {"min": 10, "max": 50}, "color": {"highlight": {"border": "rgba(217,0,18,1)", "background": "rgba(217,0,18,1)"}}, "shape": "circle"}, "edges": {"color": {"highlight": "rgba(237,5,24,1)", "inherit": false, "opacity": 0.2}, "smooth": false}, "physics": {"forceAtlas2Based": {"gravitationalConstant": -118, "springLength": 200, "springConstant": 0, "damping": 0.92, "avoidOverlap": 0.9}, "maxVelocity": 30, "minVelocity": 0.75, "solver": "forceAtlas2Based"}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
