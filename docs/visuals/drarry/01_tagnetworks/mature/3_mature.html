@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#a42940", "font": {"color": "white"}, "id": "Post-Traumatic Stress Disorder - PTSD", "label": "Post-Traumatic Stress Disorder - PTSD", "shape": "dot", "title": "Post-Traumatic Stress Disorder - PTSD\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Post-Traumatic Stress Disorder - PTSD:\u003cbr\u003eTherapy\u003cbr\u003eHarry Potter Has PTSD\u003cbr\u003eGrief/Mourning\u003cbr\u003eAnxiety\u003cbr\u003eMental Health Issues", "value": 7}, {"color": "#a42940", "font": {"color": "white"}, "id": "Depression", "label": "Depression", "shape": "dot", "title": "Depression\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Depression:\u003cbr\u003eSuicide\u003cbr\u003eGrief/Mourning\u003cbr\u003ePanic Attacks\u003cbr\u003eAnxiety\u003cbr\u003eSuicide Attempt", "value": 8}, {"color": "#a42940", "font": {"color": "white"}, "id": "Mental Health Issues", "label": "Mental Health Issues", "shape": "dot", "title": "Mental Health Issues\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Mental Health Issues:\u003cbr\u003eMental Breakdown\u003cbr\u003eMental Instability\u003cbr\u003ePanic Attacks\u003cbr\u003eAnxiety\u003cbr\u003ePost-Traumatic Stress Disorder - PTSD", "value": 6}, {"color": "#a42940", "font": {"color": "white"}, "id": "Grief/Mourning", "label": "Grief/Mourning", "shape": "dot", "title": "Grief/Mourning\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Grief/Mourning:\u003cbr\u003ePost-Traumatic Stress Disorder - PTSD\u003cbr\u003eDepression", "value": 2}, {"color": "#a42940", "font": {"color": "white"}, "id": "Panic Attacks", "label": "Panic Attacks", "shape": "dot", "title": "Panic Attacks\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Panic Attacks:\u003cbr\u003eAnxiety\u003cbr\u003eMental Health Issues\u003cbr\u003eDepression\u003cbr\u003ePost-Traumatic Stress Disorder - PTSD", "value": 4}, {"color": "#a42940", "font": {"color": "white"}, "id": "Therapy", "label": "Therapy", "shape": "dot", "title": "Therapy\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Therapy:\u003cbr\u003ePost-Traumatic Stress Disorder - PTSD", "value": 1}, {"color": "#a42940", "font": {"color": "white"}, "id": "Harry Potter Has PTSD", "label": "Harry Potter Has PTSD", "shape": "dot", "title": "Harry Potter Has PTSD\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Harry Potter Has PTSD:\u003cbr\u003ePost-Traumatic Stress Disorder - PTSD", "value": 1}, {"color": "#a42940", "font": {"color": "white"}, "id": "Anxiety", "label": "Anxiety", "shape": "dot", "title": "Anxiety\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Anxiety:\u003cbr\u003ePanic Attacks\u003cbr\u003eMental Health Issues\u003cbr\u003ePost-Traumatic Stress Disorder - PTSD\u003cbr\u003eDepression", "value": 4}, {"color": "#a42940", "font": {"color": "white"}, "id": "Suicide Attempt", "label": "Suicide Attempt", "shape": "dot", "title": "Suicide Attempt\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Suicide Attempt:\u003cbr\u003eSuicide\u003cbr\u003eSuicidal Thoughts\u003cbr\u003eDepression", "value": 3}, {"color": "#a42940", "font": {"color": "white"}, "id": "Suicidal Thoughts", "label": "Suicidal Thoughts", "shape": "dot", "title": "Suicidal Thoughts\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Suicidal Thoughts:\u003cbr\u003eSuicide Attempt\u003cbr\u003eDepression", "value": 2}, {"color": "#a42940", "font": {"color": "white"}, "id": "Suicide", "label": "Suicide", "shape": "dot", "title": "Suicide\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Suicide:\u003cbr\u003eDepression\u003cbr\u003eSuicide Attempt", "value": 2}, {"color": "#a42940", "font": {"color": "white"}, "id": "Mental Breakdown", "label": "Mental Breakdown", "shape": "dot", "title": "Mental Breakdown\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Mental Breakdown:\u003cbr\u003eMental Health Issues", "value": 1}, {"color": "#a42940", "font": {"color": "white"}, "id": "Mental Instability", "label": "Mental Instability", "shape": "dot", "title": "Mental Instability\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Mental Instability:\u003cbr\u003eMental Health Issues", "value": 1}]);
+        edges = new vis.DataSet([{"from": "Post-Traumatic Stress Disorder - PTSD", "title": "Co-occurred in 37 fics", "to": "Depression", "value": 37.0}, {"from": "Post-Traumatic Stress Disorder - PTSD", "title": "Co-occurred in 21 fics", "to": "Mental Health Issues", "value": 21.0}, {"from": "Post-Traumatic Stress Disorder - PTSD", "title": "Co-occurred in 14 fics", "to": "Grief/Mourning", "value": 14.0}, {"from": "Post-Traumatic Stress Disorder - PTSD", "title": "Co-occurred in 23 fics", "to": "Panic Attacks", "value": 23.0}, {"from": "Post-Traumatic Stress Disorder - PTSD", "title": "Co-occurred in 12 fics", "to": "Therapy", "value": 12.0}, {"from": "Post-Traumatic Stress Disorder - PTSD", "title": "Co-occurred in 13 fics", "to": "Harry Potter Has PTSD", "value": 13.0}, {"from": "Post-Traumatic Stress Disorder - PTSD", "title": "Co-occurred in 16 fics", "to": "Anxiety", "value": 16.0}, {"from": "Depression", "title": "Co-occurred in 25 fics", "to": "Suicide Attempt", "value": 25.0}, {"from": "Depression", "title": "Co-occurred in 26 fics", "to": "Suicidal Thoughts", "value": 26.0}, {"from": "Depression", "title": "Co-occurred in 27 fics", "to": "Mental Health Issues", "value": 27.0}, {"from": "Depression", "title": "Co-occurred in 20 fics", "to": "Anxiety", "value": 20.0}, {"from": "Depression", "title": "Co-occurred in 14 fics", "to": "Grief/Mourning", "value": 14.0}, {"from": "Depression", "title": "Co-occurred in 16 fics", "to": "Panic Attacks", "value": 16.0}, {"from": "Depression", "title": "Co-occurred in 13 fics", "to": "Suicide", "value": 13.0}, {"from": "Suicide Attempt", "title": "Co-occurred in 20 fics", "to": "Suicidal Thoughts", "value": 20.0}, {"from": "Suicide Attempt", "title": "Co-occurred in 16 fics", "to": "Suicide", "value": 16.0}, {"from": "Mental Health Issues", "title": "Co-occurred in 9 fics", "to": "Mental Breakdown", "value": 9.0}, {"from": "Mental Health Issues", "title": "Co-occurred in 15 fics", "to": "Panic Attacks", "value": 15.0}, {"from": "Mental Health Issues", "title": "Co-occurred in 15 fics", "to": "Anxiety", "value": 15.0}, {"from": "Mental Health Issues", "title": "Co-occurred in 9 fics", "to": "Mental Instability", "value": 9.0}, {"from": "Anxiety", "title": "Co-occurred in 14 fics", "to": "Panic Attacks", "value": 14.0}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"nodes": {"font": {"size": 20}, "scaling": {"min": 10, "max": 50}, "color": {"highlight": {"border": "rgba(217,0,18,1)", "background": "rgba(217,0,18,1)"}}, "shape": "circle"}, "edges": {"color": {"highlight": "rgba(237,5,24,1)", "inherit": false, "opacity": 0.2}, "smooth": false}, "physics": {"forceAtlas2Based": {"gravitationalConstant": -118, "springLength": 200, "springConstant": 0, "damping": 0.92, "avoidOverlap": 0.9}, "maxVelocity": 30, "minVelocity": 0.75, "solver": "forceAtlas2Based"}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#82413c", "font": {"color": "white"}, "id": "Alpha/Beta/Omega Dynamics", "label": "Alpha/Beta/Omega Dynamics", "shape": "dot", "title": "Alpha/Beta/Omega Dynamics\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Alpha/Beta/Omega Dynamics:\u003cbr\u003eAlpha Harry Potter\u003cbr\u003eOmega Draco Malfoy", "value": 2}, {"color": "#82413c", "font": {"color": "white"}, "id": "Alpha Harry Potter", "label": "Alpha Harry Potter", "shape": "dot", "title": "Alpha Harry Potter\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Alpha Harry Potter:\u003cbr\u003eAlpha/Beta/Omega Dynamics\u003cbr\u003eOmega Draco Malfoy", "value": 2}, {"color": "#82413c", "font": {"color": "white"}, "id": "Omega Draco Malfoy", "label": "Omega Draco Malfoy", "shape": "dot", "title": "Omega Draco Malfoy\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Omega Draco Malfoy:\u003cbr\u003eAlpha Harry Potter\u003cbr\u003eAlpha/Beta/Omega Dynamics", "value": 2}]);
+        edges = new vis.DataSet([{"from": "Alpha/Beta/Omega Dynamics", "title": "Co-occurred in 14 fics", "to": "Alpha Harry Potter", "value": 14.0}, {"from": "Alpha/Beta/Omega Dynamics", "title": "Co-occurred in 18 fics", "to": "Omega Draco Malfoy", "value": 18.0}, {"from": "Alpha Harry Potter", "title": "Co-occurred in 14 fics", "to": "Omega Draco Malfoy", "value": 14.0}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"nodes": {"font": {"size": 20}, "scaling": {"min": 10, "max": 50}, "color": {"highlight": {"border": "rgba(217,0,18,1)", "background": "rgba(217,0,18,1)"}}, "shape": "circle"}, "edges": {"color": {"highlight": "rgba(237,5,24,1)", "inherit": false, "opacity": 0.2}, "smooth": false}, "physics": {"forceAtlas2Based": {"gravitationalConstant": -118, "springLength": 200, "springConstant": 0, "damping": 0.92, "avoidOverlap": 0.9}, "maxVelocity": 30, "minVelocity": 0.75, "solver": "forceAtlas2Based"}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

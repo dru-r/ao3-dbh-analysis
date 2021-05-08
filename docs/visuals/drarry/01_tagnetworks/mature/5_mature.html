@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#c5ff45", "font": {"color": "white"}, "id": "Sex", "label": "Sex", "shape": "dot", "title": "Sex\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Sex:\u003cbr\u003eAnal Sex", "value": 1}, {"color": "#c5ff45", "font": {"color": "white"}, "id": "Anal Sex", "label": "Anal Sex", "shape": "dot", "title": "Anal Sex\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Anal Sex:\u003cbr\u003eSex\u003cbr\u003eHand Jobs\u003cbr\u003eRimming\u003cbr\u003eOral Sex\u003cbr\u003eBlow Jobs", "value": 6}, {"color": "#c5ff45", "font": {"color": "white"}, "id": "Oral Sex", "label": "Oral Sex", "shape": "dot", "title": "Oral Sex\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Oral Sex:\u003cbr\u003eAnal Fingering\u003cbr\u003eBlow Jobs\u003cbr\u003eAnal Sex", "value": 3}, {"color": "#c5ff45", "font": {"color": "white"}, "id": "Anal Fingering", "label": "Anal Fingering", "shape": "dot", "title": "Anal Fingering\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Anal Fingering:\u003cbr\u003eOral Sex\u003cbr\u003eRimming\u003cbr\u003eBlow Jobs\u003cbr\u003eAnal Sex", "value": 4}, {"color": "#c5ff45", "font": {"color": "white"}, "id": "Blow Jobs", "label": "Blow Jobs", "shape": "dot", "title": "Blow Jobs\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Blow Jobs:\u003cbr\u003eShower Sex\u003cbr\u003eRimming\u003cbr\u003eMasturbation\u003cbr\u003eOral Sex\u003cbr\u003eAnal Fingering", "value": 7}, {"color": "#c5ff45", "font": {"color": "white"}, "id": "Rimming", "label": "Rimming", "shape": "dot", "title": "Rimming\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Rimming:\u003cbr\u003eBlow Jobs\u003cbr\u003eAnal Fingering\u003cbr\u003eAnal Sex", "value": 3}, {"color": "#c5ff45", "font": {"color": "white"}, "id": "Hand Jobs", "label": "Hand Jobs", "shape": "dot", "title": "Hand Jobs\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Hand Jobs:\u003cbr\u003eAnal Sex\u003cbr\u003eBlow Jobs", "value": 2}, {"color": "#c5ff45", "font": {"color": "white"}, "id": "Masturbation", "label": "Masturbation", "shape": "dot", "title": "Masturbation\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Masturbation:\u003cbr\u003eBlow Jobs", "value": 1}, {"color": "#c5ff45", "font": {"color": "white"}, "id": "Shower Sex", "label": "Shower Sex", "shape": "dot", "title": "Shower Sex\u003cbr\u003e\u003cbr\u003eTop 5 tags in this group co-occuring with Shower Sex:\u003cbr\u003eBlow Jobs", "value": 1}]);
+        edges = new vis.DataSet([{"from": "Sex", "title": "Co-occurred in 13 fics", "to": "Anal Sex", "value": 13.0}, {"from": "Anal Sex", "title": "Co-occurred in 46 fics", "to": "Oral Sex", "value": 46.0}, {"from": "Anal Sex", "title": "Co-occurred in 56 fics", "to": "Anal Fingering", "value": 56.0}, {"from": "Anal Sex", "title": "Co-occurred in 52 fics", "to": "Blow Jobs", "value": 52.0}, {"from": "Anal Sex", "title": "Co-occurred in 24 fics", "to": "Rimming", "value": 24.0}, {"from": "Anal Sex", "title": "Co-occurred in 18 fics", "to": "Hand Jobs", "value": 18.0}, {"from": "Blow Jobs", "title": "Co-occurred in 21 fics", "to": "Oral Sex", "value": 21.0}, {"from": "Blow Jobs", "title": "Co-occurred in 30 fics", "to": "Anal Fingering", "value": 30.0}, {"from": "Blow Jobs", "title": "Co-occurred in 33 fics", "to": "Hand Jobs", "value": 33.0}, {"from": "Blow Jobs", "title": "Co-occurred in 17 fics", "to": "Masturbation", "value": 17.0}, {"from": "Blow Jobs", "title": "Co-occurred in 15 fics", "to": "Rimming", "value": 15.0}, {"from": "Blow Jobs", "title": "Co-occurred in 12 fics", "to": "Shower Sex", "value": 12.0}, {"from": "Oral Sex", "title": "Co-occurred in 17 fics", "to": "Anal Fingering", "value": 17.0}, {"from": "Anal Fingering", "title": "Co-occurred in 18 fics", "to": "Rimming", "value": 18.0}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"nodes": {"font": {"size": 20}, "scaling": {"min": 10, "max": 50}, "color": {"highlight": {"border": "rgba(217,0,18,1)", "background": "rgba(217,0,18,1)"}}, "shape": "circle"}, "edges": {"color": {"highlight": "rgba(237,5,24,1)", "inherit": false, "opacity": 0.2}, "smooth": false}, "physics": {"forceAtlas2Based": {"gravitationalConstant": -118, "springLength": 200, "springConstant": 0, "damping": 0.92, "avoidOverlap": 0.9}, "maxVelocity": 30, "minVelocity": 0.75, "solver": "forceAtlas2Based"}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
