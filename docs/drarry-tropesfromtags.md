@@ -44,6 +44,7 @@ Asterisks* denote a network with 5 or less nodes.<br><br>
 <div style="overflow-x:auto;">
   <table>
     <tr>
+      <th></th>
       <th>Example tags</th>
       <th>Link to network</th>
      <th>Comments</th>
