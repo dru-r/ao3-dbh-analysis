@@ -588,7 +588,7 @@ Asterisks* denote a network with 5 or less nodes.<br><br>
     <tr>
       <td>13</td>
       <td>Gay Draco Malfoy, Lesbian Pansy Parkinson, Bisexual Harry Potter, Coming Out, Person of Color Harry Potter</td>
-      <td><a href="/ao3-dbh-analysis/visuals/drarry/01_tagnetworks/explicit/12_teen.html">Link</a></td>
+      <td><a href="/ao3-dbh-analysis/visuals/drarry/01_tagnetworks/teen/12_teen.html">Link</a></td>
        <td>sexuality; i haven’t read that many person of color harry fics so i can’t really comment on that</td>
     </tr>
     <tr>
