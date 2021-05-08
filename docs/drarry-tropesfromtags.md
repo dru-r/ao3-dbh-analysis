@@ -52,7 +52,7 @@ Asterisks* denote a network with 5 or less nodes.<br><br>
     <tr>
       <td>1</td>
       <td>Post-Hogwarts, Auror Harry Potter, Clubbing, POV Draco Malfoy, Potions Master Draco Malfoy</td>
-      <td><a href="dru-r.github.io/ao3-dbh-analysis/ visuals/drarry/01_tagnetworks/explicit/0_explicit.html">Link</a></td>
+      <td><a href="/visuals/drarry/01_tagnetworks/explicit/0_explicit.html">Link</a></td>
       <td>about when the boys are adults/finding romance after school</td>
     </tr>
     <tr>
