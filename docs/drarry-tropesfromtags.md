@@ -112,13 +112,13 @@ Asterisks* denote a network with 5 or less nodes.<br><br>
     <tr>
       <td>11</td>
       <td>Manipulative Albus Dumbledore, Ginny Weasley Bashing, Ron Weasley Bashing, Molly Weasley Bashing, Hermione Granger Bashing</td>
-      <td><a href="dru-r.github.io/ao3-dbh-analysis/ visuals/drarry/01_tagnetworks/explicit/10_explicit.html">Link</a></<td>
+      <td><a href="dru-r.github.io/ao3-dbh-analysis/ visuals/drarry/01_tagnetworks/explicit/10_explicit.html">Link</a></td>
        <td>taking another pov of harry’s story</ td>
     </tr>
     <tr>
       <td>12*</td>
       <td>Threesome – M/M/M, Foursome – M/M/M/M, Spitroasting, Double Penetration, Teacher-Student Relationship</td>
-      <td><a href="dru-r.github.io/ao3-dbh-analysis/ visuals/drarry/01_tagnetworks/explicit/11_explicit.html">Link</a></<td>
+      <td><a href="dru-r.github.io/ao3-dbh-analysis/ visuals/drarry/01_tagnetworks/explicit/11_explicit.html">Link</a></td>
        <td>orgies?</ td>
     </tr>
     <tr>
