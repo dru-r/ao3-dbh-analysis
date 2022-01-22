@@ -30,7 +30,7 @@ We can see that the first two dimensions already explain 87% of the variance in 
 [Click here for the interactive version](/visuals/drarry/02_CA_freeform/symmetricbiplot.html)<br><br>
 The default plot produced from CA is a symmetric biplot. To start us off, we notice first that the first dimension (x-axis, Component 0) has 71.46% inertia, or variance explained. The second dimension (y-axis, Component 1) has 16.44% inertia. What this means is that the bulk of the variance is explained by the first dimension, and much less so by the second dimension.<br><br>
 
-Next, with this plot, we can also interpret the distance between different row points (freeform tags), and distance between different column points (ratings). Freeform tags which appear closer to each other in the graph are thus more similar to each other, same with ratings which appear closer to each other. <br><br>
+Next, with this plot, we can also interpret the distance between different row points (ratings), and distance between different column points (freeform tags). Freeform tags which appear closer to each other in the graph are thus more similar to each other, same with ratings which appear closer to each other. <br><br>
 
 <b>Unfortunately, we cannot directly interpret the distance between row and column points beyond general observations. For that, we will have to look at the asymmetric biplot (shown later).</b><br><br>
 
