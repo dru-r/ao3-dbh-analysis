@@ -6,3 +6,4 @@ I've gone through many ships, but none have ever drawn me back as much as Drarry
 
 ## Available analyses:
 1. [Finding tropes through tags](drarry-tropesfromtags.md)
+2. [Freeform tag associations to fic ratings](drarry-cafreeform.md)
