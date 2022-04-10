@@ -24,9 +24,10 @@ There's quite a bit going on in my life right now so I'm not going to be updatin
 13. (A) [An initial look at kudos on AO3 D:BH fics](dbh-kudosbasic.md)<br>
 13. (B) [User interest in ships in the AO3 D:BH fandom](dbh-kudosnetwork.md)<br>
 14. [Visualising fics by verb usage](dbh-nmftsne.md)<br>
+15. [Dialogue analysis of Connor from AO3 D:BH fics](dbh-condialogue-1.md)<br>
 
 ### Stuff currently in the works:
-15. ??? (more to come!)<br>
+16. ??? (more to come!)<br>
 
 ## More details:
 #### What is this?
