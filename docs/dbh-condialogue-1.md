@@ -81,7 +81,7 @@ So the answer to the question of whether Connor utterances from gen/teen/mature 
 ## Visualising dialogue by fic rating
 Next, I wanted to know if fanfiction Connor’s utterances were possibly separable by fic rating. <b>I used the filtered set of 72,860 fanfiction Connor utterances</b>, which were 10 to 24 words in length. I had a hunch that the answer would be close to no, especially given the weak CA results.
 
-Before jumping into clustering, I started by visualising the 768-dimension MPNet embeddings in a 2D space with the help of UMAP (n_neighbors=15). I selected 1000 random utterances by rating (making 4000 in total) to visualise. Rerunning this visualisation with different selections of 4000 utterances does not drastically change its overall
+Before jumping into clustering, I started by visualising the 768-dimension MPNet embeddings in a 2D space with the help of UMAP (n_neighbors=15). I selected 1000 random utterances by rating (making 4000 in total) to visualise. Rerunning this visualisation with different selections of 4000 utterances does not drastically change its overall shape and appearance.
 
 Here is one of the visualisations:
 
